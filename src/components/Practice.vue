@@ -7,6 +7,7 @@
     <ol v-for="(item,index) in list" :key=item>{{index+1}}.{{item}}</ol>
     <input type="text" v-model="content">
     <p>content:{{content}}</p>
+    <p>this</p>
   </div>
 </template>
 <script>
