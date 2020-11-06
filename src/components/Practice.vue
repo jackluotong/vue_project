@@ -36,6 +36,7 @@ export default {
     }
   }
   /*
+  2020-11-05
   点击事件：v-on=@
   绑定：v-bind=:
   v-text,v-html,v-show,v-for,v-if,v-else,v-model,v-once
