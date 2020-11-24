@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name:'practice',
+ 
   data(){
     return{
        msg:'apple',
