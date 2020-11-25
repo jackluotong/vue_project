@@ -27,6 +27,11 @@ const routes = [
     path:'/interview',
     name:'Interview',
     component:()=>import('../views/Interview.vue')
+  },
+  {
+    path:'/forVue',
+    name:'ForVue',
+    component:()=>import('../components/ForVue.vue')
   }
 ]
 

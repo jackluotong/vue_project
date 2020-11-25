@@ -11,7 +11,7 @@
         <span slot="title"><a-icon type="mail" /><span>Vue</span></span>
         <a-menu-item-group key="g1">
           <template slot="title"> <a-icon type="qq" /><span>基础部分</span> </template>
-          <a-menu-item key="1">
+          <a-menu-item key="1" @click="vueClick" >
             Option 1
           </a-menu-item>
           <a-menu-item key="2">
@@ -60,20 +60,22 @@
         </a-menu-item>
       </a-sub-menu>
     </a-menu>
-    <ForVue/>
+   
+    
   </div>
 </template>
 <script>
-import ForVue from './ForVue'
+  
 export default {
     components:{
-        ForVue
+       
     },
     name:'InterviewVue',
     data() {
     return {
       current: ['mail'],
       openKeys: ['sub1'],
+      value:'origin',
     };
   },
   watch: {
@@ -88,6 +90,15 @@ export default {
     titleClick(e) {
       console.log('titleClick', e);
     },
+    vueClick(){
+      this.$router.push({
+        path:'/forVue',
+        query:{
+          id:this.id,
+         }
+      }) 
+    },
+   
   },
 }
 </script>
