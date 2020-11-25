@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="divInterview">
         <InterviewVue/>
     </div>
 </template>
@@ -12,3 +12,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+.divInterview{
+   
+}
+</style>

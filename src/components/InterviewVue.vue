@@ -1,68 +1,93 @@
 <template>
-  <div>
-    <a-menu
-      style="width: 256px"
-      :default-selected-keys="['1']"
-      :open-keys.sync="openKeys"
-      mode="inline"
-      @click="handleClick"
-    >
-      <a-sub-menu key="sub1" @titleClick="titleClick">
-        <span slot="title"><a-icon type="mail" /><span>Vue</span></span>
-        <a-menu-item-group key="g1">
-          <template slot="title"> <a-icon type="qq" /><span>基础部分</span> </template>
-          <a-menu-item key="1" @click="vueClick" >
-            Option 1
-          </a-menu-item>
-          <a-menu-item key="2">
-            Option 2
-          </a-menu-item>
-        </a-menu-item-group>
-        <a-menu-item-group key="g2" title="加强部分 ">
-          <a-menu-item key="3">
-            Option 3
-          </a-menu-item>
-          <a-menu-item key="4">
-            Option 4
-          </a-menu-item>
-        </a-menu-item-group>
-      </a-sub-menu>
-      <a-sub-menu key="sub2" @titleClick="titleClick">
-        <span slot="title"><a-icon type="appstore" /><span>React</span></span>
-        <a-menu-item key="5">
-          Option 5
+  <a-layout id="components-layout-demo-top-side-2">
+    <a-layout-header class="header">
+      <div class="logo" />
+      <!-- <a-menu
+        theme="dark"
+        mode="horizontal"
+        :default-selected-keys="['2']"
+        :style="{ lineHeight: '64px' }"
+      >
+        <a-menu-item key="1">
+          nav 1
         </a-menu-item>
-        <a-menu-item key="6">
-          Option 6
+        <a-menu-item key="2">
+          nav 2
         </a-menu-item>
-        <a-sub-menu key="sub3" title="Submenu">
-          <a-menu-item key="7">
-            Option 7
-          </a-menu-item>
-          <a-menu-item key="8">
-            Option 8
-          </a-menu-item>
-        </a-sub-menu>
-      </a-sub-menu>
-      <a-sub-menu key="sub4">
-        <span slot="title"><a-icon type="setting" /><span>JavaScript</span></span>
-        <a-menu-item key="9">
-          Option 9
+        <a-menu-item key="3">
+          nav 3
         </a-menu-item>
-        <a-menu-item key="10">
-          Option 10
-        </a-menu-item>
-        <a-menu-item key="11">
-          Option 11
-        </a-menu-item>
-        <a-menu-item key="12">
-          Option 12
-        </a-menu-item>
-      </a-sub-menu>
-    </a-menu>
-   
-    
-  </div>
+      </a-menu> -->
+    </a-layout-header>
+    <a-layout>
+      <a-layout-sider width="200" style="background: #fff">
+        <a-menu
+          mode="inline"
+          :default-selected-keys="['1']"
+          :default-open-keys="['sub1']"
+          :style="{ height: '100%', borderRight: 0 }"
+        >
+          <a-sub-menu key="sub1">
+            <span slot="title"><a-icon type="user" />Vue</span>
+            <a-menu-item key="1" @click="vueClick">
+             Fundamental
+            </a-menu-item>
+            <a-menu-item key="2">
+              Advanced
+            </a-menu-item>
+            <a-menu-item key="3">
+              option3
+            </a-menu-item>
+            <a-menu-item key="4">
+              option4
+            </a-menu-item>
+          </a-sub-menu>
+          <a-sub-menu key="sub2">
+            <span slot="title"><a-icon type="laptop" />subnav 2</span>
+            <a-menu-item key="5">
+              option5
+            </a-menu-item>
+            <a-menu-item key="6">
+              option6
+            </a-menu-item>
+            <a-menu-item key="7">
+              option7
+            </a-menu-item>
+            <a-menu-item key="8">
+              option8
+            </a-menu-item>
+          </a-sub-menu>
+          <a-sub-menu key="sub3">
+            <span slot="title"><a-icon type="notification" />subnav 3</span>
+            <a-menu-item key="9">
+              option9
+            </a-menu-item>
+            <a-menu-item key="10">
+              option10
+            </a-menu-item>
+            <a-menu-item key="11">
+              option11
+            </a-menu-item>
+            <a-menu-item key="12">
+              option12
+            </a-menu-item>
+          </a-sub-menu>
+        </a-menu>
+      </a-layout-sider>
+      <a-layout style="padding: 0 24px 24px">
+        <a-breadcrumb style="margin: 16px 0">
+          <a-breadcrumb-item>Home</a-breadcrumb-item>
+          <a-breadcrumb-item>List</a-breadcrumb-item>
+          <a-breadcrumb-item>App</a-breadcrumb-item>
+        </a-breadcrumb>
+        <a-layout-content
+          :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+        >
+        面试知识总结
+        </a-layout-content>
+      </a-layout>
+    </a-layout>
+  </a-layout>
 </template>
 <script>
   
@@ -73,9 +98,7 @@ export default {
     name:'InterviewVue',
     data() {
     return {
-      current: ['mail'],
-      openKeys: ['sub1'],
-      value:'origin',
+        collapsed: false,
     };
   },
   watch: {
@@ -102,3 +125,12 @@ export default {
   },
 }
 </script>
+<style>
+#components-layout-demo-top-side-2 .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+</style>
