@@ -99,6 +99,60 @@
        <p>.stop/prevent/capture/self/once/passive</p>
       </div>
     </a-card>
+    <a-card 
+      title="表单输入绑定"
+      :bordered="false"
+      style="width:98%;margin:0 auto">
+      <div class="content">
+        <p>{{messageOne}}</p>
+        <input type="text" v-model="messageOne" placeholder="edit me">
+        <input type="checkbox" id="jack" value="jack" v-model="checkedNames">
+        <label for="jack">jack</label>
+        <input type="checkbox" id="jack" value="jackluo" v-model="checkedNames">
+        <label for="jack">jackluo</label>
+        <hr>
+        <span>checked names:{{checkedNames}}</span>
+       </div>
+    </a-card>
+    <a-card
+     title="深入了解组件"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <p><a href="https://www.cnblogs.com/july-sunny/p/11687008.html">通过 Prop 向子组件传递数据</a></p>
+        <p><a href="https://cn.vuejs.org/v2/guide/components-props.html#%E4%BC%A0%E9%80%92%E9%9D%99%E6%80%81%E6%88%96%E5%8A%A8%E6%80%81-Prop">
+        $emit</a></p>
+        <a-divider>Prop</a-divider>
+        <h2>传递静态或动态 Prop</h2>
+        <h2>单向数据流</h2>
+        <h2>prop验证|验证类型可以是：String/Number/Boolean/Array/Object/Date/Function/Symbol</h2>
+        <h1><a href="https://www.jianshu.com/p/7024d34a144a">插槽slot</a></h1>
+        <p>为了子组件中更好的传值</p>
+      </div>
+    </a-card>
+    <a-card
+     title="动态组件 & 异步组件"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+         <button @click="show = !show">
+    Toggle render
+      </button>
+      <transition name="slide-fade">
+        <p v-if="show">hello</p>
+      </transition>
+      </div>
+    </a-card>
+    <a-card
+    title="深入响应式原理"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+      @click="vueSenior"
+      >
+      <div></div>
+    </a-card>
   </div>
 </template>
 <script>
@@ -125,7 +179,10 @@ export default {
          author:'jackluo',
          publish:'sh'
        },
-       name:'Vue.js'
+       name:'Vue.js',
+       messageOne:'hello',
+       checkedNames:[],
+       show:true,
     }
   },
   watch: {
@@ -169,7 +226,9 @@ export default {
     say:function(message){
       alert(message)
     },
-
+    vueSenior:function(){ 
+      window.open('https://cn.vuejs.org/v2/guide/reactivity.html');
+    }
   },
   computed: {
     fullname: function() {
