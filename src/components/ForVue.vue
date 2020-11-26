@@ -64,8 +64,8 @@
     >
       <div class="content">
          <ul>
-           <li v-for="item in items" :key="item">
-              {{item.name}}
+           <li v-for="(item,index) in items" :key="index">
+            {{index}}:{{item.name}}
            </li>
          </ul>
          <ul>
@@ -74,6 +74,29 @@
            </li>
          </ul>
           <a-divider>数组</a-divider>
+          <p>push()
+              pop()
+              shift()
+              unshift()
+              splice()
+              sort()
+              reverse()</p>
+      </div>
+    </a-card>
+     <a-card
+      title="事件处理"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+          <a-button type="primary" @click="clickOne">
+             Primary
+         </a-button>
+         <a-button type="primary" @click="say('what')">
+             Primary
+         </a-button>
+            <a-divider>事件修饰符</a-divider>
+       <p>.stop/prevent/capture/self/once/passive</p>
       </div>
     </a-card>
   </div>
@@ -102,6 +125,7 @@ export default {
          author:'jackluo',
          publish:'sh'
        },
+       name:'Vue.js'
     }
   },
   watch: {
@@ -135,6 +159,17 @@ export default {
         })
       }
     },
+    clickOne:function(event){
+      alert(this.name)
+      if(event){
+        alert(event.target.tagName)
+        console.log(event);
+      }
+    },
+    say:function(message){
+      alert(message)
+    },
+
   },
   computed: {
     fullname: function() {
