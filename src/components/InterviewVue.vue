@@ -32,7 +32,7 @@
             <a-menu-item key="1" @click="vueClick">
              Fundamental
             </a-menu-item>
-            <a-menu-item key="2">
+            <a-menu-item key="2" @click="vueRouterClick">
               Advanced
             </a-menu-item>
             <a-menu-item key="3">
@@ -105,6 +105,9 @@ export default {
     openKeys(val) {
       console.log('openKeys', val);
     },
+    $route(to,from){
+        console.log(to,from);
+    },
   },
   methods: {
     handleClick(e) {
@@ -115,13 +118,18 @@ export default {
     },
     vueClick(){
       this.$router.push({
-        path:'/forVue',
+        name:'ForVue',
         query:{
           id:this.id,
          }
       }) 
     },
-   
+   vueRouterClick:function(){
+    //  this.$router.go(3)
+     this.$router.push({
+       path:'/forRouter',
+     })
+    },
   },
 }
 </script>

@@ -32,6 +32,13 @@ const routes = [
     path:'/forVue',
     name:'ForVue',
     component:()=>import('../components/ForVue.vue')
+  },
+  {
+    path:'/forRouter',
+    // redirect: '/about',
+    alias: 'heheda',
+    name:'ForRouter',
+    component:()=>import('../components/ForRouter.vue')
   }
 ]
 
