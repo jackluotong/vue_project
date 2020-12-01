@@ -33,10 +33,10 @@
              Fundamental
             </a-menu-item>
             <a-menu-item key="2" @click="vueRouterClick">
-              Advanced
+              VueRouter
             </a-menu-item>
-            <a-menu-item key="3">
-              option3
+            <a-menu-item key="3" @click="vuexClick">
+             Vuex
             </a-menu-item>
             <a-menu-item key="4">
               option4
@@ -130,6 +130,11 @@ export default {
        path:'/forRouter',
      })
     },
+    vuexClick:function(){
+      this.$router.push({
+        name:'ForVuex'
+      })
+    }
   },
 }
 </script>

@@ -39,6 +39,11 @@ const routes = [
     alias: 'heheda',
     name:'ForRouter',
     component:()=>import('../components/ForRouter.vue')
+  },
+  {
+    path:'/forVuex',
+    name:'ForVuex',
+    component:()=>import('../components/ForVuex.vue')
   }
 ]
 
