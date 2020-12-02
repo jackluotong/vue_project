@@ -44,6 +44,20 @@ const routes = [
     path:'/forVuex',
     name:'ForVuex',
     component:()=>import('../components/ForVuex.vue')
+  },{
+    path:'/jsFundamental',
+    name:'JsFundamental',
+    component:()=>import('../components/JsFundamental.vue')
+  },
+  {
+    path:'/jsAdvanced',
+    name:'JsAdvanced',
+    component:()=>import('../components/JsAdvanced.vue')
+  },
+  {
+    path:'/decemberInterview',
+    name:'DecemberInterview',
+    component:()=>import('../components/DecemberInterview.vue')
   }
 ]
 

@@ -38,39 +38,43 @@
             <a-menu-item key="3" @click="vuexClick">
              Vuex
             </a-menu-item>
-            <a-menu-item key="4">
+            <!-- <a-menu-item key="4">
               option4
-            </a-menu-item>
+            </a-menu-item> -->
           </a-sub-menu>
           <a-sub-menu key="sub2">
-            <span slot="title"><a-icon type="laptop" />subnav 2</span>
-            <a-menu-item key="5">
-              option5
+            <span slot="title"><a-icon type="laptop" />JavaScript</span>
+            <a-menu-item key="5" @click="jsFundamental">
+               Fundamental
             </a-menu-item>
-            <a-menu-item key="6">
-              option6
+            <a-menu-item key="6" @click="$router.push({name:'JsAdvanced'})">
+             Advanced
             </a-menu-item>
-            <a-menu-item key="7">
+            <!-- <a-menu-item key="7">
               option7
             </a-menu-item>
             <a-menu-item key="8">
               option8
-            </a-menu-item>
+            </a-menu-item> -->
           </a-sub-menu>
           <a-sub-menu key="sub3">
-            <span slot="title"><a-icon type="notification" />subnav 3</span>
+            <span slot="title"><a-icon type="notification" /> ReactSeries</span>
             <a-menu-item key="9">
-              option9
+             React
             </a-menu-item>
             <a-menu-item key="10">
-              option10
+             ReactNative
+            </a-menu-item>     
+          </a-sub-menu>
+         
+          <a-sub-menu key="sub4">
+            <span slot="title"><a-icon type="notification" />Interview</span>
+            <a-menu-item key="20" @click="$router.push({name:'DecemberInterview'})">
+            December
             </a-menu-item>
-            <a-menu-item key="11">
-              option11
-            </a-menu-item>
-            <a-menu-item key="12">
-              option12
-            </a-menu-item>
+             <a-menu-item key="21" @click="desperate">
+             January
+            </a-menu-item> 
           </a-sub-menu>
         </a-menu>
       </a-layout-sider>
@@ -132,9 +136,28 @@ export default {
     },
     vuexClick:function(){
       this.$router.push({
-        name:'ForVuex'
+        name:'ForVuex',
       })
-    }
+    },
+    jsFundamental:function(){
+      this.$router.push({
+        name:'JsFundamental',
+      })
+    },
+    jsAdvanced:function(){
+      this.$router.push({
+        name:'JsAdvanced',
+      })
+      for(var i=0;i<3;i++){
+        setTimeout(() => {
+          console.log(i);
+        }, 10);
+      }
+    },
+   
+    desperate:function(){
+      alert('Desperate?')
+    },
   },
 }
 </script>
