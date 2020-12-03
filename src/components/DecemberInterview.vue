@@ -122,7 +122,10 @@ export default {
      */
     checkType:function(params) {
       return Object.prototype.toString.call(params)
-    }
+    },
+    /**
+     * 
+     */
   }
 }
 </script>
