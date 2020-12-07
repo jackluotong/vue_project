@@ -144,7 +144,8 @@ export default {
         { name:"如何理解Bigint？",answer:"因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可"},
         { name:"数据类型检测？",answer:"typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call"},
         { name:"闭包的理解？",answer:"当前环境中存在指向父级的作用域"},
-        { name:"原型链的理解？",answer:""}
+        { name:"原型链的理解？",answer:""},
+        { name:"js如何实现继承？",answer:"prototype+call/寄生组合继承/"},
       ],
       cssPart:[
         { name: "12-03：水平垂直居中？", answer: "" },
@@ -157,7 +158,8 @@ export default {
         { name: "12-05： $set？", answer: "为data中的某一个对象添加一个属性，this.$set(obj, key, value)" },
         { name: "12-05： 双向数据绑定的原理，怎么监听View层的变化？", answer: "" },
         { name:"对keep-alive的了解？",answer:"以使被包含的组件保留状态，或避免重新渲染,"},
-        { name:"路由/照片懒加载",answer:""}
+        { name:"路由/照片懒加载",answer:""},
+        { name:"$nextTick?原理？",answer:""},
       ],
       protocolPart:[
         { name:"TCP 和 UDP 的区别",answer:""},
