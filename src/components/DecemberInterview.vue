@@ -1,32 +1,35 @@
 <template>
   <div style="background:#ECECEC; padding:20px;">
-    <a-card
-      title="2020-12-02 Interivew|无锡"
+  
+     <!-- js part -->
+     <a-card
+      title="2020-12-03 Interivew|JsPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
         <ol>
           <li
-            v-for="(item,index) in topic1202"
+            v-for="(item,index) in jsPart"
             :key='index'
             class="liClass"
           >
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-        <a-button @click="testAxios">test axios</a-button>
+          <p><a href="https://blog.csdn.net/weixin_37580235/article/details/82317240#%E5%B7%B2%E7%9F%A5%E9%AB%98%E5%BA%A6%E5%92%8C%E5%AE%BD%E5%BA%A6%E7%9A%84%E5%85%83%E7%B4%A0"> block element/located in center</a></p>
       </div>
     </a-card>
-    <a-card
-      title="2020-12-03 Interivew|Begin"
+   <!-- css part -->
+     <a-card
+      title="2020-12-07 Interivew|CssPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
         <ol>
           <li
-            v-for="(item,index) in another"
+            v-for="(item,index) in cssPart"
             :key='index'
             class="liClass"
           >
@@ -36,16 +39,77 @@
 
       </div>
     </a-card>
-    <a-card
-      title="HTML/CSS Operate"
+     <!-- vue part -->
+     <a-card
+      title="2020-12-07 Interivew|VuePart"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-        <div class="centerVerticalHorizontal">
-          <p><a href="https://blog.csdn.net/weixin_37580235/article/details/82317240#%E5%B7%B2%E7%9F%A5%E9%AB%98%E5%BA%A6%E5%92%8C%E5%AE%BD%E5%BA%A6%E7%9A%84%E5%85%83%E7%B4%A0"> block element/located in center</a></p>
-        </div>
-      </div>
+        <ol>
+          <li
+            v-for="(item,index) in vuePart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+       </div>
+    </a-card>
+    <!-- protocol part -->
+     <a-card
+      title="2020-12-07 Interivew|ProtocolPart"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <ol>
+          <li
+            v-for="(item,index) in protocolPart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+       </div>
+    </a-card>
+     <!-- arithmetic part -->
+     <a-card
+      title="2020-12-07 Interivew|ArithmeticPart"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <ol>
+          <li
+            v-for="(item,index) in arithmeticPart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+       </div>
+    </a-card>
+      <!-- webpack part -->
+     <a-card
+      title="2020-12-07 Interivew|WebpackPart"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <ol>
+          <li
+            v-for="(item,index) in webpackPart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+       </div>
     </a-card>
   </div>
 </template>
@@ -56,37 +120,61 @@ const nums = [12, 12, 122, 1, 11, 23, 232]
 export default {
   data() {
     return {
-      topic1202: [
+      jsPart: [
+        { name: "从输入URL到页面展示发生了什么？", answer: "" },
+        { name: "12-03：es6中数组和对象新增的方法？", answer: "" },
+        { name: "12-03：深拷贝和浅拷贝？", answer: "浅拷贝就是对对象进行浅层次的复制，只复制一层对象的属性，并不包括对象里面的引用类型数据,实现方式:concat/assign/slice/.../;深拷贝是对对象以及对象的所有子对象进行拷贝，也就是说新拷贝对象的子对象里的属性也不会影响到原来的对象" },
+        { name: "12-04: 值类型和引用类型的区别？", answer: "值类型的数据存储在栈中，函数运行完成后变量销毁，复制是深复制，不能添加属性和方法，值的比较。|引用类型的存储在堆中，运行完不会销毁，复制是浅复制，可添加属性和方法，引用地址的比较。" },
+        { name: "12-04: 事件循环机制?(宏任务/微任务)", answer: "宏任务：script主代码，setTimeout,setInterval,I/O,UI渲染/微任务：promise.then" },
+        { name: "12-04: 行内元素和块级元素的区别？", answer: "行内元素都在水平方向上排列/块级元素都在垂直方向排列，行内元素盒模型属性不同/行内(span,a,i,b)块级(p,h1,table,div,li)" },
+        { name: "12-04: 跨域问题？为什么会有跨域问题？怎么解决？", answer: "因为浏览器的同源策略(协议域名端口相同)才会出现跨域问题/jsonp,cors,nginx反向代理接口跨域,node.js中间件代理跨域,location.hash+iframe,window.name+iframe,postMessage,WebSocket" },
+        { name: "12-04: 浏览器兼容性问题？为什么？怎么办？", answer: "" },
+        { name: "12-05：es6新特性中的map/set有用过嘛？", answer: "" },
+        { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "" },
+        { name: "12-05：const 声明的值能不能改变？", answer: "值类型的存在栈stack中，引用类型的在堆hack中" },
         { name: 'MVVM的理解以及优缺点？', answer: '1' },
         { name: 'InstanceOf和typeOf的区别？', answer: '前者返回true/false，后者返回类型' },
         { name: 'cookie,localstorage,sessionstorage的区别？', answer: 'https://www.cnblogs.com/TigerZhang-home/p/8665348.html' },
         { name: '性能优化？', answer: '1' },
         { name: ' 兼容性问题？', answer: '1' },
         { name: '跨域问题？', answer: '1' },
+        { name: 'promise的出现？以及怎么使用？', answer: '处理异步请求状况，地狱回调函数而出现;三种状态(pending/resolved/rejected;);方法(race,then,all)' },
+        { name: '浏览器缓存策略',answer:''},
+        { name:"this 的理解？",answer:"全局上下文默认this指向window,箭头函数中指向最近的非箭头函数，"},
+        { name:"如何理解Bigint？",answer:"因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可"},
+        { name:"数据类型检测？",answer:"typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call"},
+        { name:"闭包的理解？",answer:"当前环境中存在指向父级的作用域"},
+        { name:"原型链的理解？",answer:""}
       ],
-      another: [
-        { name: "从输入URL到页面展示发生了什么？", answer: "" },
+      cssPart:[
         { name: "12-03：水平垂直居中？", answer: "" },
-        { name: "12-03：es6中数组和对象新增的方法？", answer: "" },
-        { name: "12-04: 值类型和引用类型的区别？", answer: "" },
-        { name: "12-03：深拷贝和浅拷贝？", answer: "浅拷贝就是对对象进行浅层次的复制，只复制一层对象的属性，并不包括对象里面的引用类型数据 深拷贝是对对象以及对象的所有子对象进行拷贝，也就是说新拷贝对象的子对象里的属性也不会影响到原来的对象" },
-        { name: "12-04: 值类型和引用类型的区别？", answer: "值类型的数据存储在栈中，函数运行完成后变量销毁，复制是深复制，不能添加属性和方法，值的比较。|引用类型的存储在堆中，运行完不会销毁，复制是浅复制，可添加属性和方法，引用地址的比较。" },
-        { name: "12-04: 事件循环机制?(宏任务/微任务)", answer: "宏任务：script主代码，setTimeout,setInterval,I/O,UI渲染/微任务：promise.then" },
-        { name: "12-04: 行内元素和块级元素的区别？", answer: "行内元素都在水平方向上排列/块级元素都在垂直方向排列，行内元素盒模型属性不同/行内(span,a,i,b)块级(p,h1,table,div,li)" },
-        { name: "12-04: 跨域问题？为什么会有跨域问题？怎么解决？", answer: "因为浏览器的同源策略(协议域名端口相同)才会出现跨域问题/jsonp,cors,nginx反向代理接口跨域,node.js中间件代理跨域,location.hash+iframe,window.name+iframe,postMessage,WebSocket" },
-        { name: "12-04: 浏览器兼容性问题？为什么？怎么办？", answer: "" },
         { name: "12-04: 回流和重绘？为什么？怎么办？", answer: "回流是元素的规模尺寸，布局，隐藏等改变而需要重新构建/重绘元素的外观，风格，而不会影响布局的" },
         { name: "12-05：行内元素和块级元素的区别？ ", answer: "给行内元素设置margin/padding无效果" },
-        { name: "12-05：es6新特性中的map/set有用过嘛？", answer: "" },
-        { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "" },
-        { name: "12-05：const 声明的值能不能改变？", answer: "" },
-        { name: "12-05： $set？", answer: "" },
+        { name:"poistion有哪几种？效果和用法？",answer:""},
+        { name:"css选择器优先级？",answer:"!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性"}
+      ],
+      vuePart:[
+        { name: "12-05： $set？", answer: "为data中的某一个对象添加一个属性，this.$set(obj, key, value)" },
         { name: "12-05： 双向数据绑定的原理，怎么监听View层的变化？", answer: "" },
-      ]
+        { name:"对keep-alive的了解？",answer:"以使被包含的组件保留状态，或避免重新渲染,"},
+        { name:"路由/照片懒加载",answer:""}
+      ],
+      protocolPart:[
+        { name:"TCP 和 UDP 的区别",answer:""},
+        { name:"TCP 的三次握手和四次挥手",answer:""},
+        { name:"http请求的方法？",answer:"GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT"},
+
+      ],
+      arithmeticPart:[
+
+      ],
+      webpackPart:[
+
+      ],
     }
   },
   computed: {
-
+    
   },
   watch: {
 
@@ -242,8 +330,11 @@ export default {
       clearTimeout()
     },
     /**
-     * 
+     * hack stack 
      */
+    hackFun:function(){
+     
+    }
   }
 }
 </script>
