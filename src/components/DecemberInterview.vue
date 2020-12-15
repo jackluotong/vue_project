@@ -169,6 +169,11 @@ export default {
         { name:"对keep-alive的了解？",answer:"以使被包含的组件保留状态，或避免重新渲染,"},
         { name:"路由/照片懒加载",answer:""},
         { name:"$nextTick?原理？",answer:""},
+        { name:"vue模板编译原理？",answer:"生成ast树->优化->codegen"},
+        { name:"vue中的diff算法？",answer:"根据key来做检查，渲染那些改变的，"},
+        { name:'虚拟dom以及key属性的作用？',answer:''},
+        { name:'ssr了解嘛？',answer:''},
+        { name:'vue中的性能优化？',answer:''},
       ],
       protocolPart:[
         { name:"TCP 和 UDP 的区别",answer:""},
@@ -206,6 +211,14 @@ export default {
     }
     takeOut(arrSet);
     console.log(this.checkType(122));
+     const p1={
+      name:'jackluo',
+      age:27
+    };
+    const p2=this.test(p1);
+    console.log('-------out p1 and p2-------');
+    console.log(p2);
+    console.log(p1);
   },
   created() {
     console.log(this.checkType('122'));
@@ -345,7 +358,19 @@ export default {
      */
     hackFun:function(){
      
+    },
+    /**
+     * stack heap run 
+     */
+    test:function(person){
+      person.age=26;
+      person={
+        name:'williamluo',
+        age:18,
+      }
+      return person;
     }
+   
   }
 }
 </script>
