@@ -84,7 +84,7 @@ export default {
       this.message=value;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
       this.myInstanceOf(this.message, typeof (this.message)); 
       if(navigator.onLine){
-        alert('online')
+        console.log('online');
       }
     },
     onClose() {
