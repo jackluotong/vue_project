@@ -228,8 +228,11 @@ export default {
     },
     question(newQuestion, oldQuestion) {
       this.answer = 'Wating for you...'
+     
       this.$nextTick(function () {
-        this.$refs.new.value = newQuestion
+        this.$refs.new.innerText = newQuestion
+       
+        this.$refs.old.innerText=oldQuestion
         this.old = oldQuestion
         console.log('new value' + this.$refs.new.value)
       })
