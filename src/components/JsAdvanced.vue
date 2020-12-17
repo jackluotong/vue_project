@@ -49,6 +49,12 @@
     </div>
 </template>
 <script>
+let obj = {
+  a: function() {
+    console.log(this);
+  }
+}
+let func = obj.a;
 export default {
   data() {
     return {
@@ -68,6 +74,7 @@ export default {
     while(array1.some(Array.isArray)){
       array1=[].concat(...array1)
     }
+    func();
     /**
      * nextTick 原理
      * 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
