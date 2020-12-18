@@ -201,12 +201,28 @@ export default {
      if(typeof ctor !=='function'){
        throw 'newOperator function the first param must be a function';
      }
-     let obj=Object.create(ctor.prototype);
+     let obj=Object.create(ctor.prototype);                                                                                                                                                                                                                                                                                                                                                
      let res=ctor.apply(obj,args);
      let isObject=typeof res === 'object'&&res!==null;
      let isFunction=typeof res==='function';
      return isObject||isFunction?res:obj;
    },
+   /**
+    * 浅拷贝
+    * 手动实现，assign，concat，slice，展开运算符，
+    */
+
+   /**
+    * 深拷贝
+    * Json.parse(JSON.stringfy())
+    */
+   
+   /**
+    * js 内存机制 -数据是如何存储的？
+    * boolean null undefined number string symbol bigint 存储在栈中
+    * 闭包变量是存在堆内存中的。
+    * 
+    */
   }
 }
 </script>

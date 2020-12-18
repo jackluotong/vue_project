@@ -35,6 +35,43 @@
         .main .right{
             background: green;
         }
+        /*
+        1.盒子模型是content+paddin+border+margin；
+        盒子模型分为两种：ie和w3c，ie盒子的width=content+padding+border；w3c盒子的width=content；
+        2.选择符有：id class 标签 ；rem fontsize 等；优先级算法；1000>0100>0010>0001;
+        新增伪类有：:hover :after ::before :root :nth-child()等
+        3.内核有四种：webkit tredent gecko blink
+        遇到兼容性问题：照片有间距，margin padding等不一样；
+        出现原因：浏览器处理方式不同；因为不同浏览器使用内核及所支持的HTML（标准通用标记语言下的一个应用）等网页语言标准不同
+        解决办法：float属性为img布局；设置 margin padding：0；
+        4.html5新特性：websocket，canvas，video，localStorage，sessionStorage，
+          css3新特性：文字特效，动画，多媒体查询，
+          移除了：frame，big，strike
+          处理兼容性问题：使用成熟性框架；
+          区分：文档类型声明，结构语义；
+        5.实现：依据原稿来写样式；
+          高质量：性能优化做好；展开
+          设计：第一行div居中，定好宽高各一半；第二行父级元素宽100%高50%，子级div宽50%高100%居左浮动； 
+        6.库：antd，element，vis，以及一些在具体项目中使用的库，
+          开发工具：vscode，sourcetree，
+          自己项目中的组件
+        7.所有引用类型都有一个__proto__(隐式原型)属性，属性值是一个普通的对象
+          ②所有函数都有一个prototype(原型)属性，属性值是一个普通的对象
+          ③所有引用类型的__proto__属性指向它构造函数的prototype 
+        当访问一个对象的某个属性时，会先在这个对象本身属性上查找，如果没有找到，则会去它的__proto__隐式原型上查找，即它的构造函数的prototype
+      ，如果还没有找到就会再在构造函数的prototype的__proto__中查找，这样一层一层向上查找就会形成一个链式结构，我们称为原型链。     
+         8.利用缓存来存储一些信息，类型于cookie，local/sessionStorage，三者的区别：local 不主动清除的话一直存在，session 关闭当前页面就清除；
+        9.嵌套太多，运行缓慢，增加服务器的http请求，阻塞页面加载，
+        10.把字符串解析成js代码并运行，应该避免使用，不安全且非常耗性能；
+        11.服务器端代码需要很少的cpu周期（执行非阻塞操作，并且无大量的算法作业）
+          强调实时资源
+          npm
+        12.sse，javascript数据推送，comment，websocket，
+        13.vue双向数据绑定，
+          react单向
+
+        
+        */
     </style>
 </head>
 <body>
