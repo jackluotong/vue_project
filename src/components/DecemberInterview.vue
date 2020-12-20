@@ -1,8 +1,8 @@
 <template>
   <div style="background:#ECECEC; padding:20px;">
-  
-     <!-- js part -->
-     <a-card
+
+    <!-- js part -->
+    <a-card
       title="2020-12-03 Interivew|JsPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -17,11 +17,11 @@
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-          <p><a href="https://blog.csdn.net/weixin_37580235/article/details/82317240#%E5%B7%B2%E7%9F%A5%E9%AB%98%E5%BA%A6%E5%92%8C%E5%AE%BD%E5%BA%A6%E7%9A%84%E5%85%83%E7%B4%A0"> block element/located in center</a></p>
+        <p><a href="https://blog.csdn.net/weixin_37580235/article/details/82317240#%E5%B7%B2%E7%9F%A5%E9%AB%98%E5%BA%A6%E5%92%8C%E5%AE%BD%E5%BA%A6%E7%9A%84%E5%85%83%E7%B4%A0"> block element/located in center</a></p>
       </div>
     </a-card>
-   <!-- css part -->
-     <a-card
+    <!-- css part -->
+    <a-card
       title="2020-12-07 Interivew|CssPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -39,8 +39,8 @@
 
       </div>
     </a-card>
-     <!-- vue part -->
-     <a-card
+    <!-- vue part -->
+    <a-card
       title="2020-12-07 Interivew|VuePart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -55,10 +55,10 @@
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       </div>
+      </div>
     </a-card>
     <!-- protocol part -->
-     <a-card
+    <a-card
       title="2020-12-07 Interivew|ProtocolPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -73,10 +73,10 @@
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       </div>
+      </div>
     </a-card>
-     <!-- arithmetic part -->
-     <a-card
+    <!-- arithmetic part -->
+    <a-card
       title="2020-12-07 Interivew|ArithmeticPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -91,10 +91,10 @@
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       </div>
+      </div>
     </a-card>
-      <!-- webpack part -->
-     <a-card
+    <!-- webpack part -->
+    <a-card
       title="2020-12-07 Interivew|WebpackPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -109,7 +109,7 @@
             {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       </div>
+      </div>
     </a-card>
   </div>
 </template>
@@ -137,60 +137,60 @@ export default {
         { name: 'cookie,localstorage,sessionstorage的区别？', answer: 'https://www.cnblogs.com/TigerZhang-home/p/8665348.html' },
         { name: '性能优化？', answer: '1' },
         { name: ' 兼容性问题？', answer: '1' },
-        { name: '跨域问题？', answer: '1' },
         { name: 'promise的出现？以及怎么使用？', answer: '处理异步请求状况，地狱回调函数而出现;三种状态(pending/resolved/rejected;);方法(race,then,all)' },
-        { name: '浏览器缓存策略',answer:''},
-        { name:"this 的理解？",answer:"全局上下文默认this指向window,箭头函数中指向最近的非箭头函数，"},
-        { name:"如何理解Bigint？",answer:"因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可"},
-        { name:"数据类型检测？",answer:"typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call"},
-        { name:"闭包的理解？",answer:"当前环境中存在指向父级的作用域"},
-        { name:"原型链的理解？",answer:""},
-        { name:"js如何实现继承？",answer:"prototype+call/寄生组合继承/"},
-        { name:"对象/数组/方法/的浅拷贝？",answer:""},
-        { name:"vue3相比vue2做了哪些优化？",answer:""},
-        { name:'vue-router的底层原理？',answer:''},
-        { name:'webpack的用法以及底层原理？',answer:''},
-        { name:'封装一个方法你要考虑的要素？',answer:''},
-        { name:'react 和react dom的作用？' ,answer:''},
-        { name:'redux的使用？',answer:''},
-        { name:'手写promise？' ,answer:''},
-        { name:'ts中常用的api？以及比js的优点？',answer:''},
+        { name: '浏览器缓存策略', answer: '' },
+        { name: "this 的理解？", answer: "全局上下文默认this指向window,箭头函数中指向最近的非箭头函数，" },
+        { name: "如何理解Bigint？", answer: "因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可" },
+        { name: "数据类型检测？", answer: "typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call" },
+        { name: "闭包的理解？", answer: "当前环境中存在指向父级的作用域" },
+        { name: "原型链的理解？", answer: "" },
+        { name: "js如何实现继承？", answer: "prototype+call/寄生组合继承/" },
+        { name: "对象/数组/方法/的浅拷贝？", answer: "" },
+        { name: "vue3相比vue2做了哪些优化？", answer: "" },
+        { name: 'vue-router的底层原理？', answer: '' },
+        { name: 'webpack的用法以及底层原理？', answer: '' },
+        { name: '封装一个方法你要考虑的要素？', answer: '' },
+        { name: 'react 和react dom的作用？', answer: '' },
+        { name: 'redux的使用？', answer: '' },
+        { name: '手写promise？', answer: '' },
+        { name: 'ts中常用的api？以及比js的优点？', answer: '' },
+        { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，问价体积过大' },
       ],
-      cssPart:[
+      cssPart: [
         { name: "12-03：水平垂直居中？", answer: "" },
         { name: "12-04: 回流和重绘？为什么？怎么办？", answer: "回流是元素的规模尺寸，布局，隐藏等改变而需要重新构建/重绘元素的外观，风格，而不会影响布局的" },
         { name: "12-05：行内元素和块级元素的区别？ ", answer: "给行内元素设置margin/padding无效果" },
-        { name:"poistion有哪几种？效果和用法？",answer:""},
-        { name:"css选择器优先级？",answer:"!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性"}
+        { name: "poistion有哪几种？效果和用法？", answer: "" },
+        { name: "css选择器优先级？", answer: "!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性" }
       ],
-      vuePart:[
+      vuePart: [
         { name: "12-05： $set？", answer: "为data中的某一个对象添加一个属性，this.$set(obj, key, value)" },
         { name: "12-05： 双向数据绑定的原理，怎么监听View层的变化？", answer: "" },
-        { name:"对keep-alive的了解？",answer:"以使被包含的组件保留状态，或避免重新渲染,"},
-        { name:"路由/照片懒加载",answer:""},
-        { name:"$nextTick?原理？",answer:""},
-        { name:"vue模板编译原理？",answer:"生成ast树->优化->codegen"},
-        { name:"vue中的diff算法？",answer:"根据key来做检查，渲染那些改变的，"},
-        { name:'虚拟dom以及key属性的作用？',answer:''},
-        { name:'ssr了解嘛？',answer:''},
-        { name:'vue中的性能优化？',answer:''},
+        { name: "对keep-alive的了解？", answer: "以使被包含的组件保留状态，或避免重新渲染," },
+        { name: "路由/照片懒加载", answer: "" },
+        { name: "$nextTick?原理？", answer: "" },
+        { name: "vue模板编译原理？", answer: "生成ast树->优化->codegen" },
+        { name: "vue中的diff算法？", answer: "根据key来做检查，渲染那些改变的，" },
+        { name: '虚拟dom以及key属性的作用？', answer: '' },
+        { name: 'ssr了解嘛？', answer: '' },
+        { name: 'vue中的性能优化？', answer: '' },
       ],
-      protocolPart:[
-        { name:"TCP 和 UDP 的区别",answer:""},
-        { name:"TCP 的三次握手和四次挥手",answer:""},
-        { name:"http请求的方法？",answer:"GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT"},
+      protocolPart: [
+        { name: "TCP 和 UDP 的区别", answer: "" },
+        { name: "TCP 的三次握手和四次挥手", answer: "" },
+        { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
 
       ],
-      arithmeticPart:[
+      arithmeticPart: [
 
       ],
-      webpackPart:[
+      webpackPart: [
 
       ],
     }
   },
   computed: {
-    
+
   },
   watch: {
 
@@ -211,11 +211,11 @@ export default {
     }
     takeOut(arrSet);
     console.log(this.checkType(122));
-     const p1={
-      name:'jackluo',
-      age:27
+    const p1 = {
+      name: 'jackluo',
+      age: 27
     };
-    const p2=this.test(p1);
+    const p2 = this.test(p1);
     console.log('-------out p1 and p2-------');
     console.log(p2);
     console.log(p1);
@@ -356,21 +356,21 @@ export default {
     /**
      * hack stack 
      */
-    hackFun:function(){
-     
+    hackFun: function () {
+
     },
     /**
      * stack heap run 
      */
-    test:function(person){
-      person.age=26;
-      person={
-        name:'williamluo',
-        age:18,
+    test: function (person) {
+      person.age = 26;
+      person = {
+        name: 'williamluo',
+        age: 18,
       }
       return person;
     }
-   
+
   }
 }
 </script>

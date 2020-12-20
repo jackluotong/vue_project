@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>满屏品字布局</title>
-    <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="utf-8">
+  <title>满屏品字布局</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-        html,body{
-            height: 100%;/*此设置非常关键，因为默认的body，HTML高度为0，所以后面设置的div的高度无法用百分比显示*/
-        }       
+    html,
+    body {
+      height: 100%;
+      /*此设置非常关键，因为默认的body，HTML高度为0，所以后面设置的div的高度无法用百分比显示*/
+    }
 
-        .header{
-            height:50%; /*此步结合html,body高度为100%，解决元素相对窗口的定位问题*/
-            width: 50%;     
-            background: #ccc;           
-            margin:0 auto;
-        }
+    .header {
+      height: 50%;
+      /*此步结合html,body高度为100%，解决元素相对窗口的定位问题*/
+      width: 50%;
+      background: #ccc;
+      margin: 0 auto;
+    }
 
-        .main{
-            width: 100%;
-            height: 50%;
-            background:rgb(133, 17, 17);
-        }
+    .main {
+      width: 100%;
+      height: 50%;
+      background: rgb(133, 17, 17);
+    }
 
-        .main .left,.main .right{
-            float: left;/*采用float方式，对元素进行左右定位*/
-            width:50%;/*此步解决元素相对窗口的定位问题*/
-            height:100%;/*此步解决元素相对窗口的定位问题*/
-            background: yellow;
-        }
-        .main .right{
-            background: green;
-        }
-        /*
+    .main .left,
+    .main .right {
+      float: left;
+      /*采用float方式，对元素进行左右定位*/
+      width: 50%;
+      /*此步解决元素相对窗口的定位问题*/
+      height: 100%;
+      /*此步解决元素相对窗口的定位问题*/
+      background: yellow;
+    }
+
+    .main .right {
+      background: green;
+    }
+
+    /*
         1.盒子模型是content+paddin+border+margin；
         盒子模型分为两种：ie和w3c，ie盒子的width=content+padding+border；w3c盒子的width=content；
         2.选择符有：id class 标签 ；rem fontsize 等；优先级算法；1000>0100>0010>0001;
@@ -70,15 +80,61 @@
         13.vue双向数据绑定，
           react单向
 
-        
+        {
+  // 主题
+  "workbench.colorTheme": "Monokai",
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  // #每次保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // #每次保存的时候将代码按eslint格式进行修复
+  "eslint.autoFixOnSave": true,
+  // 添加 vue 支持
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // #让函数(名)和后面的括号之间加个空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  // #让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  // #这个按用户自身习惯选择
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      // #vue组件中html代码格式化样式
+      "wrap_attributes": "force-expand-multiline"
+      // "wrap_attributes": "force"
+      // "wrap_attributes": "force-aligned",
+      // "wrap_attributes": "auto"
+    }
+  },
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": 0,
+  "git.enableSmartCommit": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[vue]": {},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+}
         */
-    </style>
+  </style>
 </head>
+
 <body>
-<div class="header"></div>
-<div class="main">
+  <div class="header"></div>
+  <div class="main">
     <div class="left"></div>
     <div class="right"></div>
-</div>
+  </div>
 </body>
+
 </html>
