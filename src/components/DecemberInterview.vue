@@ -57,6 +57,24 @@
         </ol>
       </div>
     </a-card>
+    <!-- react part -->
+     <a-card
+      title="2020-12-21 Interivew|ReactPart"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <ol>
+          <li
+            v-for="(item,index) in reactPart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+      </div>
+    </a-card>
     <!-- protocol part -->
     <a-card
       title="2020-12-07 Interivew|ProtocolPart"
@@ -121,31 +139,30 @@ export default {
   data() {
     return {
       jsPart: [
-        { name: "从输入URL到页面展示发生了什么？", answer: "" },
-        { name: "12-03：es6中数组和对象新增的方法？", answer: "" },
-        { name: "12-03：深拷贝和浅拷贝？", answer: "浅拷贝就是对对象进行浅层次的复制，只复制一层对象的属性，并不包括对象里面的引用类型数据,实现方式:concat/assign/slice/.../;深拷贝是对对象以及对象的所有子对象进行拷贝，也就是说新拷贝对象的子对象里的属性也不会影响到原来的对象" },
+        { name: "从输入URL到页面展示发生了什么？", answer: "https://juejin.cn/post/6869279683230629896" },
+        { name: "12-03：es6中数组和对象新增的方法？", answer: "数组方法:map,set,reduce,filter,some,every,find,flat,;对象:对象简写,assign,super,属性名表达式" },
+        { name: "12-03：深拷贝和浅拷贝？", answer: "浅拷贝就是对对象进行浅层次的复制，只复制一层对象的属性，并不包括对象里面的引用类型数据,实现方式:concat/assign/slice/.../;深拷贝是对对象以及对象的所有子对象进行拷贝，也就是说新拷贝对象的子对象里的属性也不会影响到原来的对象，实现方式:Json.parse,递归" },
         { name: "12-04: 值类型和引用类型的区别？", answer: "值类型的数据存储在栈中，函数运行完成后变量销毁，复制是深复制，不能添加属性和方法，值的比较。|引用类型的存储在堆中，运行完不会销毁，复制是浅复制，可添加属性和方法，引用地址的比较。" },
         { name: "12-04: 事件循环机制?(宏任务/微任务)", answer: "宏任务：script主代码，setTimeout,setInterval,I/O,UI渲染/微任务：promise.then" },
         { name: "12-04: 行内元素和块级元素的区别？", answer: "行内元素都在水平方向上排列/块级元素都在垂直方向排列，行内元素盒模型属性不同/行内(span,a,i,b)块级(p,h1,table,div,li)" },
         { name: "12-04: 跨域问题？为什么会有跨域问题？怎么解决？", answer: "因为浏览器的同源策略(协议域名端口相同)才会出现跨域问题/jsonp,cors,nginx反向代理接口跨域,node.js中间件代理跨域,location.hash+iframe,window.name+iframe,postMessage,WebSocket" },
-        { name: "12-04: 浏览器兼容性问题？为什么？怎么办？", answer: "" },
+        { name: "12-04: 浏览器兼容性问题？为什么？怎么办？", answer: "照片有间距，margin，padding等不统一；设置为0；因为浏览器内核解析代码的方式不同" },
         { name: "12-05：es6新特性中的map/set有用过嘛？", answer: "" },
-        { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "" },
+        { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "promise先执行，因为是微任务，setTimeout是宏任务，在所有代码块执行完后执行微任务" },
         { name: "12-05：const 声明的值能不能改变？", answer: "值类型的存在栈stack中，引用类型的在堆hack中" },
         { name: 'MVVM的理解以及优缺点？', answer: '1' },
         { name: 'InstanceOf和typeOf的区别？', answer: '前者返回true/false，后者返回类型' },
         { name: 'cookie,localstorage,sessionstorage的区别？', answer: 'https://www.cnblogs.com/TigerZhang-home/p/8665348.html' },
-        { name: '性能优化？', answer: '1' },
-        { name: ' 兼容性问题？', answer: '1' },
+        { name: '性能优化？', answer: 'html/css/js分开陈述' },
         { name: 'promise的出现？以及怎么使用？', answer: '处理异步请求状况，地狱回调函数而出现;三种状态(pending/resolved/rejected;);方法(race,then,all)' },
-        { name: '浏览器缓存策略', answer: '' },
+        { name: '浏览器缓存策略', answer: '缓存类型/缓存header/缓存过程' },
         { name: "this 的理解？", answer: "全局上下文默认this指向window,箭头函数中指向最近的非箭头函数，" },
         { name: "如何理解Bigint？", answer: "因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可" },
         { name: "数据类型检测？", answer: "typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call" },
         { name: "闭包的理解？", answer: "当前环境中存在指向父级的作用域" },
-        { name: "原型链的理解？", answer: "" },
+        { name: "原型链的理解？", answer: "向上查找_proto_" },
         { name: "js如何实现继承？", answer: "prototype+call/寄生组合继承/" },
-        { name: "对象/数组/方法/的浅拷贝？", answer: "" },
+        { name: "对象/数组/方法/的浅拷贝？", answer: "assign/slice/concat" },
         { name: "vue3相比vue2做了哪些优化？", answer: "" },
         { name: 'vue-router的底层原理？', answer: '' },
         { name: 'webpack的用法以及底层原理？', answer: '' },
@@ -155,6 +172,8 @@ export default {
         { name: '手写promise？', answer: '' },
         { name: 'ts中常用的api？以及比js的优点？', answer: '' },
         { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，问价体积过大' },
+        { name: 'js 渲染十万条数据卡顿优化方法',answer:'window.requestAnimationFrame(callback) /document.createdocumentfragment()'},
+        { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "" },
@@ -174,6 +193,16 @@ export default {
         { name: '虚拟dom以及key属性的作用？', answer: '' },
         { name: 'ssr了解嘛？', answer: '' },
         { name: 'vue中的性能优化？', answer: '' },
+        { name: 'router和route的区别？',answer:'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query'}
+      ],
+      reactPart:[
+        { name: "react 如何避免重复渲染？", answer: "" },
+        { name: "如何理解react虚拟dom？", answer: "" },
+        { name: "react如何实现数据的双向绑定？", answer: "" },
+        { name: "TCP 和 UDP 的区别", answer: "" },
+        { name: "TCP 和 UDP 的区别", answer: "" },
+        { name: "TCP 和 UDP 的区别", answer: "" },
+
       ],
       protocolPart: [
         { name: "TCP 和 UDP 的区别", answer: "" },
@@ -182,7 +211,11 @@ export default {
 
       ],
       arithmeticPart: [
-
+        { name: "算法排序有哪些？时间复杂度以及空间复杂度？", answer: "" },
+        { name: "二叉树？图？最短路径？", answer: "" },
+        { name: "判断链表是否有环？环的入口？节点个数？", answer: "" },
+        { name: "TCP 和 UDP 的区别", answer: "" },
+        { name: "TCP 和 UDP 的区别", answer: "" },
       ],
       webpackPart: [
 
@@ -219,6 +252,7 @@ export default {
     console.log('-------out p1 and p2-------');
     console.log(p2);
     console.log(p1);
+    // window.requestAnimationFrame
   },
   created() {
     console.log(this.checkType('122'));
