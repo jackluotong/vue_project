@@ -149,7 +149,7 @@ export default {
         { name: "12-04: 浏览器兼容性问题？为什么？怎么办？", answer: "照片有间距，margin，padding等不统一；设置为0；因为浏览器内核解析代码的方式不同" },
         { name: "12-05：es6新特性中的map/set有用过嘛？", answer: "" },
         { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "promise先执行，因为是微任务，setTimeout是宏任务，在所有代码块执行完后执行微任务" },
-        { name: "12-05：const 声明的值能不能改变？", answer: "值类型的存在栈stack中，引用类型的在堆hack中" },
+        { name: "12-05：const 声明的值能不能改变？", answer: "值类型的存在栈stack中，引用类型的在堆heap中" },
         { name: 'MVVM的理解以及优缺点？', answer: '1' },
         { name: 'InstanceOf和typeOf的区别？', answer: '前者返回true/false，后者返回类型' },
         { name: 'cookie,localstorage,sessionstorage的区别？', answer: 'https://www.cnblogs.com/TigerZhang-home/p/8665348.html' },
@@ -159,24 +159,25 @@ export default {
         { name: "this 的理解？", answer: "全局上下文默认this指向window,箭头函数中指向最近的非箭头函数，" },
         { name: "如何理解Bigint？", answer: "因为超过number表达是数字无法表示所以出现了bigint,在后面加n即可" },
         { name: "数据类型检测？", answer: "typeof除了null都可以,但是对于引用类型除函数都显示object;instanceOf返回true/false;prototype.toString.call" },
-        { name: "闭包的理解？", answer: "当前环境中存在指向父级的作用域" },
+        { name: "闭包的理解？", answer: "当前环境中存在指向父级的作用域，适用场景：保护变量，协调异步代码" },
         { name: "原型链的理解？", answer: "向上查找_proto_" },
-        { name: "js如何实现继承？", answer: "prototype+call/寄生组合继承/" },
+        { name: "js如何实现继承？", answer: "prototype+call/call/apply(参数是数组)/prototype" },
         { name: "对象/数组/方法/的浅拷贝？", answer: "assign/slice/concat" },
         { name: "vue3相比vue2做了哪些优化？", answer: "" },
         { name: 'vue-router的底层原理？', answer: '' },
         { name: 'webpack的用法以及底层原理？', answer: '' },
         { name: '封装一个方法你要考虑的要素？', answer: '' },
-        { name: 'react 和react dom的作用？', answer: '' },
+        { name: 'react 和react dom的作用？', answer: 'react:react的一些语法api;react-dom:把虚拟dom改变为真实dom' },
         { name: 'redux的使用？', answer: '' },
         { name: '手写promise？', answer: '' },
         { name: 'ts中常用的api？以及比js的优点？', answer: '' },
-        { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，问价体积过大' },
+        { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，文件体积过大' },
         { name: 'js 渲染十万条数据卡顿优化方法',answer:'window.requestAnimationFrame(callback) /document.createdocumentfragment()'},
-        { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+        { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                 
+        { name: '浏览器和服务器是怎么交互的？请求的时候返回什么？',answer:''}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
       ],
       cssPart: [
-        { name: "12-03：水平垂直居中？", answer: "" },
+        { name: "12-03：水平垂直居中？", answer: "absolute+-margin/transform;flex;grid;" },
         { name: "12-04: 回流和重绘？为什么？怎么办？", answer: "回流是元素的规模尺寸，布局，隐藏等改变而需要重新构建/重绘元素的外观，风格，而不会影响布局的" },
         { name: "12-05：行内元素和块级元素的区别？ ", answer: "给行内元素设置margin/padding无效果" },
         { name: "poistion有哪几种？效果和用法？", answer: "" },
@@ -220,6 +221,9 @@ export default {
       webpackPart: [
 
       ],
+      interviewThinking:[
+        {name:'2020-12-23 陆家嘴富汇大厦(轮胎公司)',answer:'个人发展最重要自己优秀才是王道，坚持，坚持。'}
+      ]
     }
   },
   computed: {
@@ -253,6 +257,20 @@ export default {
     console.log(p2);
     console.log(p1);
     // window.requestAnimationFrame
+    Promise.resolve().then(()=>{
+      console.log('promise.then');//2
+      setTimeout(() => {
+       console.log('setTimeout'); //5
+      });
+    })
+    setTimeout(()=>{
+      console.log('setTimeout1');//3
+      Promise.resolve().then(()=>{
+        console.log('promise.then1');//4
+      })
+    })
+    console.log('start');//1 宏任务执行完毕执行微任务
+
   },
   created() {
     console.log(this.checkType('122'));
@@ -276,7 +294,6 @@ export default {
      * test ajax visit local json file
      */
     testAxios: function () {
-
       this.axios.get('http://localhost:8081/assets/test.json').then(res => {
         if (res.data.code == 200) {
           res.data.results
