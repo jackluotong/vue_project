@@ -58,7 +58,7 @@
       </div>
     </a-card>
     <!-- react part -->
-     <a-card
+    <a-card
       title="2020-12-21 Interivew|ReactPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -150,7 +150,7 @@ export default {
         { name: "12-05：es6新特性中的map/set有用过嘛？", answer: "" },
         { name: "12-05：setTimeout与prommise谁先执行？(宏任务微任务)", answer: "promise先执行，因为是微任务，setTimeout是宏任务，在所有代码块执行完后执行微任务" },
         { name: "12-05：const 声明的值能不能改变？", answer: "值类型的存在栈stack中，引用类型的在堆hack中" },
-        { name: 'MVVM的理解以及优缺点？', answer: '1' },
+        { name: 'MVVM的理解以及优缺点？', answer: '优点：低耦合，可重用性，独立开发，可测试；缺点：' },
         { name: 'InstanceOf和typeOf的区别？', answer: '前者返回true/false，后者返回类型' },
         { name: 'cookie,localstorage,sessionstorage的区别？', answer: 'https://www.cnblogs.com/TigerZhang-home/p/8665348.html' },
         { name: '性能优化？', answer: 'html/css/js分开陈述' },
@@ -172,8 +172,13 @@ export default {
         { name: '手写promise？', answer: '' },
         { name: 'ts中常用的api？以及比js的优点？', answer: '' },
         { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，问价体积过大' },
-        { name: 'js 渲染十万条数据卡顿优化方法',answer:'window.requestAnimationFrame(callback) /document.createdocumentfragment()'},
-        { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+        { name: 'js 渲染十万条数据卡顿优化方法', answer: 'window.requestAnimationFrame(callback) /document.createdocumentfragment()' },
+        { name: '设计模式有哪些？介绍一下工厂模式？', answer: '' },
+        { name: '箭头函数和普通函数的区别？', answer: '1.箭头函数没有this也不能改变this指向；2.不能使用prototype；3.是匿名函数，不能作为构造函数，不能使用new' },
+        { name: '箭头函数的this指向哪里？对象函数', answer: '' },
+        { name: '怎么判断对象是否相等', answer: '' },
+        { anme: 'slice怎么用？', answer: '' }
+
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "" },
@@ -193,9 +198,9 @@ export default {
         { name: '虚拟dom以及key属性的作用？', answer: '' },
         { name: 'ssr了解嘛？', answer: '' },
         { name: 'vue中的性能优化？', answer: '' },
-        { name: 'router和route的区别？',answer:'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query'}
+        { name: 'router和route的区别？', answer: 'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query' }
       ],
-      reactPart:[
+      reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
         { name: "如何理解react虚拟dom？", answer: "" },
         { name: "react如何实现数据的双向绑定？", answer: "" },
@@ -208,6 +213,7 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 的三次握手和四次挥手", answer: "" },
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
+        { name: '浏览器和服务器交互原理？', answer: '' },
 
       ],
       arithmeticPart: [
@@ -241,6 +247,8 @@ export default {
         return arr.indexOf(item) === index
       })
       console.log(res);
+      let arr = [12, 123, 123, 1231, 132]
+      arr.slcie(1, 21, 12)
     }
     takeOut(arrSet);
     console.log(this.checkType(122));
@@ -253,6 +261,7 @@ export default {
     console.log(p2);
     console.log(p1);
     // window.requestAnimationFrame
+
   },
   created() {
     console.log(this.checkType('122'));
