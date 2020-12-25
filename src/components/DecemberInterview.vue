@@ -58,7 +58,7 @@
       </div>
     </a-card>
     <!-- react part -->
-     <a-card
+    <a-card
       title="2020-12-21 Interivew|ReactPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
@@ -172,12 +172,21 @@ export default {
         { name: '手写promise？', answer: '' },
         { name: 'ts中常用的api？以及比js的优点？', answer: '' },
         { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，文件体积过大' },
+<<<<<<< HEAD
         { name: 'js 渲染十万条数据卡顿优化方法',answer:'window.requestAnimationFrame(callback) /document.createdocumentfragment()'},
         { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                 
         { name: '浏览器和服务器是怎么交互的？请求的时候返回什么？',answer:''},
         { name :'性能优化？协议层？打包层？代码层？',answer:''},
         { name :'原型和原型链的区别？各自在什么时候使用？',answer:''},
         { name: '浏览器的缓存机制？',answer:''},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+=======
+        { name: 'js 渲染十万条数据卡顿优化方法', answer: 'window.requestAnimationFrame(callback) /document.createdocumentfragment()' },
+        { name: '设计模式有哪些？介绍一下工厂模式？', answer: '' },
+        { name: '浏览器和服务器是怎么交互的？请求的时候返回什么？', answer: '' },
+        { name: '箭头函数的this指向哪里？对象函数', answer: '' },
+        { name: '怎么判断对象是否相等', answer: '' },
+        { anme: 'slice怎么用？', answer: '' }
+>>>>>>> eb23842501eacdf597f2ed80397849199331427a
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "absolute+-margin/transform;flex;grid;" },
@@ -198,9 +207,9 @@ export default {
         { name: '虚拟dom以及key属性的作用？', answer: '' },
         { name: 'ssr了解嘛？', answer: '' },
         { name: 'vue中的性能优化？', answer: '' },
-        { name: 'router和route的区别？',answer:'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query'}
+        { name: 'router和route的区别？', answer: 'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query' }
       ],
-      reactPart:[
+      reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
         { name: "如何理解react虚拟dom？", answer: "" },
         { name: "react如何实现数据的双向绑定？", answer: "" },
@@ -213,6 +222,11 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 的三次握手和四次挥手", answer: "" },
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
+<<<<<<< HEAD
+=======
+        { name: '浏览器和服务器交互原理？', answer: '' },
+
+>>>>>>> eb23842501eacdf597f2ed80397849199331427a
       ],
       arithmeticPart: [
         { name: "算法排序有哪些？时间复杂度以及空间复杂度？", answer: "" },
@@ -224,8 +238,8 @@ export default {
       webpackPart: [
 
       ],
-      interviewThinking:[
-        {name:'2020-12-23 陆家嘴富汇大厦(轮胎公司)',answer:'个人发展最重要自己优秀才是王道，坚持，坚持。'}
+      interviewThinking: [
+        { name: '2020-12-23 陆家嘴富汇大厦(轮胎公司)', answer: '个人发展最重要自己优秀才是王道，坚持，坚持。' }
       ]
     }
   },
@@ -248,6 +262,8 @@ export default {
         return arr.indexOf(item) === index
       })
       console.log(res);
+      let arr = [12, 123, 123, 1231, 132]
+      arr.slcie(1, 21, 12)
     }
     takeOut(arrSet);
     console.log(this.checkType(122));
@@ -260,15 +276,15 @@ export default {
     console.log(p2);
     console.log(p1);
     // window.requestAnimationFrame
-    Promise.resolve().then(()=>{
+    Promise.resolve().then(() => {
       console.log('promise.then');//2
       setTimeout(() => {
-       console.log('setTimeout'); //5
+        console.log('setTimeout'); //5
       });
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       console.log('setTimeout1');//3
-      Promise.resolve().then(()=>{
+      Promise.resolve().then(() => {
         console.log('promise.then1');//4
       })
     })
