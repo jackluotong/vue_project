@@ -172,21 +172,19 @@ export default {
         { name: '手写promise？', answer: '' },
         { name: 'ts中常用的api？以及比js的优点？', answer: '' },
         { name: 'spa首页白屏怎么解决？', answer: '出现的原因：加载过多，网络延迟，文件体积过大' },
-<<<<<<< HEAD
         { name: 'js 渲染十万条数据卡顿优化方法',answer:'window.requestAnimationFrame(callback) /document.createdocumentfragment()'},
         { name: '设计模式有哪些？介绍一下工厂模式？',answer:''},                 
         { name: '浏览器和服务器是怎么交互的？请求的时候返回什么？',answer:''},
         { name :'性能优化？协议层？打包层？代码层？',answer:''},
         { name :'原型和原型链的区别？各自在什么时候使用？',answer:''},
         { name: '浏览器的缓存机制？',answer:''},                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-=======
         { name: 'js 渲染十万条数据卡顿优化方法', answer: 'window.requestAnimationFrame(callback) /document.createdocumentfragment()' },
         { name: '设计模式有哪些？介绍一下工厂模式？', answer: '' },
         { name: '浏览器和服务器是怎么交互的？请求的时候返回什么？', answer: '' },
-        { name: '箭头函数的this指向哪里？对象函数', answer: '' },
+        { name: '箭头函数的this指向哪里？对象？函数', answer: '' },
         { name: '怎么判断对象是否相等', answer: '' },
-        { anme: 'slice怎么用？', answer: '' }
->>>>>>> eb23842501eacdf597f2ed80397849199331427a
+        { name: 'slice怎么用？', answer: '' },
+        { name: '内存泄漏是什么？',answer:'用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。(其实说白了就是该内存空间使用完毕之后未回收)即所谓内存泄漏。'}
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "absolute+-margin/transform;flex;grid;" },
@@ -222,11 +220,8 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 的三次握手和四次挥手", answer: "" },
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
-<<<<<<< HEAD
-=======
         { name: '浏览器和服务器交互原理？', answer: '' },
 
->>>>>>> eb23842501eacdf597f2ed80397849199331427a
       ],
       arithmeticPart: [
         { name: "算法排序有哪些？时间复杂度以及空间复杂度？", answer: "" },
@@ -243,10 +238,10 @@ export default {
       ]
     }
   },
-  computed: {
-
+  computed() {
+    
   },
-  watch: {
+  watch(){
 
   },
   mounted() {
@@ -262,8 +257,7 @@ export default {
         return arr.indexOf(item) === index
       })
       console.log(res);
-      let arr = [12, 123, 123, 1231, 132]
-      arr.slcie(1, 21, 12)
+      
     }
     takeOut(arrSet);
     console.log(this.checkType(122));
@@ -287,6 +281,7 @@ export default {
       Promise.resolve().then(() => {
         console.log('promise.then1');//4
       })
+      console.log(this,'--------------');
     })
     console.log('start');//1 宏任务执行完毕执行微任务
 
@@ -439,6 +434,12 @@ export default {
         age: 18,
       }
       return person;
+    },
+    /**
+     * array api
+     */
+    arrFun:function(){
+      
     }
 
   }
