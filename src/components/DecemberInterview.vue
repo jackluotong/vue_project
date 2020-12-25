@@ -184,7 +184,8 @@ export default {
         { name: '箭头函数的this指向哪里？对象？函数', answer: '' },
         { name: '怎么判断对象是否相等', answer: '' },
         { name: 'slice怎么用？', answer: '' },
-        { name: '内存泄漏是什么？',answer:'用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。(其实说白了就是该内存空间使用完毕之后未回收)即所谓内存泄漏。'}
+        { name: '内存泄漏是什么？',answer:'用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。(其实说白了就是该内存空间使用完毕之后未回收)即所谓内存泄漏。'},
+        { name:'那些东西可以造成内存泄漏？怎么防止？',answer:'造成：意外的全局变量，被遗忘的计时器或者回调函数，脱离dom的引用，闭包，'}
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "absolute+-margin/transform;flex;grid;" },
@@ -211,7 +212,7 @@ export default {
         { name: "react 如何避免重复渲染？", answer: "" },
         { name: "如何理解react虚拟dom？", answer: "" },
         { name: "react如何实现数据的双向绑定？", answer: "" },
-        { name: "TCP 和 UDP 的区别", answer: "" },
+        { name: "props,state", answer: "" },
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 和 UDP 的区别", answer: "" },
 
