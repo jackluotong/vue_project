@@ -220,8 +220,10 @@ export default {
       protocolPart: [
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 的三次握手和四次挥手", answer: "" },
-        { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
         { name: '浏览器和服务器交互原理？', answer: '' },
+      ],
+      HTTPPart:[
+        { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
 
       ],
       arithmeticPart: [
@@ -232,7 +234,7 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
       ],
       webpackPart: [
-
+        {name:'核心概念？',answer:'entry,output,loader,plugins'}
       ],
       interviewThinking: [
         { name: '2020-12-23 陆家嘴富汇大厦(轮胎公司)', answer: '个人发展最重要自己优秀才是王道，坚持，坚持。' }
