@@ -186,8 +186,10 @@ export default {
         { name: 'slice怎么用？', answer: '' },
         { name: '内存泄漏是什么？', answer: '用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。(其实说白了就是该内存空间使用完毕之后未回收)即所谓内存泄漏。' },
         { name: '那些东西可以造成内存泄漏？怎么防止？', answer: '造成：意外的全局变量，被遗忘的计时器或者回调函数，脱离dom的引用，闭包，' },
-        { name: 'seo怎么优化？',answer:''},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        { name: 'seo怎么优化？', answer: '' },
+        { name: '浏览器的缓存机制？etag是干嘛的？', answer: '' },
+        { name: 'settimeout为什么不是很精确的执行？', answer: '' },
+        { name: '前端部署问题？', answer: '' }
       ],
       cssPart: [
         { name: "12-03：水平垂直居中？", answer: "absolute+-margin/transform;flex;grid;" },
@@ -209,9 +211,9 @@ export default {
         { name: 'ssr了解嘛？', answer: '' },
         { name: 'vue中的性能优化？', answer: '' },
         { name: 'router和route的区别？', answer: 'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query' },
-        { name: 'vue-cli的源码理解？',answer:''},
-        { name: 'vue中定义一个过滤器',answer:''},
-        { name :'',answer:''},
+        { name: 'vue-cli的源码理解？', answer: '' },
+        { name: 'vue中定义一个过滤器', answer: '' },
+        { name: '', answer: '' },
       ],
       reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
@@ -227,16 +229,16 @@ export default {
         { name: "TCP 的三次握手和四次挥手", answer: "" },
         { name: '浏览器和服务器交互原理？', answer: '' },
       ],
-      HTTPPart:[
+      HTTPPart: [
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
-        { name:'uri和url的区别？',answer:'url是uri的子集'},
-        { name:'如何理解http状态码？',answer:'1 变更；2 状态成功；3 永久重定向；4 错误；5 错误'},
-        { name:'http的特点？缺点？',answer:''},//我也不知道是对还是错要学会去爱也要学会去治愈自己在受伤中成长及时止损;
-        { name:'如何处理表单中提交的数据？',answer:''},
-        { name:'http缓存以及缓存代理？',answer:''},
-        { name:'什么是跨域？浏览器如何响应拦截？如何解决？',answer:''},
-        { name:'',answer:''},
-        { name:'',answer:''},
+        { name: 'uri和url的区别？', answer: 'url是uri的子集' },
+        { name: '如何理解http状态码？', answer: '1 变更；2 状态成功；3 永久重定向；4 错误；5 错误' },
+        { name: 'http的特点？缺点？', answer: '' },//我也不知道是对还是错要学会去爱也要学会去治愈自己在受伤中成长及时止损;
+        { name: '如何处理表单中提交的数据？', answer: '' },
+        { name: 'http缓存以及缓存代理？', answer: '' },
+        { name: '什么是跨域？浏览器如何响应拦截？如何解决？', answer: '' },
+        { name: '', answer: '' },
+        { name: '', answer: '' },
 
       ],
       arithmeticPart: [
@@ -247,7 +249,8 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
       ],
       webpackPart: [
-        {name:'核心概念？',answer:'entry,output,loader,plugins'}
+        { name: '核心概念？', answer: 'entry,output,loader,plugins' },
+        { name: 'webpack中的haah是做什么的？', answer: '' }
       ],
       interviewThinking: [
         { name: '2020-12-23 陆家嘴富汇大厦(轮胎公司)', answer: '个人发展最重要自己优秀才是王道，坚持，坚持。' }
