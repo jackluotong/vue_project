@@ -56,6 +56,9 @@
           </li>
         </ol>
       </div>
+      <p>父组件调用子组件的方法</p>
+      <ForRouter ref="myChild"></ForRouter>
+      <a-button @click="fatherToSon">父组件调用子组件的方法</a-button>
     </a-card>
     <!-- react part -->
     <a-card
@@ -135,7 +138,12 @@
 var arr = [[1, 2], [3, 4]];
 var arrSet = [1, 12, 212, 1, 2, 2, 1, 1, 12, 21, 2122113, 1, null, undefined, null]
 const nums = [12, 12, 122, 1, 11, 23, 232]
+import ForRouter from './ForRouter'
 export default {
+  component:{
+  ForRouter
+  },
+
   data() {
     return {
       jsPart: [
@@ -187,7 +195,8 @@ export default {
         { name: '内存泄漏是什么？', answer: '用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。(其实说白了就是该内存空间使用完毕之后未回收)即所谓内存泄漏。' },
         { name: '那些东西可以造成内存泄漏？怎么防止？', answer: '造成：意外的全局变量，被遗忘的计时器或者回调函数，脱离dom的引用，闭包，' },
         { name: 'seo怎么优化？', answer: '' },
-        { name: '浏览器的缓存机制？etag是干嘛的？', answer: '' },
+        { name: '浏览器的缓存机制？etag是干嘛的？', answer:'缓存类型：强缓存，协商缓存；缓存位置：service worker，memory cahce，disk cache，push cache；'},
+        { name: '浏览器的本地存储？',answer:''},
         { name: 'settimeout为什么不是很精确的执行？', answer: '' },
         { name: '前端部署问题？', answer: '' }
       ],
@@ -197,14 +206,16 @@ export default {
         { name: "12-05：行内元素和块级元素的区别？ ", answer: "给行内元素设置margin/padding无效果" },
         { name: "poistion有哪几种？效果和用法？", answer: "" },
         { name: "css选择器优先级？", answer: "!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性" },
-        { name: '弹性布局？垂直居中？水平居中？' }
+        { name: '弹性布局？垂直居中？水平居中？' },
+        { name: 'bfc?',answer:''},
+        { name: 'position中的各种布局？',answer:''},
       ],
       vuePart: [
         { name: "12-05： $set？", answer: "为data中的某一个对象添加一个属性，this.$set(obj, key, value)" },
         { name: "12-05： 双向数据绑定的原理，怎么监听View层的变化？", answer: "" },
         { name: "对keep-alive的了解？", answer: "以使被包含的组件保留状态，或避免重新渲染," },
         { name: "路由/照片懒加载", answer: "" },
-        { name: "$nextTick?原理？", answer: "" },
+        { name: "$nextTick?原理？", answer: "功能：更新数据后让回调函数作用于更新后的DOM ；结合js的运行机制+能力检测+根据能力检测以不同方式执行回调队列+执行回调队列" },
         { name: "vue模板编译原理？", answer: "生成ast树->优化->codegen" },
         { name: "vue中的diff算法？", answer: "根据key来做检查，渲染那些改变的，" },
         { name: '虚拟dom以及key属性的作用？', answer: '' },
@@ -213,7 +224,9 @@ export default {
         { name: 'router和route的区别？', answer: 'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query' },
         { name: 'vue-cli的源码理解？', answer: '' },
         { name: 'vue中定义一个过滤器', answer: '' },
-        { name: '', answer: '' },
+        { name: 'vue中父子组件的方法互相调用？', answer: '父调用子：this.$refs;子调用父：this.$parent' },
+        { name:'vue3.0的原理？',answer:''},
+        { name: '监听对象和监听数组有什么区别？',answer:''}
       ],
       reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
@@ -231,7 +244,6 @@ export default {
       ],
       HTTPPart: [
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
-<<<<<<< HEAD
         { name:'uri和url的区别？',answer:'url是uri的子集'},
         { name:'如何理解http状态码？',answer:'1 变更；2 状态成功；3 永久重定向；4 错误；5 错误'},
         { name:'http的特点？缺点？',answer:''},//我也不知道是对还是错要学会去爱也要学会去治愈自己在受伤中成长及时止损;
@@ -240,16 +252,8 @@ export default {
         { name:'什么是跨域？浏览器如何响应拦截？如何解决？',answer:'scheme host post都相同则为同源；解决方法：cors jsonp nginx '},
         { name:'',answer:''},
         { name:'',answer:''},
-=======
-        { name: 'uri和url的区别？', answer: 'url是uri的子集' },
-        { name: '如何理解http状态码？', answer: '1 变更；2 状态成功；3 永久重定向；4 错误；5 错误' },
-        { name: 'http的特点？缺点？', answer: '' },//我也不知道是对还是错要学会去爱也要学会去治愈自己在受伤中成长及时止损;
-        { name: '如何处理表单中提交的数据？', answer: '' },
-        { name: 'http缓存以及缓存代理？', answer: '' },
-        { name: '什么是跨域？浏览器如何响应拦截？如何解决？', answer: '' },
         { name: '', answer: '' },
         { name: '', answer: '' },
->>>>>>> 28287ddf8229b812b510f31eb35759efb12eb5e3
 
       ],
       arithmeticPart: [
@@ -470,6 +474,9 @@ export default {
      */
     arrFun: function () {
 
+    },
+    fatherToSon:function(){
+      this.$refs.myChild.parentClick('heheh')
     }
 
   }

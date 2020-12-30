@@ -32,7 +32,13 @@
 
 <script>
 export default {
-  
+  methods:{
+    parentClick:function(e){
+      console.log('====================================');
+      console.log(e);
+      console.log('====================================');
+    }
+  }
 }
 </script>
 <style scoped>
