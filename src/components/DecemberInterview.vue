@@ -234,7 +234,7 @@ export default {
         { name:'http的特点？缺点？',answer:''},//我也不知道是对还是错要学会去爱也要学会去治愈自己在受伤中成长及时止损;
         { name:'如何处理表单中提交的数据？',answer:''},
         { name:'http缓存以及缓存代理？',answer:''},
-        { name:'什么是跨域？浏览器如何响应拦截？如何解决？',answer:''},
+        { name:'什么是跨域？浏览器如何响应拦截？如何解决？',answer:'scheme host post都相同则为同源；解决方法：cors jsonp nginx '},
         { name:'',answer:''},
         { name:'',answer:''},
 
