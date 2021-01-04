@@ -226,7 +226,9 @@ export default {
         { name: 'vue中定义一个过滤器', answer: '' },
         { name: 'vue中父子组件的方法互相调用？', answer: '父调用子：this.$refs;子调用父：this.$parent' },
         { name:'vue3.0的原理？',answer:''},
-        { name: '监听对象和监听数组有什么区别？',answer:''}
+        { name: '监听对象和监听数组有什么区别？',answer:''},
+        { name: 'v-if和v-show的区别？',answer:'v-if条件渲染来决定，可以在template中使用，性能损耗高，显示隐藏是把dom元素整个的添加或删除'},
+        { name: '父子组件钩子执行顺序？',answer:''}
       ],
       reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
@@ -475,9 +477,21 @@ export default {
     arrFun: function () {
 
     },
+    /**
+     * father component use son function
+     */
     fatherToSon:function(){
       this.$refs.myChild.parentClick('heheh')
-    }
+    },
+    /**
+     * prototype
+     */
+    protoFun:function(){
+     
+      setTimeout(()=>{
+
+      },1000)
+    },
 
   }
 }
