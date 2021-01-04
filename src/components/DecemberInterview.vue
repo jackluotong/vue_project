@@ -224,11 +224,13 @@ export default {
         { name: 'router和route的区别？', answer: 'router:router为VueRouter的实例，相当于一个全局的路由器对象，里面含有很多属性和子对象，/route:相当于当前正在跳转的路由对象。。可以从里面获取name,path,params,query' },
         { name: 'vue-cli的源码理解？', answer: '' },
         { name: 'vue中定义一个过滤器', answer: '' },
-        { name: 'vue中父子组件的方法互相调用？', answer: '父调用子：this.$refs;子调用父：this.$parent' },
+        { name: 'vue中父子组件的方法互相调用？', answer: '父调用子：this.$refs;子调用父：this.$parent'},
         { name:'vue3.0的原理？',answer:''},
         { name: '监听对象和监听数组有什么区别？',answer:''},
         { name: 'v-if和v-show的区别？',answer:'v-if条件渲染来决定，可以在template中使用，性能损耗高，显示隐藏是把dom元素整个的添加或删除'},
-        { name: '父子组件钩子执行顺序？',answer:''}
+        { name: '父子组件钩子执行顺序？',answer:'组件的调用顺序都是先父后子,渲染完成的顺序是先子后父,组件的销毁操作是先父后子,销毁完成的顺序是先子后父'},
+        { name: 'hash 和 history路由实现原理？',answer:'location.hash / history.pushState()和history.replaceState()'},
+        { name: '',answer:''}
       ],
       reactPart: [
         { name: "react 如何避免重复渲染？", answer: "" },
@@ -487,12 +489,12 @@ export default {
      * prototype
      */
     protoFun:function(){
-     
+      const double=number=>number*2;
       setTimeout(()=>{
-
+        console.log(double(12));
       },1000)
     },
-
+ 
   }
 }
 </script>
