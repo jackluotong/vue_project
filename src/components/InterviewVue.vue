@@ -72,7 +72,7 @@
             <a-menu-item key="20" @click="$router.push({name:'DecemberInterview'})">
             December
             </a-menu-item>
-             <a-menu-item key="21" @click="desperate">
+             <a-menu-item key="21" @click="$router.push({name:'January'})">
              January
             </a-menu-item> 
           </a-sub-menu>

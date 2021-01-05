@@ -80,14 +80,32 @@
     </a-card>
     <!-- protocol part -->
     <a-card
-      title="2020-12-07 Interivew|ProtocolPart"
+      title="2020-12-07 Interivew|TcpPart"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
         <ol>
           <li
-            v-for="(item,index) in protocolPart"
+            v-for="(item,index) in TcpPart"
+            :key='index'
+            class="liClass"
+          >
+            {{item.index}}{{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
+          </li>
+        </ol>
+      </div>
+    </a-card>
+    <!-- http part -->
+    <a-card
+      title="2020-12-07 Interivew|HttpPart"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+        <ol>
+          <li
+            v-for="(item,index) in HTTPPart"
             :key='index'
             class="liClass"
           >
@@ -241,10 +259,13 @@ export default {
         { name: "TCP 和 UDP 的区别", answer: "" },
 
       ],
-      protocolPart: [
+      TcpPart: [
         { name: "TCP 和 UDP 的区别", answer: "" },
         { name: "TCP 的三次握手和四次挥手", answer: "" },
         { name: '浏览器和服务器交互原理？', answer: '' },
+        { name: 'Tcp报文头部的字段？', answer: '' },
+        { name: '浏览器和服务器交互原理？', answer: '' },
+
       ],
       HTTPPart: [
         { name: "http请求的方法？", answer: "GET, POST 和 HEAD,OPTIONS, PUT, DELETE, TRACE 和 CONNECT" },
@@ -264,8 +285,6 @@ export default {
         { name: "算法排序有哪些？时间复杂度以及空间复杂度？", answer: "" },
         { name: "二叉树？图？最短路径？", answer: "" },
         { name: "判断链表是否有环？环的入口？节点个数？", answer: "" },
-        { name: "TCP 和 UDP 的区别", answer: "" },
-        { name: "TCP 和 UDP 的区别", answer: "" },
       ],
       webpackPart: [
         { name: '核心概念？', answer: 'entry,output,loader,plugins' },
@@ -506,11 +525,5 @@ export default {
 .liClass {
   text-align: left;
 }
-.centerVerticalHorizontal {
-  /*
-    
-    */
-  justify-content: left;
-  display: flex;
-}
+
 </style>
