@@ -34,17 +34,19 @@ export default {
         { name: '防抖节流？', answer: '' },
         { name: 'vue组件封装', answer: '' },
         { name: '项目详细描述', answer: '' },
-        { title: '01-06九亭欸福特面试', name: ' ？', answer: '' },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        { title: '01-06九亭欸福特面试', name: ' ？', answer: '' },
         { name: 'mvvm？', answer: '' },
         { name: '输入url到显示？', answer: '' },
         { name: '回流和重绘？', answer: '' },
         { name: '$.this 和$(this)的区别？', answer: '' },
-        { title: '01-06花旗外包面试', name: ' ？', answer: '' }, 
-        { name: '文档流？', answer: '' },
-        { name: '数组的去重排序？', answer: '' },
-        { name: 'poistion的属性有哪几种？', answer: '' },
-        { name: '回流和重绘？', answer: '' },
-        { name: 'canvas?',answer:''}
+        { title: '01-06花旗外包面试', name: ' ？', answer: '' },
+        { name: '文档流？', answer: '一个一个的div组成的' },
+        { name: '数组的去重排序？', answer: '去重:set,sort,includes,hasOwenProperty,filter,indexOf,递归,map;排序:冒泡，选择，快排，希尔，递归，插入，桶' },
+        { name: 'poistion的属性有哪几种？', answer: 'fixed,sticky,relative,absolute,static' },
+        { name: '回流和重绘？', answer: '回流是当几何属性发生改变时产生的；重绘是当样式等外观发生改变时产生的' },
+        { name: 'canvas?', answer: '' },
+        { title: '01-06花旗外包面试', name: ' ？', answer: '' },
+
       ]
     }
   },
