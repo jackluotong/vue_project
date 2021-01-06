@@ -11,26 +11,29 @@
           <li
             v-for="(item,index,id) in interview"
             :key='id'
-            class="liClass" 
+            class="liClass"
           >
             {{item.index}}{{item.title}} <span>题目：</span> {{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
       </div>
     </a-card>
-   
-    </div>
-    
+
+  </div>
+
 </template>
 <script>
 export default {
-  data(){
-    return{
-      interview:[
-        {title:'01-05中安科技面试',name:'router中如果找不到当前路径怎么处理？',answer:''},
-        {name:'http了解的怎么样？状态码？里面的方法？',answer:''},
-        {name:'算法有那些了解？排序有哪些？快排怎么实现？',answer:''}
-
+  data() {
+    return {
+      interview: [
+        { title: '01-05中安科技面试', name: 'router中如果找不到当前路径怎么处理？', answer: '' },
+        { name: 'http了解的怎么样？状态码？里面的方法？', answer: '' },
+        { name: '算法有那些了解？排序有哪些？快排怎么实现？', answer: '' },
+        { title: '01-05外滩soho面试', name: '性能优化怎么做？', answer: '' },
+        { name: '防抖节流？', answer: '' },
+        { name: 'vue组件封装', answer: '' },
+        { name: '项目详细描述', answer: '' },
       ]
     }
   },
