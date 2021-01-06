@@ -34,6 +34,17 @@ export default {
         { name: '防抖节流？', answer: '' },
         { name: 'vue组件封装', answer: '' },
         { name: '项目详细描述', answer: '' },
+        { title: '01-06九亭欸福特面试', name: ' ？', answer: '' },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        { name: 'mvvm？', answer: '' },
+        { name: '输入url到显示？', answer: '' },
+        { name: '回流和重绘？', answer: '' },
+        { name: '$.this 和$(this)的区别？', answer: '' },
+        { title: '01-06花旗外包面试', name: ' ？', answer: '' }, 
+        { name: '文档流？', answer: '' },
+        { name: '数组的去重排序？', answer: '' },
+        { name: 'poistion的属性有哪几种？', answer: '' },
+        { name: '回流和重绘？', answer: '' },
+        { name: 'canvas?',answer:''}
       ]
     }
   },
