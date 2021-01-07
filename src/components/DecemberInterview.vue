@@ -165,7 +165,7 @@ export default {
   data() {
     return {
       jsPart: [
-        { name: "从输入URL到页面展示发生了什么？", answer: "https://juejin.cn/post/6869279683230629896" },
+        { name: "从输入URL到页面展示发生了什么？", answer: "拼接字符串-查找缓存-dns解析-tcp连接-服务器响应- https://juejin.cn/post/6869279683230629896" },
         { name: "12-03：es6中数组和对象新增的方法？", answer: "数组方法:map,set,reduce,filter,some,every,find,flat,;对象:对象简写,assign,super,属性名表达式" },
         { name: "12-03：深拷贝和浅拷贝？", answer: "浅拷贝就是对对象进行浅层次的复制，只复制一层对象的属性，并不包括对象里面的引用类型数据,实现方式:concat/assign/slice/.../;深拷贝是对对象以及对象的所有子对象进行拷贝，也就是说新拷贝对象的子对象里的属性也不会影响到原来的对象，实现方式:Json.parse,递归" },
         { name: "12-04: 值类型和引用类型的区别？", answer: "值类型的数据存储在栈中，函数运行完成后变量销毁，复制是深复制，不能添加属性和方法，值的比较。|引用类型的存储在堆中，运行完不会销毁，复制是浅复制，可添加属性和方法，引用地址的比较。" },
@@ -255,9 +255,6 @@ export default {
         { name: "如何理解react虚拟dom？", answer: "" },
         { name: "react如何实现数据的双向绑定？", answer: "" },
         { name: "props,state", answer: "" },
-        { name: "TCP 和 UDP 的区别", answer: "" },
-        { name: "TCP 和 UDP 的区别", answer: "" },
-
       ],
       TcpPart: [
         { name: "TCP 和 UDP 的区别", answer: "" },

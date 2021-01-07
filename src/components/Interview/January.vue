@@ -45,6 +45,7 @@ export default {
         { name: '回流和重绘？', answer: '回流是当几何属性发生改变时产生的；重绘是当样式等外观发生改变时产生的' },
         { name: 'poistion的属性有哪几种？', answer: 'fixed,sticky,relative,absolute,static' },
         { name: 'canvas?',answer:''},
+        { name: '定义函数的方式？',answer:'函数声明，函数表达式'},
       ]
     }
   },
