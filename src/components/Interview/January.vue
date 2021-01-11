@@ -32,7 +32,8 @@
           <p>{{array}}</p>
           <p>{{afterValue}}</p>
           <a-button @click='flat()'>flat</a-button>
-
+          <a-button @click='deleteIt()'>数组超过两次的去重</a-button>
+          <a-button @click='chained()'>链式调用</a-button>
         </div>
       </a-card>
     </div>
@@ -147,9 +148,55 @@ export default {
     flat: function () {
       let str = JSON.stringify(this.array)
       this.afterValue = str;
-    }
-  }
+    },
+    deleteIt: function (array) {
+      let _array = []
+      let __array = []
+      // let array = [1, 11, 11, 1, 1, 22, 22, 222, 22, 3, 3, 4, 3]
+      debugger
+      if (Array.isArray(array)) {
+        array.forEach((item, index) => {
+          if (_array.indexOf(item) === -1) {
+            _array.push(item)
+          } else {
+            if (__array.indexOf(item) === -1) {
+              __array.push(item)
+            } else {
+              array.splice(index, 1)
+            }
+          }
+        });
+        console.log(array);
+      } else {
+        alert('not array')
+      }
 
+    },
+    chained: function () {
+      function chained1(str) {
+        console.log('Hello,I`m' + str);
+      }
+      chained1('jack');
+      chained1.prototype.eat = function () {
+        alert('eat')
+        return this;
+      }
+      chained1.prototype.sleep = function () {
+        setTimeout(() => {
+          alert('sleep')
+        }, 1000);
+        return this;
+      }
+      let fun = new chained1()
+      fun.eat().sleep()
+    },
+    deleteIt1: function () {
+      debugger;
+      let array = [1, 11, 11, 1, 1, 22, 22, 222, 22, 3, 3, 4, 3]
+      this.deleteIt(array)
+    },
+
+  }
 }
 </script>
 <style scoped>
