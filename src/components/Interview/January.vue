@@ -46,7 +46,10 @@ export default {
         { name: '回流和重绘？', answer: '回流是当几何属性发生改变时产生的；重绘是当样式等外观发生改变时产生的' },
         { name: 'canvas?', answer: '' },
         { title: '01-06花旗外包面试', name: ' ？', answer: '' },
-
+        { title: '01-08躺平设计家面试', name: 'bfc ？', answer: '' },
+        { title: '01-08躺平设计家面试', name: '垂直居中？', answer: '' },
+        { title: '01-08躺平设计家面试', name: '跨域？', answer: '' },
+        { title: '01-08躺平设计家面试', name: 'var let const？', answer: '' },
       ]
     }
   },
