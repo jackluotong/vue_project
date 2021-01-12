@@ -34,6 +34,7 @@
           <a-button @click='flat()'>flat</a-button>
           <a-button @click='deleteIt()'>数组超过两次的去重</a-button>
           <a-button @click='chained()'>链式调用</a-button>
+          <a-button @click='bird()'>Bird</a-button>
         </div>
       </a-card>
     </div>
@@ -68,6 +69,13 @@ export default {
         { title: '01-08面试', name: ' ？', answer: '' },
         { name: 'let var const 的差距？', answer: '' },
         { name: '堆栈的差距？', answer: '' },
+        { title: '01-12面试', name: ' vue-router的原理？', answer: '' },
+        { name: 'vuex中同步和异步是怎么操作的？', answer: '' },
+        { name: '描述你在项目中遇到的问题以及如何解决的？', answer: '' },
+        { name: '封装一个组件以及函数要考虑到什么？', answer: '' },
+        { name: 'localStorage,sessionStorage,cookie有什么区别？', answer: '' },
+
+
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
@@ -195,7 +203,22 @@ export default {
       let array = [1, 11, 11, 1, 1, 22, 22, 222, 22, 3, 3, 4, 3]
       this.deleteIt(array)
     },
-
+    bird:function(){
+      function Bird(name){
+        this.name=name;
+        this.run=function(){
+          console.log('${name},run');
+          return this;
+        }
+        this.eat=function(){
+          console.log('${name},eat');
+          return this;
+        }
+      }
+      let bird=new Bird('jack')
+      bird.run().eat()
+    },
+    
   }
 }
 </script>
