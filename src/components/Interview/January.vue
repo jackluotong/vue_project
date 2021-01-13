@@ -80,6 +80,13 @@ export default {
         { name: 'react 和vue的区别？', answer: '' },
         { name: 'react中的virtual dom 以及diff？', answer: '' },
         { name: 'websocket？', answer: '双向协议，http只能是客户端给服务端，服务器向客户端，建立在tcp只上，不受同源策略限制，' },
+        { title: '01-13面试', name: ' http协议？', answer: '' },
+        { name: 'vuex和全局变量的差别？', answer: '' },
+        { name: 'js中的编译是什么意思？', answer: '' },
+        { name: '强类型和若类型的语言差异？', answer: '' },
+        { name: 'vuex和全局变量的差别？', answer: '' },
+        { name: 'vuex和全局变量的差别？', answer: '' },
+
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
