@@ -14,19 +14,54 @@
   </div>
 </div>
 <script>
-  function testOne(){
-      click('jack').eat().sleep()
+ function LazyPig(name){
+	return new Lazy(name)
+}
+function Lazy(name){
+	this.name = name;
+	this.task = [];
+	console.log('Hi, 我是' + name)
+	let _this = this;
+	let fn = (function(){
+		return function(){
+			_this.next()
+		}
+	})()
+	this.task.push(fn)
+	setTimeout(()=>{
+		_this.next()
+	},0)
+}
+Lazy.prototype = {
+	next: function(){
+		var fn = this.task.shift()
+		fn && fn()
+	},
+	sleep: function(time){
+		let _this = this;
+		let fn = (function(time){
+			return function(){
+				setTimeout(()=>{
+					console.log(_this.name + ' Wake up !')
+					_this.next()
+				}, time * 1000)
+			}
+		})(time)
+		this.task.push(fn)
+		return this;
+	},
+	eat: function(smt){
+		let _this = this;
+		let fn = (function(smt){
+			return function(){
+				console.log(_this.name + ' is eating ' + smt);
+				_this.next()
+			}
+		})(smt)
+		this.task.push(fn)
+		return this;
+	}
+}
+LazyPig('哼哼').sleep(5).eat('早饭')
 
-  }
-  function click(str) {
-    console.log('Hello,${str}');//模板字符串
-    this.eat=function(){
-      alert('eat')
-      return this;
-    }
-    this.sleep=function(){
-      alert('sleep')
-      return this;
-    }
-  }
 </script>
