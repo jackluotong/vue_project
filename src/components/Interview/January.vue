@@ -74,8 +74,12 @@ export default {
         { name: '描述你在项目中遇到的问题以及如何解决的？', answer: '' },
         { name: '封装一个组件以及函数要考虑到什么？', answer: '' },
         { name: 'localStorage,sessionStorage,cookie有什么区别？', answer: '' },
-
-
+        { title: '01-12面试', name: ' http协议？', answer: '' },
+        { name: 'tcp udp的区别？', answer: '' },
+        { name: '跨域怎么处理？以及jsonp', answer: 'nginx，jsonp，cros，localstorage，sessionstorage，jsonp原理：利用src属性来实现跨域' },
+        { name: 'react 和vue的区别？', answer: '' },
+        { name: 'react中的virtual dom 以及diff？', answer: '' },
+        { name: 'websocket？', answer: '双向协议，http只能是客户端给服务端，服务器向客户端，建立在tcp只上，不受同源策略限制，' },
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
@@ -178,7 +182,6 @@ export default {
       } else {
         alert('not array')
       }
-
     },
     chained: function () {
       function chained1(str) {
@@ -203,22 +206,22 @@ export default {
       let array = [1, 11, 11, 1, 1, 22, 22, 222, 22, 3, 3, 4, 3]
       this.deleteIt(array)
     },
-    bird:function(){
-      function Bird(name){
-        this.name=name;
-        this.run=function(){
+    bird: function () {
+      function Bird(name) {
+        this.name = name;
+        this.run = function () {
           console.log('${name},run');
           return this;
         }
-        this.eat=function(){
+        this.eat = function () {
           console.log('${name},eat');
           return this;
         }
       }
-      let bird=new Bird('jack')
+      let bird = new Bird('jack')
       bird.run().eat()
     },
-    
+
   }
 }
 </script>
