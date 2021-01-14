@@ -35,6 +35,7 @@
           <a-button @click='deleteIt()'>数组超过两次的去重</a-button>
           <a-button @click='chained()'>链式调用</a-button>
           <a-button @click='bird()'>Bird</a-button>
+          <a-button @click='testOne()'>Bird</a-button>
         </div>
       </a-card>
     </div>
@@ -86,20 +87,28 @@ export default {
         { name: '强类型和若类型的语言差异？', answer: '' },
         { name: 'vuex和全局变量的差别？', answer: '' },
         { name: 'vuex和全局变量的差别？', answer: '' },
-
+        { title: '01-13阿里面试', name: ' promise的原理', answer: '' },
+        { name: 'vuex中actions和mutations的详细操作以及如何提交？', answer: '' },
+        { name: 'history模式后端为什么要配置？', answer: '' },
+        { name: '浏览器和服务器怎么通讯？', answer: '' },
+        { name: 'vuex和全局变量的差别？', answer: '' },
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
-
     }
   },
   methods: {
+    testOne: function () {
+      let array = [1, 23, 323, 4]
+      console.log(typeof (array));
+    },
     insertSortTest: function () {
       let array = [1, 0, 12, 122, 1231, 3123213213, 8]
       let a = this.insertSort(array)
       console.log(a.toString());//数组转换为字符串的方法：toString,join,
       console.log(a.join(','));//split
     },
+    //#region 
     /**
      * 算法排序类
      * 冒泡排序 O(n2)
@@ -164,6 +173,7 @@ export default {
     /**
     * 基数排序
     */
+    //#endregion
     flat: function () {
       let str = JSON.stringify(this.array)
       this.afterValue = str;
