@@ -84,8 +84,6 @@ export default {
         { name: 'vuex和全局变量的差别？', answer: '' },
         { name: 'js中的编译是什么意思？', answer: '' },
         { name: '强类型和若类型的语言差异？', answer: '' },
-        { name: 'vuex和全局变量的差别？', answer: '' },
-        { name: 'vuex和全局变量的差别？', answer: '' },
 
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
@@ -101,6 +99,7 @@ export default {
       console.log(a.join(','));//split
     },
     /**
+     * 工单账号 1180 1526 
      * 算法排序类
      * 冒泡排序 O(n2)
      */
@@ -133,7 +132,7 @@ export default {
       return array;
     },
     /**
-     * 插入排序
+     * 插入排序  
      */
     insertSort: function (array) {
       const { length } = array
