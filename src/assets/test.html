@@ -1,71 +1,118 @@
 <div>
   <div>
     <span>begin-end-time</span>
-
-    <input type="text" value="123213">
-
+     
+      <input type="text" value="123213">
+    
     <span>----</span>
-
-    <input type="text" value="123213213">
-
-    <span>1231</span>
-    <input type="text" value='1232'>
-    <button onclick="testOne()">click</button>
+     
+      <input type="text" value="123213213">
+    
+     <span>1231</span>
+     <input type="text" value='1232'>
+     <button onclick="testOne()">click</button>
   </div>
 </div>
 <script>
-  function testOne() {
-    let array = [1, 23, 323, 4]
-    console.log(typeof (array));
+  /*
+  define a function
+  */
+  function LazyPig(params) {
+    return new Lazy(params)
   }
-  function LazyPig(name) {
-    return new Lazy(name)
-  }
-  function Lazy(name) {
-    this.name = name;
-    this.task = [];
-    console.log('Hi, 我是' + name)
-    let _this = this;
-    let fn = (function () {
-      return function () {
-        _this.next()
-      }
-    })()
-    this.task.push(fn)
-    setTimeout(() => {
-      _this.next()
-    }, 0)
-  }
-  Lazy.prototype = {
-    next: function () {
-      var fn = this.task.shift()
-      fn && fn()
-    },
-    sleep: function (time) {
-      let _this = this;
-      let fn = (function (time) {
-        return function () {
-          setTimeout(() => {
-            console.log(_this.name + ' Wake up !')
-            _this.next()
-          }, time * 1000)
-        }
-      })(time)
-      this.task.push(fn)
-      return this;
-    },
-    eat: function (smt) {
-      let _this = this;
-      let fn = (function (smt) {
-        return function () {
-          console.log(_this.name + ' is eating ' + smt);
-          _this.next()
-        }
-      })(smt)
-      this.task.push(fn)
-      return this;
+  /*
+  define a prototype function
+  */
+ function Lazy(params) {
+   this.params=params;
+   this.task=[];
+  console.log('Hello,'+params);
+  let that=this;
+  let fn=(function() {
+    return function () {
+      that.next()
     }
-  }
-  LazyPig('哼哼').sleep(5).eat('早饭')
+  })()
+  this.task.push(fn)
+  setTimeout(()=>{
+    that.next()
+  },0)
+ }
+ lazy.prototype={
+   next:function () {
+     var fn=this.task.shift()
+     fn&&fn()
+   },
+   sleep:function(timer){
+     let that=this;
+     let fn=(function(timer){
+       return function() {
+         setTimeout(()=>{
+          console.log(that.name+'wake up!');
+          that.next()
 
+         },timer*1000)
+       }
+     })(timer)
+     this.task.push(fn)
+     return this;
+   },
+   eat:function(str){
+
+   }
+ }
+</script>
+<script>
+
+ function LazyPig(name){
+	return new Lazy(name)
+}
+function Lazy(name){
+	this.name = name;
+	this.task = [];
+	console.log('Hi, 我是' + name)
+	let _this = this;
+	let fn = (function(){
+		return function(){
+			_this.next()
+		}
+	})()
+	this.task.push(fn)
+	setTimeout(()=>{
+		_this.next()
+	},0)
+}
+Lazy.prototype = {
+	next: function(){
+		var fn = this.task.shift()
+		fn && fn()
+	},
+	sleep: function(time){
+		let _this = this;
+		let fn = (function(time){
+			return function(){
+				setTimeout(()=>{
+					console.log(_this.name + ' Wake up !')
+					_this.next()
+				}, time * 1000)
+			}
+		})(time) 
+		this.task.push(fn)
+		return this;
+	},
+	eat: function(smt){
+		let _this = this;
+		let fn = (function(smt){
+			return function(){
+				console.log(_this.name + ' is eating ' + smt);
+				_this.next()
+			}
+		})(smt)
+		this.task.push(fn)
+		return this;
+	}
+}
+function testOne() {
+  LazyPig('哼哼').sleep(5).eat('早饭')
+}
 </script>
