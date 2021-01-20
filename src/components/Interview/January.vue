@@ -1,3 +1,4 @@
+
 <template>
   <div style="background:#ECECEC; padding:20px;">
     <!-- js part -->
@@ -85,6 +86,12 @@ export default {
         { name: 'vuex和全局变量的差别？', answer: '' },
         { name: 'js中的编译是什么意思？', answer: '' },
         { name: '强类型和若类型的语言差异？', answer: '' },
+        { title: '01-20叮咚买菜面试', name: ' jsonp的原理？', answer: '' },
+        { name: '图片懒加载的原理？', answer: '' },
+        { name: 'cors中后端需要配置什么？', answer: '' },
+        { name: '？', answer: '' },
+
+
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
@@ -166,6 +173,7 @@ export default {
     * 基数排序
     */
     flat: function () {
+
       let str = JSON.stringify(this.array)
       this.afterValue = str;
     },
@@ -229,19 +237,19 @@ export default {
       let bird = new Bird('jack')
       bird.run().eat()
     },
-    copy:function(){
+    copy: function () {
       /**
        * 实现浅拷贝的方法
        * slice assign concat ... 手写
        */
-      let arr=[1,2,3]
-      let newArr=arr;
-      newArr[0]=100;
+      let arr = [1, 2, 3]
+      let newArr = arr;
+      newArr[0] = 100;
       console.log(arr);
       //浅拷贝
       console.log('浅拷贝开始');
-      let newArr1=arr.slice()
-      newArr1[0]=101;
+      let newArr1 = arr.slice()
+      newArr1[0] = 101;
       console.log(arr);
 
       //有对象的嵌套，那么浅拷贝不能完成
