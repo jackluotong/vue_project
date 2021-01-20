@@ -37,6 +37,8 @@
           <a-button @click='chained()'>链式调用</a-button>
           <a-button @click='bird()'>Bird</a-button>
           <a-button @click="copy()">拷贝</a-button>
+          <a-button @click='sortFunc()'>排序</a-button>
+
         </div>
       </a-card>
     </div>
@@ -89,13 +91,14 @@ export default {
         { title: '01-20叮咚买菜面试', name: ' jsonp的原理？', answer: '' },
         { name: '图片懒加载的原理？', answer: '' },
         { name: 'cors中后端需要配置什么？', answer: '' },
-        { name: '？', answer: '' },
-
+        { name: '解构赋值中怎么取最后一个值？', answer: '' },
+        { title: '01-20MicroFocus面试', name: ' button以及input中的button的区别？', answer: '' },
+        { name: '数组中的对象拿到值如何比较？', answer: '' },
+        { name: ' jsonp的原理？', answer: '' },
 
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
-
     }
   },
   methods: {
@@ -263,6 +266,19 @@ export default {
        */
       console.log('开始实现深拷贝');
 
+    },
+    sortFunc: function () {
+      var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+
+      for (let i = 0; i < staffs.length; i++) {
+        for (let j = 0; j < staffs.length - 1 - i; j++) {
+          if (staffs[j].age > staffs[j + 1].age) {
+            [staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
+          }
+        }
+      }
+      console.log(staffs);
+      return staffs;
     }
   }
 }

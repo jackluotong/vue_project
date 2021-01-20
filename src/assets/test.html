@@ -71,4 +71,32 @@
   function testOne() {
     LazyPig('jackpig').sleep(3).eat('pig')
   }
+
+</script>
+
+<script>
+  var a = 1;
+  function b() {
+    a = 10;
+    return;
+    function a() { }
+  }
+  b();
+  console.log(a);
+
+  var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+  sortFunc(staffs, 'age');
+  function sortFunc() {
+    var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+
+    for (let i = 0; i < staffs.length; i++) {
+      for (let j = 0; j < staffs.length - 1 - i; j++) {
+        if (staffs[j] > staffs[j + 1]) {
+
+          [staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
+        }
+      }
+    }
+    return staffs;
+  }
 </script>
