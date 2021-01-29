@@ -11,8 +11,36 @@
     <span>1231</span>
     <input type="text" value='1232'>
     <button onclick="testOne()">click</button>
+    <button onclick="deleteTwo()">click</button>
+
   </div>
 </div>
+<script>
+  //删除数组中出现两次的数字
+  function deleteTwo() {
+    let a = [1, 1, 1, 2, 2, 3];
+    let b = [1, 2, 1, 2, 1, 3, 2];
+
+    function objs(data) {
+      let news1 = [];
+      let news2 = [];
+      data.forEach((item, index) => {
+        if (news1.indexOf(item) === -1) {
+          news1.push(item);
+        } else {
+          if (news2.indexOf(item) === -1) {
+            news2.push(item);
+          } else {
+            data.splice(index, 1);
+          }
+        }
+      });
+      console.log(data);
+    }
+    objs(a);
+    objs(b);
+  }
+</script>
 <script>
   /*
   define a function
