@@ -16,6 +16,7 @@
   </div>
 </div>
 <script>
+<<<<<<< HEAD
   //实现从数组中删除重复超过2次的元素
 function deleteTwo(){
 
@@ -42,6 +43,32 @@ objs(a);
 objs(b);
   
 }
+=======
+  //删除数组中出现两次的数字
+  function deleteTwo() {
+    let a = [1, 1, 1, 2, 2, 3];
+    let b = [1, 2, 1, 2, 1, 3, 2];
+
+    function objs(data) {
+      let news1 = [];
+      let news2 = [];
+      data.forEach((item, index) => {
+        if (news1.indexOf(item) === -1) {
+          news1.push(item);
+        } else {
+          if (news2.indexOf(item) === -1) {
+            news2.push(item);
+          } else {
+            data.splice(index, 1);
+          }
+        }
+      });
+      console.log(data);
+    }
+    objs(a);
+    objs(b);
+  }
+>>>>>>> 5e811265fef5f9d6b46be6f8427c4b977e1cef44
 </script>
 <script>
   /*
@@ -100,5 +127,33 @@ objs(b);
   }
   function testOne() {
     LazyPig('jackpig').sleep(3).eat('pig')
+  }
+
+</script>
+
+<script>
+  var a = 1;
+  function b() {
+    a = 10;
+    return;
+    function a() { }
+  }
+  b();
+  console.log(a);
+
+  var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+  sortFunc(staffs, 'age');
+  function sortFunc() {
+    var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+
+    for (let i = 0; i < staffs.length; i++) {
+      for (let j = 0; j < staffs.length - 1 - i; j++) {
+        if (staffs[j] > staffs[j + 1]) {
+
+          [staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
+        }
+      }
+    }
+    return staffs;
   }
 </script>

@@ -37,6 +37,8 @@
           <a-button @click='chained()'>链式调用</a-button>
           <a-button @click='bird()'>Bird</a-button>
           <a-button @click="copy()">拷贝</a-button>
+          <a-button @click='sortFunc()'>排序</a-button>
+          <a-button v-on='checkOutput()'>输出</a-button>
         </div>
       </a-card>
     </div>
@@ -87,18 +89,96 @@ export default {
         { name: 'js中的编译是什么意思？', answer: '' },
         { name: '强类型和若类型的语言差异？', answer: '' },
         { title: '01-20叮咚买菜面试', name: ' jsonp的原理？', answer: '' },
-        { name: '图片懒加载的原理？', answer: '' },
+        { name: '图片懒加载的原理？', answer: 'src属性决定是否加载照片=》可视区的判断：getBoundingClientRect()//获取元素大小以及位置' },
         { name: 'cors中后端需要配置什么？', answer: '' },
-        { name: '？', answer: '' },
+        { name: '解构赋值中怎么取最后一个值？', answer: '' },
+        { title: '01-20MicroFocus面试', name: ' button以及input中的button的区别？', answer: '' },
+        { name: '数组中的对象拿到值如何比较？', answer: '' },
+        { title: '01.26面试', name: 'vue的双向绑定以及m怎么到v,v怎么到m', answer: '' },
+        { name: '浏览器的缓存？', answer: '' },
+        { name: '浏览器的缓存中的etag？', answer: '' },
+        { name: 'link,import区别？', answer: 'link的同时被加载，import的当前页面加载完毕时被加载' },
+        { name: 'px em rem？', answer: '因此一般不用于响应式网站,' },
+        { title: '01.28面试', name: '数据结构与算法？队列？广度优先算法', answer: '            ' },
+        { name: '成千上万条数据怎么优化？', answer: '从数据上处理：分页分表，比如前端可以把数据分页展示，后端也分段吐数据从渲染上解决，异步渲染，比如进入页面先不渲染，然后加载好页面再渲染，局部渲染：只渲染目前可见区域的数据，再渲染次屏数据，还有性能瓶颈，可以考虑web worker 做压缩和解码，也可以考虑离屏canvas做预渲染，减少网络耗时：压缩数据，gzip等' },
+        { name: '项目中遇到的难点以及怎么解决的？', answer: '' },
+        { name: '二叉树分层次遍历？', answer: '' },
+        { name: '虚拟dom？', answer: '' },
+        { name: 'diff算法？', answer: '' },
 
+        { title: '01.29合合面试', name: 'vue中的mixin？', answer: '' },
+        { name: 'vue2为什么不能监听数组？是如何解决的？', answer: '' },
+        { name: 'vue3是如何监听数组的？', answer: '' },
+        { name: 'jsonp的原理？', answer: '' },
+        { name: 'nginx反向代理原理？', answer: '' },
+        { name: '跨域是发生在浏览器还是服务器？', answer: '' },
+        { name: 'spa页面的优缺点？', answer: '' },
+        { name: 'nexttic原理？', answer: '' },
+        { name: 'h5新增的操作dom的api？', answer: '' },
+        { name: 'computed和watch的区别？', answer: '' },
+        { name: 'computed的缓存机制？', answer: '' },
+        { name: '父子组件执行生命周期顺序？', answer: '' },
+        { name: 'SPA和MPA的区别？', answer: '' },
+
+        { title: '01.29哈罗出行面试', name: 'css中的position？以及其中的relative与absolute的区别', answer: '' },
+        { name: 'css中的flex布局？', answer: '' },
+        { name: 'new操作符做了什么？', answer: '' },
+        { name: 'js事件循环机制？以及宏微任务执行顺序？', answer: '' },
+        { name: 'promise原理？', answer: '' },
+        { name: '数组的splice方法？', answer: '' },
+        { name: '箭头函数的this指向？', answer: '' },
+        { name: '普通函数的this指向？', answer: '' },
+        { name: 'es6新特性？', answer: '' },
+        { name: '行内元素和块级元素？', answer: '' },
 
       ],
       array: [1, [12, [23232, [2323]]], [12313], [54], [546], [687, [120]]],
       afterValue: '',
-
     }
   },
   methods: {
+    /**
+     * check the value of output
+     */
+    checkOutput: function () {
+      var a = 1;
+      function b() {
+        a = 10;
+        // return
+        //  function c(){
+        //    console.log(a);
+        //  } 
+
+      }
+      var arrFunc = function () {
+        //a json arrary
+        let arrOne = [1, 2, 3, 4, 5, 6]
+        let arrTwo = [
+          { name: 'jack', age: 26 },
+          { name: 'jerry', age: 27 },
+          { name: 'william', age: 28 },
+          { name: 'jacky', age: 29 },
+        ]
+        let newArray = arrTwo.find((item) => {
+          if (item.age > 27) {
+            return item;
+          }
+        })
+        console.log(newArray);
+        console.log(arrOne);
+        for (let i = 0; i < arrTwo.length; i++) {
+          let arrNew = []
+          let j = 0
+          if (arrTwo[i].age > 26) {
+            arrNew[j++] = arrTwo[i]
+          }
+          console.log(arrNew);
+        }
+      }
+      arrFunc()
+      b()
+      console.log(a);
+    },
     insertSortTest: function () {
       let array = [1, 0, 12, 122, 1231, 3123213213, 8]
       let a = this.insertSort(array)
@@ -263,6 +343,19 @@ export default {
        */
       console.log('开始实现深拷贝');
 
+    },
+    sortFunc: function () {
+      var staffs = [{ name: 'AA', age: 40 }, { name: 'BB', age: 50 }, { name: 'DD', age: 40 }, { name: 'CC', age: 40 }, { name: 'EE', age: 45 }];
+
+      for (let i = 0; i < staffs.length; i++) {
+        for (let j = 0; j < staffs.length - 1 - i; j++) {
+          if (staffs[j].age > staffs[j + 1].age) {
+            [staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
+          }
+        }
+      }
+      console.log(staffs);
+      return staffs;
     }
   }
 }
