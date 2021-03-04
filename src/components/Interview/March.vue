@@ -44,11 +44,28 @@ export default {
         { name: 'expert和expert default的区别？', answer: '' },
         { name: 'es6新特性？', answer: '' },
         { name: '数据库索引原理？索引加在哪里？sql怎么优化查询？', answer: '' },
+        { title: '03.04美团面试', name: 'package-lock.json是做什么的？需要上传到git嘛？', answer: '' },
+        { name: 'cdn和dns有什么区别？', answer: '' },
+        { name: 'css垂直居中和水平垂直居中？', answer: '' },
+        { name: '数组的降维？', answer: '' },
+        { name: 'prototype怎么应用？', answer: '' },
+        { name: 'http常见状态码？1 2 3 4 5 ', answer: '' },
+        { name: '为什么要用node作为中间件？', answer: '' },
+        { name: 'Vue中组件的', answer: '' },
+        { name: '事件循环？', answer: '' },
+
       ],
     }
   },
   methods: {
+    testFun: {
+      //       (async function () {
+      //   console.log('start')
+      //   await sleep(10000);
+      //   console.log(new Date());
+      // })(); 
 
+    }
   },
 }
 </script>
