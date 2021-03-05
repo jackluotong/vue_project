@@ -62,7 +62,12 @@ const routes = [{
     path: '/January',
     name: 'January',
     component: () => import('../components/Interview/January.vue')
-  }
+  },
+  {
+    path: '/March',
+    name: 'March',
+    component: () => import('../components/Interview/March.vue')
+  },
 ]
 
 const router = new VueRouter({

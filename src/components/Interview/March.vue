@@ -3,7 +3,7 @@
   <div style="background:#ECECEC; padding:20px;">
     <!-- interview part from march -->
     <a-card
-      title="2021-01-05 Interivew"
+      title="2021-03 Interivew"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
@@ -17,6 +17,32 @@
             {{item.index}}{{item.title}} <span>题目：</span> {{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
+       <!-- <img :src='img'/> -->
+      </div>
+    </a-card>
+
+    <!-- cliclk function -->
+     <a-card
+      title="2021-03 Interivew"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+       <a-button 
+       type='primary' 
+       @click='promiseFun'
+       class="btn"
+       >promise test</a-button>
+      </div>
+    </a-card>
+    <!-- photo and other -->
+     <a-card
+      title="2021-03 Interivew"
+      :bordered="false"
+      style="width:98%;margin:0 auto"
+    >
+      <div class="content">
+       <img :src='img'/>
       </div>
     </a-card>
   </div>
@@ -28,14 +54,13 @@ export default {
   data() {
     return {
       interview: [
-        { title: '03.01(某内资)', name: '行内元素和块级元素？', answer: '' },
-        { name: '伪类和伪元素的区别？', answer: '' },
+        { title: '03.01(某内资)', name: '行内元素和块级元素？', answer: '行内元素有span,a,i,b无法设置padding margin/块级元素自成一行p,h,div,li' },
+        { name: '伪类和伪元素的区别？', answer: '伪类是比如:after,:hover,逻辑上存在却无需标识/伪元素是虚拟的,比如first,逻辑上存在但是dom中不存在' },
         { name: 'vue中作用域slot', answer: '' },
-        { name: 'vue中render是做什么的？', answer: '' },
+        { name: 'vue中render是做什么的？', answer: '把virtual dom变为true dom' },
         { name: 'webpack中的loader和plugin的区别？/dependencies和devDependencies区别？', answer: '' },
-        { name: 'vue中render是做什么的？', answer: '' },
-        { name: 'vue双向绑定详解？m<=>v', answer: '' },
-        { name: 'cros需要做那些配置？', answer: '' },
+        { name: 'vue双向绑定详解？m<=>v', answer: 'view=>model用事件监听;model=>view,observer(劫持并监听所有属性，如果有变动的，就通知订阅者。)+watcher(可以收到属性的变化通知并执行相应的函数，从而更新视图)+compile(可以扫描和解析每个节点的相关指令，并根据初始化模板数据以及初始化相应的订阅器。)' },
+        { name: 'cros需要做那些配置？', answer: '服务端设置 Access-Control-Allow-Origin 就可以开启 CORS' },
         { name: 'promise原理以及all的时候需要传什么参数？', answer: '' },
         { name: '垂直水平居中的方式？', answer: '' },
         { title: '03.02律商联讯(外资)', name: 'css样式优先级？', answer: '' },
@@ -53,18 +78,26 @@ export default {
         { name: '为什么要用node作为中间件？', answer: '' },
         { name: 'Vue中组件的', answer: '' },
         { name: '事件循环？', answer: '' },
-
       ],
+      img:require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
   },
   methods: {
-    testFun: {
-      //       (async function () {
-      //   console.log('start')
-      //   await sleep(10000);
-      //   console.log(new Date());
-      // })(); 
-
+   promiseFun:function(){
+     let run=function(){
+     let _promise=new Promise(function(resolve,reject){
+       setTimeout(() => {
+         let rand=Math.random()
+         if(rand>0.5){
+           resolve('resolve'+rand)
+         }else{
+           reject('reject'+rand)
+         }
+       }, 1000);
+     })
+     return _promise
+   }
+   run()
     }
   },
 }
@@ -78,5 +111,9 @@ export default {
 }
 button {
   margin-left: 4px;
+}
+.btn{
+  vertical-align: center;
+  margin: 0 auto;
 }
 </style>
