@@ -33,6 +33,11 @@
        @click='promiseFun'
        class="btn"
        >promise test</a-button>
+        <a-button 
+       type='primary' 
+       @click='promiseChain'
+       class="btn"
+       >promise chain use</a-button>
       </div>
     </a-card>
     <!-- photo and other -->
@@ -42,7 +47,7 @@
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <img :src='img'/>
+       <img :src='img'/>  
       </div>
     </a-card>
   </div>
@@ -61,9 +66,9 @@ export default {
         { name: 'webpack中的loader和plugin的区别？/dependencies和devDependencies区别？', answer: '' },
         { name: 'vue双向绑定详解？m<=>v', answer: 'view=>model用事件监听;model=>view,observer(劫持并监听所有属性，如果有变动的，就通知订阅者。)+watcher(可以收到属性的变化通知并执行相应的函数，从而更新视图)+compile(可以扫描和解析每个节点的相关指令，并根据初始化模板数据以及初始化相应的订阅器。)' },
         { name: 'cros需要做那些配置？', answer: '服务端设置 Access-Control-Allow-Origin 就可以开启 CORS' },
-        { name: 'promise原理以及all的时候需要传什么参数？', answer: '' },
-        { name: '垂直水平居中的方式？', answer: '' },
-        { title: '03.02律商联讯(外资)', name: 'css样式优先级？', answer: '' },
+        { name: 'promise原理以及all的时候需要传什么参数？', answer: 'promise使用回调函数，把回调函数封装在内部；all的时候把所有的promise放在数组中入参' },
+        { name: '垂直水平居中的方式？', answer: '第一种父元素相对布局，子元素绝对布局+外边距，第二种flex布局，第三种父元素相对布局,子元素绝对布局+transform，第四种 表格' },
+        { title: '03.02律商联讯(外资)', name: 'css样式优先级？', answer: '!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性' },
         { name: 'es5继承？', answer: '' },
         { name: 'js中的宏任务和微任务？', answer: '' },
         { name: 'expert和expert default的区别？', answer: '' },
@@ -98,6 +103,33 @@ export default {
      return _promise
    }
    run()
+    },
+    promiseChain:function(){
+      function run_a(){
+        return new Promise(function(resolve,){
+          resolve('step1')
+        })
+      }
+      function run_b(data_a){
+         return new Promise(function(resolve,){
+           console.log(data_a);
+          resolve('step2')
+        })
+      }
+      function run_c(data_b){
+         return new Promise(function(resolve,){
+           console.log(data_b);
+          resolve('step3')
+        })
+      }
+      //continue use it.
+      run_a().then(function(data){
+        return run_b(data)
+      }).then(function(data){
+        return run_c(data)
+      }).then(function(data){
+        console.log(data);
+      })
     }
   },
 }
