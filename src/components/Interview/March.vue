@@ -17,32 +17,32 @@
             {{item.index}}{{item.title}} <span>题目：</span> {{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       <!-- <img :src='img'/> -->
+        <!-- <img :src='img'/> -->
       </div>
     </a-card>
 
     <!-- cliclk function -->
-     <a-card
+    <a-card
       title="2021-03 Interivew"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <a-button 
-       type='primary' 
-       @click='promiseFun'
-       class="btn"
-       >promise test</a-button>
+        <a-button
+          type='primary'
+          @click='promiseFun'
+          class="btn"
+        >promise test</a-button>
       </div>
     </a-card>
     <!-- photo and other -->
-     <a-card
+    <a-card
       title="2021-03 Interivew"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <img :src='img'/>
+        <img :src='img' />
       </div>
     </a-card>
   </div>
@@ -79,26 +79,47 @@ export default {
         { name: 'Vue中组件的', answer: '' },
         { name: '事件循环？', answer: '' },
       ],
-      img:require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
+      img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
   },
   methods: {
-   promiseFun:function(){
-     let run=function(){
-     let _promise=new Promise(function(resolve,reject){
-       setTimeout(() => {
-         let rand=Math.random()
-         if(rand>0.5){
-           resolve('resolve'+rand)
-         }else{
-           reject('reject'+rand)
-         }
-       }, 1000);
-     })
-     return _promise
-   }
-   run()
-    }
+    promiseFun: function () {
+      let run = function () {
+        let _promise = new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            let rand = Math.random()
+            if (rand > 0.5) {
+              resolve('resolve' + rand)
+            } else {
+              reject('reject' + rand)
+            }
+          }, 1000);
+        })
+        return _promise
+      }
+      /**
+       * then
+       */
+      // run().then(function (data) {
+      //   console.log('resolve' + data);
+      // }, function (data) {
+      //   console.log('reject' + data);
+      // })
+      /**
+       * 
+       */
+      run().then(function (data) {
+        console.log('first', data);
+        return data
+      }).then(function (data) {
+        console.log('second', data);
+        return data
+      }).then(function (data) {
+        console.log('third', data);
+        return data
+      })
+    },
+
   },
 }
 </script>
@@ -112,7 +133,7 @@ export default {
 button {
   margin-left: 4px;
 }
-.btn{
+.btn {
   vertical-align: center;
   margin: 0 auto;
 }
