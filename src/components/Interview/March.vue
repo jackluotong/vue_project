@@ -77,15 +77,9 @@ export default {
         { title: '03.04美团面试', name: 'package-lock.json是做什么的？需要上传到git嘛？', answer: '是用来记录安装包的版本，需要上传' },
         { name: 'cdn和dns有什么区别？', answer: 'cdn:内容分发网络,让用户能够更快速的得到请求的数据/dns:将域名转换为ip地址' },
         { name: 'css垂直居中和水平垂直居中？', answer: '' },
-<<<<<<< HEAD
         { name: '数组的降维？', answer: 'arr+= " "arr=arr.split(","),flat,递归,stack,reduce,concat' },
-        { name: 'prototype怎么应用？', answer: '' },
-        { name: 'http常见状态码？1 2 3 4 5 ', answer: '' },
-=======
-        { name: '数组的降维？', answer: 'arr+= " "arr=arr.split(","),flat,递归,stack,reduce,concat'},
         { name: 'prototype怎么应用？', answer: '做一些继承,给对象里添加属性和方法' },
         { name: 'http常见状态码？1 2 3 4 5 ', answer: '1代表信息类；2代表成功类；3代表重定向类；4代表客户端错误；5代表服务端错误' },
->>>>>>> 734e78e036acbe864dd562a82f7def094ca01a95
         { name: '为什么要用node作为中间件？', answer: '' },
         { name: 'Vue中组件的', answer: '' },
         { name: '事件循环？', answer: '' },
