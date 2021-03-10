@@ -80,9 +80,9 @@ export default {
         { name: '数组的降维？', answer: 'arr+= " "arr=arr.split(","),flat,递归,stack,reduce,concat'},
         { name: 'prototype怎么应用？', answer: '做一些继承,给对象里添加属性和方法' },
         { name: 'http常见状态码？1 2 3 4 5 ', answer: '1代表信息类；2代表成功类；3代表重定向类；4代表客户端错误；5代表服务端错误' },
-        { name: '为什么要用node作为中间件？', answer: '' },
-        { name: 'Vue中组件的', answer: '' },
-        { name: '事件循环？', answer: '' },
+        { name: '为什么要用node作为中间件？', answer: '1.在工程上的应用：统一了标准，引入了组件化、自动化；2.在服务端的应用：ssr,serverless，多端适配' },
+        { name: 'Vue中的组件', answer: '组件注册，传值' },
+        { name: '事件循环？', answer: '执行栈和事件队列' },
       ],
       img:require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
