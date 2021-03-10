@@ -83,7 +83,9 @@ export default {
         { name: '为什么要用node作为中间件？', answer: '' },
         { name: 'Vue中组件的', answer: '' },
         { name: '事件循环？', answer: '' },
-        { title: '03.04美团面试', name: 'package-lock.json是做什么的？需要上传到git嘛？', answer: '是用来记录安装包的版本，需要上传' },
+        { title: '03.09面试', name: '首屏渲染速度怎么加快？', answer: '' },
+        { name: '算法排序？以及时间空间复杂度？', answer: '' },
+
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
