@@ -17,37 +17,37 @@
             {{item.index}}{{item.title}} <span>题目：</span> {{item.name}}<br>答案：<span style="color:blue">{{item.answer}}. </span>
           </li>
         </ol>
-       <!-- <img :src='img'/> -->
+        <!-- <img :src='img'/> -->
       </div>
     </a-card>
 
     <!-- cliclk function -->
-     <a-card
+    <a-card
       title="2021-03 Interivew"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <a-button 
-       type='primary' 
-       @click='promiseFun'
-       class="btn"
-       >promise test</a-button>
-        <a-button 
-       type='primary' 
-       @click='promiseChain'
-       class="btn"
-       >promise chain use</a-button>
+        <a-button
+          type='primary'
+          @click='promiseFun'
+          class="btn"
+        >promise test</a-button>
+        <a-button
+          type='primary'
+          @click='promiseChain'
+          class="btn"
+        >promise chain use</a-button>
       </div>
     </a-card>
     <!-- photo and other -->
-     <a-card
+    <a-card
       title="2021-03 Interivew"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <img :src='img'/>  
+        <img :src='img' />
       </div>
     </a-card>
   </div>
@@ -77,57 +77,59 @@ export default {
         { title: '03.04美团面试', name: 'package-lock.json是做什么的？需要上传到git嘛？', answer: '是用来记录安装包的版本，需要上传' },
         { name: 'cdn和dns有什么区别？', answer: 'cdn:内容分发网络,让用户能够更快速的得到请求的数据/dns:将域名转换为ip地址' },
         { name: 'css垂直居中和水平垂直居中？', answer: '' },
-        { name: '数组的降维？', answer: 'arr+= " "arr=arr.split(","),flat,递归,stack,reduce,concat'},
+        { name: '数组的降维？', answer: 'arr+= " "arr=arr.split(","),flat,递归,stack,reduce,concat' },
         { name: 'prototype怎么应用？', answer: '' },
         { name: 'http常见状态码？1 2 3 4 5 ', answer: '' },
         { name: '为什么要用node作为中间件？', answer: '' },
         { name: 'Vue中组件的', answer: '' },
         { name: '事件循环？', answer: '' },
+        { title: '03.04美团面试', name: 'package-lock.json是做什么的？需要上传到git嘛？', answer: '是用来记录安装包的版本，需要上传' },
+
       ],
-      img:require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
+      img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
   },
   methods: {
-   promiseFun:function(){
-     let run=function(){
-     let _promise=new Promise(function(resolve,reject){
-       setTimeout(() => {
-         let rand=Math.random()
-         if(rand>0.5){
-           resolve('resolve'+rand)
-         }else{
-           reject('reject'+rand)
-         }
-       }, 1000);
-     })
-     return _promise
-   }
-   run()
+    promiseFun: function () {
+      let run = function () {
+        let _promise = new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            let rand = Math.random()
+            if (rand > 0.5) {
+              resolve('resolve' + rand)
+            } else {
+              reject('reject' + rand)
+            }
+          }, 1000);
+        })
+        return _promise
+      }
+      run()
     },
-    promiseChain:function(){
-      function run_a(){
-        return new Promise(function(resolve,){
+    promiseChain: function () {
+      function run_a() {
+        return new Promise(function (resolve,) {
           resolve('step1')
         })
       }
-      function run_b(data_a){
-         return new Promise(function(resolve,){
-           console.log(data_a);
+      function run_b(data_a) {
+        return new Promise(function (resolve,) {
+          console.log(data_a);
           resolve('step2')
         })
       }
-      function run_c(data_b){
-         return new Promise(function(resolve,){
-           console.log(data_b);
+      function run_c(data_b) {
+        return new Promise(function (resolve,) {
+          console.log(data_b);
           resolve('step3')
         })
       }
       //continue use it.
-      run_a().then(function(data){
+      run_a().then(function (data) {
         return run_b(data)
-      }).then(function(data){
+      }).then(function (data) {
         return run_c(data)
-      }).then(function(data){
+      }).then(function (data) {
         console.log(data);
       })
     }
@@ -144,7 +146,7 @@ export default {
 button {
   margin-left: 4px;
 }
-.btn{
+.btn {
   vertical-align: center;
   margin: 0 auto;
 }
