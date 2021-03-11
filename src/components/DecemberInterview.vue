@@ -150,6 +150,14 @@
         </ol>
       </div>
     </a-card>
+    <a-button @click="testAxios">test axios</a-button>
+    <div
+    v-for='currency in axiosData'
+    :key='currency.index'
+    >
+   {{currency.description}}
+      <span v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+    </div>
   </div>
 </template>
 <script>
@@ -272,11 +280,6 @@ export default {
         { name: '如何处理表单中提交的数据？', answer: '' },
         { name: 'http缓存以及缓存代理？', answer: '' },
         { name: '什么是跨域？浏览器如何响应拦截？如何解决？', answer: 'scheme host post都相同则为同源；解决方法：cors jsonp nginx ' },
-        { name: '', answer: '' },
-        { name: '', answer: '' },
-        { name: '', answer: '' },
-        { name: '', answer: '' },
-
       ],
       arithmeticPart: [
         { name: "算法排序有哪些？时间复杂度以及空间复杂度？", answer: "" },
@@ -289,14 +292,21 @@ export default {
       ],
       interviewThinking: [
         { name: '2020-12-23 陆家嘴富汇大厦(轮胎公司)', answer: '个人发展最重要自己优秀才是王道，坚持，坚持。' }
-      ]
+      ],
+      axiosData:null,
+      loading:true,
     }
   },
-  computed() {
+  computed:{
 
   },
-  watch() {
+  watch:{
 
+  },
+  filters:{
+  currencydecimal(value){
+  return value.toFixed(2)
+}
   },
   mounted() {
     var str = " ad da ad   "
@@ -362,16 +372,47 @@ export default {
      * test ajax visit local json file
      */
     testAxios: function () {
-      this.axios.get('http://localhost:8081/assets/test.json').then(res => {
-        if (res.data.code == 200) {
-          res.data.results
-        }
-      }).catch(err => {
+      this.$axios({
+        method:'get',
+        url:'https://api.coindesk.com/v1/bpi/currentprice.json',
+        data:''//给后端传数据
+      })
+      .then((response)=>{
+        this.axiosData= response.data.bpi//拿到的值去做处理
+        console.log(this.axiosData,'axiosData');
+      })
+      .catch((err) => {
         this.$message({
           type: 'error',
           message: err,
         })
       })
+      .finally(()=>{
+        this.loading=false
+        this.$message({
+          type:'right',
+          message:'request was overed.'
+        })
+        })
+
+      /**
+       * get and post
+       * get  请求可缓存 有长度限制 不应该在处理敏感数据 请求被保存在历史记录中 数据在url中可见
+       * post 不能被缓存 数据不会保存在历史记录中 无限制 也允许二进制 比较安全 数据不在url中
+       */
+      
+      // this.axios.get('https://api.coindesk.com/v1/bpi/currentprice.json') 
+      // .then(response => {
+      //     this.axiosData= response.data.bpi
+      //     console.log(this.axiosData,'axiosData');
+      // })
+      // .catch(err => {
+      //   this.$message({
+      //     type: 'error',
+      //     message: err,
+      //   })
+      //   .finally(()=>{this.loading=false})
+      
     },
     /**
      * clear the space of string before and after

@@ -68,6 +68,16 @@ const routes = [{
     name: 'March',
     component: () => import('../components/Interview/March.vue')
   },
+  {
+    path: '/Protocol',
+    name: 'Protocol',
+    component: () => import('../components/Protocol/Index.vue')
+  },
+  {
+    path: '/Arithmetic',
+    name: 'Arithmetic',
+    component: () => import('../components/Arithmetic/Index.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -79,6 +79,23 @@
              March
             </a-menu-item> 
           </a-sub-menu>
+
+          <!-- add new part such as protocol and arithmetic -->
+          <!-- 2021.03.11 -->
+           <a-sub-menu key="sub5">
+            <span slot="title"><a-icon type="notification" />protocol</span>
+            <a-menu-item key="30" @click="$router.push({name:'Protocol'})">
+            HTTP TCP UDP IP
+            </a-menu-item>
+          </a-sub-menu>
+
+          <!-- arithmetic -->
+          <a-sub-menu key="sub6">
+            <span slot="title"><a-icon type="notification" />arithmetic</span>
+            <a-menu-item key="40" @click="$router.push({name:'Arithmetic'})">
+            Arithmetic
+            </a-menu-item>
+          </a-sub-menu>
         </a-menu>
       </a-layout-sider>
       <a-layout style="padding: 0 24px 24px">
