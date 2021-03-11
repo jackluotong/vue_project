@@ -83,7 +83,7 @@ export default {
         { name: '为什么要用node作为中间件？', answer: '1.在工程上的应用：统一了标准，引入了组件化、自动化；2.在服务端的应用：ssr,serverless，多端适配' },
         { name: 'Vue中的组件', answer: '组件注册，传值' },
         { name: '事件循环？', answer: '执行栈和事件队列' },
-        { title: '03.09面试', name: '首屏渲染速度怎么加快？', answer: 'critical rendering path' },
+        { title: '03.09面试', name: '首屏渲染速度怎么加快？', answer: 'critical rendering path domtree,cssom' },
         { name: '算法排序？以及时间空间复杂度？', answer: '' },//git config http.sslVerify "false" 当无法git pull的时候
         { name: '浏览器渲染页面的原理？', answer: '' },
         { name: '如何确保tcp传输稳定可靠？', answer: '' },
@@ -91,7 +91,7 @@ export default {
         { name: '防抖节流怎么实现？', answer: '' },
         { name: '构造函数和prototype的区别？', answer: '' },
         { name: 'webpack打包原理？', answer: '' },
-        { name: '', answer: '' },
+        { title: '03.11面试', name: '', answer: '' },
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
