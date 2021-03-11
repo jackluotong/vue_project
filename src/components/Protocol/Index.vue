@@ -10,7 +10,7 @@
       <div class="content">
         <ol>
           <li
-            v-for="(item,index,id) in TCP"
+            v-for="(item,index,id) in interview"
             :key='id'
             class="liClass"
           >
@@ -27,15 +27,7 @@
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-        <ol>
-          <li
-          v-for='(item,index,id) in HTTP'
-          :key='id'
-          class="liClass"
-          >
-          {{item.index}}{{item.title}}  <span> name:</span>{{item.name}} <br>answer:<span style='color:black'>{{item.answer}} </span>
-          </li>
-        </ol>
+        
       </div>
     </a-card>
     <!-- UDP -->
@@ -45,15 +37,7 @@
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-       <ol>
-          <li
-          v-for='(item,index,id) in UDP'
-          :key='id'
-          class="liClass"
-          >
-          {{item.index}}{{item.title}}  <span> name:</span>{{item.name}} <br>answer:<span style='color:black'>{{item.answer}} </span>
-          </li>
-        </ol>
+        <img :src='img' />
       </div>
     </a-card>
 
@@ -64,40 +48,9 @@
       style="width:98%;margin:0 auto"
     >
       <div class="content">
-      <ol>
-          <li
-          v-for='(item,index,id) in IP'
-          :key='id'
-          class="liClass"
-          >
-          {{item.index}}{{item.title}}  <span> name:</span>{{item.name}} <br>answer:<span style='color:black'>{{item.answer}} </span>
-          </li>
-        </ol>
+        <img :src='img' />
       </div>
     </a-card>
   </div>
 
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      TCP:[
-        {title:'tcp',name:'tcp',answer:'?'}
-      ],
-      HTTP:[],
-      UDP:[],
-      IP:[]
-    }
-  },
-}
-</script>
-<style scoped>
-.liClass{
-text-align: left;
-}
-.content{
-  float: left;
-}
-</style>
