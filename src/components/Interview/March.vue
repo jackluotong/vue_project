@@ -86,11 +86,11 @@ export default {
         { title: '03.09面试', name: '首屏渲染速度怎么加快？', answer: 'critical rendering path domtree,cssom' },
         { name: '算法排序？以及时间空间复杂度？', answer: '' },//git config http.sslVerify "false" 当无法git pull的时候
         { name: '浏览器渲染页面的原理？', answer: '' },
-        { name: '如何确保tcp传输稳定可靠？', answer: '' },
+        { name: '如何确保tcp传输稳定可靠？', answer: '序列号、超时重传、检验和、流量控制、滑动窗口、拥塞控制实现可靠性' },
         { name: '从输入url到页面展现的过程？', answer: '' },
         { name: '防抖节流怎么实现？', answer: '' },
-        { name: '构造函数和prototype的区别？', answer: '' },
-        { name: 'webpack打包原理？', answer: '' },
+        { name: '构造函数和prototype的区别？', answer: '构造函数存在浪费内存' },
+        { name: 'webpack打包原理？', answer: '把依赖的模块转化成可以代表这些包的静态文件，分析代码。转换代码，编译代码，输出代码' },
         { title: '03.12面试', name: '', answer: '' },
         { name: '', answer: '' },
         { name: '', answer: '' },//github.com.cnpmjs.org 在com后面增加这个配置来加速clone
@@ -101,6 +101,9 @@ export default {
   },
   methods: {
     promiseFun: function () {
+      let myMap=new Map()
+      myMap.set('1','1111')
+      alert(myMap)
       let run = function () {
         let _promise = new Promise(function (resolve, reject) {
           setTimeout(() => {
