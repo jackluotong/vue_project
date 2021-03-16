@@ -91,10 +91,12 @@ export default {
         { name: '防抖节流怎么实现？', answer: '' },
         { name: '构造函数和prototype的区别？', answer: '构造函数存在浪费内存' },
         { name: 'webpack打包原理？', answer: '把依赖的模块转化成可以代表这些包的静态文件，分析代码。转换代码，编译代码，输出代码' },
-        { title: '03.15面试', name: 'vue中的render是做什么的？', answer: 'createElement，转换为virtual dom' },
-        { name: '', answer: '' },
-        { name: '', answer: '' },//github.com.cnpmjs.org 在com后面增加这个配置来加速clone
-
+        { title: '03.16面试', name: 'vue中的render是做什么的？', answer: 'createElement，转换为virtual dom' },
+        { name: '网络安全问题有那些？', answer: 'xss(跨站脚本攻击，由于对用户提交的数据没有经过严格的过滤处理造成的，解决：XSS Filter，Http Only cookie) xsrf(跨站请求伪造，a网站的cookie被b网站使用；解决方案：使用token在发送http请求的时候) sql注入，xxe漏洞，' },
+        { name: '深拷贝和浅拷贝的区别？', answer: '' },//github.com.cnpmjs.org 在com后面增加这个配置来加速clone
+        { name: 'tcp和udp的区别？', answer: '' },
+        { name: 'let const var的区别？', answer: '' },
+        { name: '栈 队列 堆的区别？', answer: '' },
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
