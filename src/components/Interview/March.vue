@@ -97,6 +97,7 @@ export default {
         { name: 'tcp和udp的区别？', answer: '' },
         { name: 'let const var的区别？', answer: '' },
         { name: '栈 队列 堆的区别？', answer: '' },
+        { name: '构造函数与prototype 原型链？', answer: '' },
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
