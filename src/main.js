@@ -9,7 +9,6 @@ import 'ant-design-vue/dist/antd.css'
 import axios from "axios";
 Vue.prototype.$axios = axios;
 Vue.use(Antd);
-
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
