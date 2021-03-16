@@ -99,6 +99,7 @@ export default {
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
   },
+  
   methods: {
     promiseFun: function () {
       let myMap=new Map()
