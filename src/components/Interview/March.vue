@@ -103,7 +103,8 @@ export default {
         { name: ' react与vue的区别？', answer: 'Vue提供反应式的数据，当数据改动时，界面就会自动更新，而React里面需要调用方法SetState' },   
         { name: ' kepp-alive的原理以及生命周期？', answer: '页面第一次进入的时候，钩子触发的顺序是created->mounted->activated' },  
         { name: ' vue中的mixin？', answer: '多个组件可以共享数据和方法，在使用mixin的组件中引入后，mixin中的方法和属性也就并入到该组件中，可以直接使用。钩子函数会两个都被调用，mixin中的钩子首先执行。' },   
-      
+        { name: ' 数组降维？怎么有更高的复用性兼容性？', answer: '' },
+
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
