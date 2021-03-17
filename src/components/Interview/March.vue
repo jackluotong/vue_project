@@ -94,10 +94,16 @@ export default {
         { title: '03.16面试', name: 'vue中的render是做什么的？', answer: 'createElement，转换为virtual dom' },
         { name: '网络安全问题有那些？', answer: 'xss(跨站脚本攻击，由于对用户提交的数据没有经过严格的过滤处理造成的，解决：XSS Filter，Http Only cookie) xsrf(跨站请求伪造，a网站的cookie被b网站使用；解决方案：使用token在发送http请求的时候) sql注入，xxe漏洞，' },
         { name: '深拷贝和浅拷贝的区别？', answer: '' },//github.com.cnpmjs.org 在com后面增加这个配置来加速clone
-        { name: 'tcp和udp的区别？', answer: '' },
+        { name: 'tcp和udp的区别？', answer: 'tcp是面向连接，稳定，安全可靠，无差错，无重复，速度会慢一点；udp是无面向连接，' },
         { name: 'let const var的区别？', answer: '' },
         { name: '栈 队列 堆的区别？', answer: '' },
         { name: '构造函数与prototype 原型链？', answer: '' },
+        { title: '03.17阿里旗下二面', name: 'vue3的原理？以及新特性？', answer: ''},
+        { name: ' 数组降维？怎么有更高的复用性兼容性？', answer: '' },
+        { name: ' react与vue的区别？', answer: 'Vue提供反应式的数据，当数据改动时，界面就会自动更新，而React里面需要调用方法SetState' },   
+        { name: ' kepp-alive的原理以及生命周期？', answer: '页面第一次进入的时候，钩子触发的顺序是created->mounted->activated' },  
+        { name: ' vue中的mixin？', answer: '多个组件可以共享数据和方法，在使用mixin的组件中引入后，mixin中的方法和属性也就并入到该组件中，可以直接使用。钩子函数会两个都被调用，mixin中的钩子首先执行。' },   
+      
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }

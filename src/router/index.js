@@ -66,6 +66,9 @@ const routes = [{
   {
     path: '/March',
     name: 'March',
+    meta: {
+      keepAlive: true
+    },
     component: () => import('../components/Interview/March.vue')
   },
   {
