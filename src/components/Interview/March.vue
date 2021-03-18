@@ -104,6 +104,10 @@ export default {
         { name: ' kepp-alive的原理以及生命周期？', answer: '页面第一次进入的时候，钩子触发的顺序是created->mounted->activated' },  
         { name: ' vue中的mixin？', answer: '多个组件可以共享数据和方法，在使用mixin的组件中引入后，mixin中的方法和属性也就并入到该组件中，可以直接使用。钩子函数会两个都被调用，mixin中的钩子首先执行。' },   
         { name: ' 数组降维？怎么有更高的复用性兼容性？', answer: 'flat,' },
+        { title: '03.18华测导航面试', name: '浏览器渲染页面的原理？渲染过程以及如何阻止js阻塞？', answer: ''},
+        { name: ' 数组降维？怎么有更高的复用性兼容性？', answer: 'flat,' },
+        { name: ' vue中的diff是怎样的？父节点改变的话会影响子节点嘛？', answer: 'flat,' },
+
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
