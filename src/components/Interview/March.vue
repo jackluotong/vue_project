@@ -38,6 +38,11 @@
           @click='promiseChain'
           class="btn"
         >promise chain use</a-button>
+        <a-button
+          type='primary'
+          @click='prototypeFun'
+          class="btn"
+        >prototype</a-button>
       </div>
     </a-card>
     <!-- photo and other -->
@@ -50,6 +55,11 @@
         <img :src='img' />
       </div>
     </a-card>
+    <div>
+      <div style="height:100px;padding:20px;margin:15px;background:red">1</div>
+      <div style="height:50px;padding:10px;margin:5px;background:blue">2</div>
+
+    </div>
   </div>
 
 </template>
@@ -160,6 +170,13 @@ export default {
       }).then(function (data) {
         console.log(data);
       })
+    },
+    prototypeFun:function () {
+      function a(name){
+        alert(name)
+      }
+      a('jack')
+      //
     }
   },
 }
