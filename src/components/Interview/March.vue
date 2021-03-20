@@ -117,7 +117,8 @@ export default {
         { title: '03.18华测导航面试', name: '浏览器渲染页面的原理？渲染过程以及如何阻止js阻塞？', answer: 'domtree =>cssom=>render tree'},
         { name: ' 数组降维？怎么有更高的复用性兼容性？', answer: 'flat,' },
         { name: ' vue中的diff是怎样的？父节点改变的话会影响子节点嘛？', answer: 'flat,' },
-
+        {title:'03.19新致软件',name:'微服务是什么？多页面的通讯怎么实现？',answer:'postMessage'},
+        
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
