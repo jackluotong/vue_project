@@ -126,7 +126,15 @@ export default {
         { name: ' promise构造函数是同步执行还是异步？then？', answer: ',' },
         { name: ' const定义的变量可以更改嘛？', answer: '数组可以更改,直接定义的常量无法修改' },
         { name: ' map,set数据结构？', answer: ',' },
-
+        { title: '03.22 印度面试', name: '', answer: ''},
+        { name: ' absolute和relative的区别？', answer: ',' },
+        { name: ' react中的hooks？', answer: ',' },
+        { name: ' let作用域问题？', answer: ',' },
+        { title: '03.23 医疗面试', name: '值类型和引用类型的区别？', answer: ''},
+        { name: '普通函数和箭头函数的区别？', answer: ',' },
+        { name: ' 闭包的作用和使用方法？', answer: ',' },
+        { name: 'js中全局变量的存储', answer: '全局变量全部存放在静态存储区，在程序开始执行时给全局变量分配存储区，程序行完毕就释放。在程序执行过程中它们占据固定的存储单元，而不动态地进行分配和释放,' },//alt+z=换行
+        { name: 'vuex中的dispatch和emit', answer: ',' },
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
