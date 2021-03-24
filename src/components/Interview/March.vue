@@ -3,7 +3,7 @@
   <div style="background:#ECECEC; padding:20px;">
     <!-- interview part from march -->
     <a-card
-      title="2021-03 Interivew"
+      title="2021-03 Interview"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
@@ -21,9 +21,9 @@
       </div>
     </a-card>
 
-    <!-- cliclk function -->
+    <!-- click function -->
     <a-card
-      title="2021-03 Interivew"
+      title="2021-03 Interview"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
@@ -47,7 +47,7 @@
     </a-card>
     <!-- photo and other -->
     <a-card
-      title="2021-03 Interivew"
+      title="2021-03 Interview"
       :bordered="false"
       style="width:98%;margin:0 auto"
     >
@@ -141,6 +141,10 @@ export default {
         { name: '普通函数和箭头函数的区别？', answer: ',' },
         { name: ' 闭包的作用和使用方法？', answer: ',' },
         { name: 'js中全局变量的存储', answer: '全局变量全部存放在静态存储区，在程序开始执行时给全局变量分配存储区，程序行完毕就释放。在程序执行过程中它们占据固定的存储单元，而不动态地进行分配和释放,' },//alt+z=换行
+        { name: 'vuex中的dispatch和commit', answer: ',' },
+        { title: '03.24 汉得面试', name: '值类型和引用类型的区别？', answer: ''},
+        { name: '浏览器的事件流？', answer: ',' },
+        { name: '为什么要用事件委托？', answer: ',' },
         { name: 'vuex中的dispatch和commit', answer: ',' },
 
       ],
