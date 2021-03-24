@@ -40,16 +40,26 @@
           <a-button @click='sortFunc()'>排序</a-button>
           <a-button v-on='checkOutput()'>输出</a-button>
         </div>
+        <!-- 父组件 -->
+        <div>
+          <div>父组件的toCity{{toCity}}</div>
+          <train-city @showCityName='updateCity' :sendData='toCity'></train-city>
+        </div>
       </a-card>
     </div>
   </div>
 
 </template>
 <script>
-
+import  TrainCity from './March'
 export default {
+  name:'index', 
+  components:{
+    TrainCity,
+  },
   data() {
     return {
+      toCity:'shanghai',
       interview: [
         { title: '01-05中安科技面试', name: 'router中如果找不到当前路径怎么处理？', answer: '' },
         { name: 'http了解的怎么样？状态码？里面的方法？', answer: '' },
@@ -137,6 +147,10 @@ export default {
     }
   },
   methods: {
+    updateCity(data){
+      this.toCity=data.cityName
+      alert('toCity',this.toCity)
+    },
     /**
      * check the value of output
      */

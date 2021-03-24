@@ -53,6 +53,11 @@
     >
       <div class="content">
         <img :src='img' />
+        <!-- 测试父子组件传值 -->
+        <div class="train-city">
+          <h1>父组件传给子组件的:{{sendData}}</h1>
+          <br/> <a-button @click="select('shanghai')">点击此处将‘上海发给父组件’</a-button>
+        </div>
       </div>
     </a-card>
     <div>
@@ -66,6 +71,8 @@
 <script>
 
 export default {
+  name:'trainCity',
+  props:['sendData'],
   data() {
     return {
       interview: [
@@ -134,7 +141,7 @@ export default {
         { name: '普通函数和箭头函数的区别？', answer: ',' },
         { name: ' 闭包的作用和使用方法？', answer: ',' },
         { name: 'js中全局变量的存储', answer: '全局变量全部存放在静态存储区，在程序开始执行时给全局变量分配存储区，程序行完毕就释放。在程序执行过程中它们占据固定的存储单元，而不动态地进行分配和释放,' },//alt+z=换行
-        { name: 'vuex中的dispatch和emit', answer: ',' },
+        { name: 'vuex中的dispatch和commit', answer: ',' },
 
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
@@ -142,6 +149,12 @@ export default {
   },
   
   methods: {
+    select(val){
+      let data={
+        cityName:val
+      }
+      this.$emit('showCityName',data)
+    },
     promiseFun: function () {
       let myMap=new Map()
       myMap.set('1','1111')
