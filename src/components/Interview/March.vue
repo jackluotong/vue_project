@@ -145,8 +145,12 @@ export default {
         { title: '03.24 汉得面试', name: '值类型和引用类型的区别？', answer: ''},
         { name: '浏览器的事件流？', answer: ',' },
         { name: '为什么要用事件委托？', answer: ',' },
-        { name: 'vuex中的dispatch和commit', answer: ',' },
-
+        { name: '什么是回流？重绘？', answer: ',' },
+        { name: ' 怎么实现0.5px的线？', answer: ',' },
+        { name: 'flex布局？以及其中的各种属性？', answer: ',' },
+        { name: '闭包的优缺点？', answer: ',' },
+        { name: 'react中怎么提升渲染效果？', answer: ',' },
+        { name: 'react和vue的区别？', answer: ',' },
       ],
       img: require('../../assets/mvvm.png')//做图片动态绑定的时候需要用require
     }
