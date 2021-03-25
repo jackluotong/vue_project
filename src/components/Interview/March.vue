@@ -317,10 +317,15 @@ export default {
 				{ name: 'react和vue的区别？', answer: ',' },
         {
 					title: '03.24 中银控股面试',
-					name: 'hash模式和history模式区别？',
+					name: 'hash模式和history模式区别？以及底层原理？',
 					answer: '',
 				},
-        {name:'',answer:''}
+        {name:'事件循环机制具体？setsetTimeout和promise的执行顺寻？',answer:''},
+        {name:'vue双向绑定的类的底层？observer？watcher？compile？',answer:''},
+        {name:'settimeout不精确怎么办?',answer:''},
+        {name:'css 控制图片宽一定高是一半?',answer:'padding-bottom'},
+
+
 			],
 			img: require('../../assets/mvvm.png'), //做图片动态绑定的时候需要用require
 		}
