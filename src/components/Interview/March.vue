@@ -61,6 +61,9 @@
 					<a-button @click="testVuexActoins"
 						>commit 来触发mutation</a-button
 					>
+          <a-button @click="testItem"
+						>test question</a-button
+					>
 				</div>
 			</div>
 		</a-card>
@@ -329,12 +332,17 @@ export default {
 				},
 				{
 					name: 'vue双向绑定的类的底层？observer？watcher？compile？',
-					answer: '',
+					answer: '', 
 				},
 				{ name: 'settimeout不精确怎么办?', answer: '' },
 				{
 					name: 'css 控制图片宽一定高是一半?',
 					answer: 'padding-bottom',
+				},
+        {
+					title: '03.30 问题总结',
+					name: 'mpa spa区别？',
+					answer: 'mpa 每一次页面跳转的时候，后台服务器都会给返回一个新的html文档;spa',
 				},
 			],
 			img: require('../../assets/mvvm.png'), //做图片动态绑定的时候需要用require
@@ -342,6 +350,15 @@ export default {
 	},
 
 	methods: {
+    testItem(){
+      var a=3
+      var c=function(){
+        // var a=2
+        // console.log(a,'in the action scope');
+        return 4
+      }
+      a*c()
+    },
 		testVuexActoins() {
 			this.$store.dispatch('changeDataAsync')
 			alert(localStorage.getItem('key'))
