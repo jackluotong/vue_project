@@ -80,6 +80,11 @@ const routes = [{
     path: '/Arithmetic',
     name: 'Arithmetic',
     component: () => import('../components/Arithmetic/Index.vue')
+  }, 
+  {
+    path: '/April',
+    name: 'April',
+    component: () => import('../components/Interview/April.vue')
   },
 ]
 

@@ -323,7 +323,7 @@ export default {
 				{
 					title: '03.24 中银控股面试',
 					name: 'hash模式和history模式区别？以及底层原理？',
-					answer: '',
+					answer: 'hash 为window.hashChange 其中的newURL oldURL; history 给每个超链接增加onclick方法，阻止默认的超链接跳转，改用history.pushState或history.replaceState来更改浏览器中的url，并修改页面内容。',
 				},
 				{
 					name:
@@ -332,7 +332,7 @@ export default {
 				},
 				{
 					name: 'vue双向绑定的类的底层？observer？watcher？compile？',
-					answer: '', 
+					answer: '',   
 				},
 				{ name: 'settimeout不精确怎么办?', answer: '' },
 				{
@@ -353,8 +353,7 @@ export default {
     testItem(){
       var a=3
       var c=function(){
-        // var a=2
-        // console.log(a,'in the action scope');
+       // console.log(a,'in the action scope');
         return 4
       }
       a*c()
