@@ -19,11 +19,16 @@
 						</span>
 					</li>
 				</ol>
+        <a-button @click="testOne" style="float:left">test one</a-button>
 			</div>
+     
+		</a-card>
+     <p>{{message}}</p>
+      <a-input v-model="message" placeholder="please input some thing."></a-input>
 			<div class="div">
 				<div class="div1"></div>
+        
 			</div>
-		</a-card>
 	</div>
 </template>
 
@@ -31,6 +36,7 @@
 export default {
 	data() {
 		return {
+      message:'',
 			april: [
 				{
 					title: '04.01 X公司面试',
@@ -81,6 +87,31 @@ export default {
 			],
 		}
 	},
+  methods:{
+    testOne:function(){
+      let arr=new Array(1,2,3)
+      let a=arr.push(1,2,4)
+      let b=[1,2,3,11,22,33]
+      let c=[0]
+      console.log(c.concat(b),a);
+      setTimeout(() => {
+        console.log(this);
+      }, 10);
+      //splice(开始位置， 删除的个数，元素) 实现增删改
+      setTimeout(()=>{
+        console.log('setTimeout');
+      },0)
+     new Promise(resolve=>{
+      //  console.log('resolve');
+      setTimeout(() => {
+        console.log('resolve in promise')
+      }, 10);
+       resolve('resolve is res?')
+     }).then(res=>{
+       console.log(res);
+     })
+    }
+  }
 }
 </script>
 <style scoped>
