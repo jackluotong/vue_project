@@ -20,6 +20,9 @@
 					</li>
 				</ol>
 			</div>
+			<div class="div">
+				<div class="div1"></div>
+			</div>
 		</a-card>
 	</div>
 </template>
@@ -59,23 +62,22 @@ export default {
 				{ name: 'v-if v-show的使用场景？以及区别？', answer: '' },
 				{ name: '微前端？', answer: '' },
 				{
-					title: '04.06 X公司面试',
-					name: 'js的垃圾回收机制？',
+					title: '04.07 X公司面试',
+					name: 'flex布局实现垂直水平居中？需要知道其中的宽度嘛？',
 					answer: '',
 				},
 				{
-					name: '什么场景下要规避闭包？',
-					answer: 'setTimeout 回调函数',
+					name: 'keep-alive缓存失效问题？',
+					answer: ' ',
 				},
 				{
-					name: '为什么const定义的对象可以改变？',
-					answer:
-						'如果是基本数据类型再次修改会报错,如果是object是引用类型的不变的是其指针,但是属性可以改变的',
+					name: ' 路由导航首位的应用？',
+					answer: '  ',
 				},
-				{ name: '垂直居中？水平居中？', answer: '' },
-				{ name: 'rem？rem原理？', answer: '' },
-				{ name: 'v-if v-show的使用场景？以及区别？', answer: '' },
-				{ name: '微前端？', answer: '' },
+				{ name: 'mvvm mvc的区别？', answer: '' },
+				{ name: ' ', answer: '' },
+				{ name: ' ', answer: '' },
+				{ name: '', answer: '' },
 			],
 		}
 	},
@@ -94,5 +96,19 @@ button {
 .btn {
 	vertical-align: center;
 	margin: 0 auto;
+}
+.div {
+	display: flex;
+	justify-content: center;
+	height: 200px;
+	width: 200px;
+	background: red;
+}
+.div1 {
+	align-items: center; /* 水平居中 */
+	align-self: center; /*垂直居中 */
+	height: 100px;
+	width: 100px;
+	background: rgb(10, 82, 238);
 }
 </style>
