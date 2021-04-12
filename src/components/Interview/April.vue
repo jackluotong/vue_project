@@ -24,7 +24,7 @@
      
 		</a-card>
      <p>{{message}}</p>
-      <a-input v-model="message" placeholder="please input some thing."></a-input>
+      <a-input v-model="message" placeholder="please input some thing."></a-input >
 			<div class="div">
 				<div class="div1"></div>
         
