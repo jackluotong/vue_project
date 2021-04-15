@@ -2,3 +2,5 @@
 https://blog.csdn.net/shuixiou1/article/details/81048816?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&dist_request_id=1330147.34867.16182147731395793&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control
 # 关于各类居中问题
 https://blog.csdn.net/qq_27576607/article/details/78697812?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control
+# 浏览器的缓存
+https://www.cnblogs.com/chengxs/p/10396066.html
