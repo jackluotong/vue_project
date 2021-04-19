@@ -128,7 +128,7 @@ export default {
         { name: 'h5新增的操作dom的api？', answer: '' },
         { name: 'computed和watch的区别？', answer: 'computed：支持缓存，只有依赖数据发生改变，才会重新进行计算，不支持异步，一个属性是由其他属性计算而来的，这个属性依赖其他属性，是一个多对一或者一对一，一般用computed，如果computed属性属性值是函数，那么默认会走get方法；函数的返回值就是属性的属性值；在computed中的，属性都有一个get和一个set方法，当数据变化时，调用set方法。watch：不支持缓存，数据变，直接会触发相应的操作，watch支持异步，监听的函数接收两个参数，第一个参数是最新的值；第二个参数是输入之前的值，' },
         { name: 'computed的缓存机制？', answer: '' },
-        { name: '父子组件执行生命周期顺序？', answer: '' },
+        { name: '父子组件执行生命周期顺序？', answer: '父组件把子组件包括在里面' },
         { name: 'SPA和MPA的区别？', answer: '' },
 
         { title: '01.29哈罗出行面试', name: 'css中的position？以及其中的relative与absolute的区别', answer: '' },

@@ -86,6 +86,7 @@ export default {
 				{ name: 'mvvm mvc的区别？', answer: '' },
 				{ title: '04.12花柱面试', name: 'vuex中的缓存？', answer: '' },
 				{ name: 'keep-alive的原理？', answer: '' },
+    { title: '04.19面试', name: 'vuex中的缓存？', answer: '' },
 				{ name: ' ', answer: '' },
 				{ name: '', answer: '' },
 			],
