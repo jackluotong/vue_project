@@ -1,10 +1,10 @@
 <template>
-	<div style="background:#ECECEC; padding:20px;">
+	<div style="background: #ececec; padding: 20px">
 		<!-- all arithmetic from 2021.04.01 -->
 		<a-card
 			title="Interview"
 			:bordered="false"
-			style="width:98%;margin:0 auto"
+			style="width: 98%; margin: 0 auto"
 		>
 			<div class="content">
 				<ol>
@@ -14,12 +14,12 @@
 						class="liClass"
 					>
 						{{ item.index }}{{ item.title }} <span>题目：</span>
-						{{ item.name }}<br />答案：<span style="color:blue"
+						{{ item.name }}<br />答案：<span style="color: blue"
 							>{{ item.answer }}.
 						</span>
 					</li>
 				</ol>
-				<a-button @click="testOne" style="float:left"
+				<a-button @click="testOne" style="float: left"
 					>test one</a-button
 				>
 			</div>
@@ -86,14 +86,24 @@ export default {
 				{ name: 'mvvm mvc的区别？', answer: '' },
 				{ title: '04.12花柱面试', name: 'vuex中的缓存？', answer: '' },
 				{ name: 'keep-alive的原理？', answer: '' },
-    { title: '04.19面试', name: 'vuex中的缓存？', answer: '' },
-				{ name: ' ', answer: '' },
-				{ name: '', answer: '' },
+				{
+					title: '04.19面试',
+					name: 'vue中的data为什么是函数？',
+					answer: '',
+				},
+				{ name: 'es6 7新特性？', answer: '' },
+				{ name: '数组字符串的一些api？', answer: '' },
+				{ name: '事件循环？', answer: '' },
+				{ name: 'js如何判断数组？', answer: '' },
+				{ name: '深拷贝和浅拷贝？', answer: '' },
+				{ name: 'pc端兼容性问题？', answer: '' },
+				{ name: '组件的封装？', answer: '' },
+				{ name: '操作DOM BOM?', answer: '' },
 			],
 		}
 	},
 	methods: {
-		testOne: function() {
+		testOne: function () {
 			let arr = new Array(1, 2, 3)
 			let a = arr.push(1, 2, 4)
 			let b = [1, 2, 3, 11, 22, 33]
