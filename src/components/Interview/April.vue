@@ -30,7 +30,7 @@
 			placeholder="please input some thing."
 		></a-input>
 		<div class="div">
-			<div class="div1"></div>
+			<div class="div1">ue</div>
 		</div>
 	</div>
 </template>
