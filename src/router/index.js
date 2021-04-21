@@ -86,6 +86,16 @@ const routes = [{
     name: 'April',
     component: () => import('../components/Interview/April.vue')
   },
+  {
+    path:'/Father',
+    name:'Father',
+    component:()=>import('../ComponentTest/Father.vue')
+  },
+  {
+    path:'/Son',
+    name:'Son',
+    component:()=>import('../ComponentTest/Child.vue')
+  }
 ]
 
 const router = new VueRouter({
