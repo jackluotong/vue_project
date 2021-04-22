@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrOne=[1,231,1,2,3,1,1,5,5,4,0]
+            /**
+             * 链式调用
+             */
+            function A(){
+                console.log('A');
+                this.task=[]
+                let that=this
+                let fn=(function(){
+                    return function(){
+                        that.next()
+                    }
+                })
+                this.task.push(fn)
+                setTimeout(() => {
+                    that.next()
+                }, 0);
+            }
+            A.prototype={
+                next:function(){
+                    var fn=this.task.shift()
+                    fn && fn()
+                },
+                eat:function(){
+                    let that=this
+                    let fn=(function() {
+                        return function () {
+                            setTimeout(() => {
+                                console.log('prototype-eat-new');
+                                that.next()
+                            }, 1000);
+                        }
+                    })
+                    this.task.push(fn)
+                    return this
+                },
+                color:'red',
+                get:function(){
+                    let that=this
+                    console.log(that.task);
+                    return this
+                }
+            }
+            
+          let B=new A()
+          B.eat().get()
+          let C=(function(str){
+              console.log('C',str);
+          })
+       
+
+        /*
+        数组去重
+        indexOf
+        new Set(arr)
+        includes
+        */
+       
+      const unique={
+          indexOfFun:function(arr){
+            if(! arr instanceof Array){
+            return false
+            }
+                let array=[]
+                for(let i=0;i<arr.length;i++){
+                    if(array.indexOf(arr[i])===-1){
+                        array.push(arr[i])
+                    }
+                }
+               
+                return array;
+          },
+          setFun:function(arr){
+              return new Set(arr);
+          },
+          includesFun:function(arr){
+            if(! arr instanceof Array){
+            return false
+            }
+            let newArr=[]
+            for(let i=0;i<arr.length;i++){
+                if(! newArr.includes(arr[i])){
+                    newArr.push(arr[i])
+                }
+                
+            }
+            console.log(newArr)
+            return newArr
+          }
+      }
+
+     unique.setFun(arrOne)
+     
+      /*
+        数组扁平化方法
+        递归
+        ...运算符
+        es6的arr.flat(Infinity)
+        */
+      
+     const flatFun={
+         extendsFun:function(arr){
+            if(!arr instanceof Array){
+               return false
+           }
+         while(arr.some(Array.isArray)){
+            arr=[].concat(...arr)
+         }
+         console.log(arr);
+         },
+         flatInFun:function(arr){
+            if(!arr instanceof Array){
+               return false
+            }
+             return arr.falt(Infinity)
+         }
+     }
+      /*
+      数组排序
+        冒泡排序
+      */
+     const sortFun={
+        bubbling: function (array) {
+        const { length } = array;
+        for (let i = 0; i < length; i++) {
+            for (let j = 0; j < length - 1 - i; j++) {
+            if (array[j] > array[j + 1]) {
+                [array[j + 1], array[j]] = [array[j], array[j + 1]]
+            }
+            }
+        }
+            console.log(array);
+             return array;
+         },
+     }
+    
+     sortFun.bubbling(unique.indexOfFun(arrOne))
+    </script>
+</body>
+</html>
