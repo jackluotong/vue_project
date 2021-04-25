@@ -46,6 +46,9 @@
           <train-city @showCityName='updateCity' :sendData='toCity'></train-city>
         </div>
       </a-card>
+      <div >
+        <p class='test'>1111111111111111111111111111111111122测试超出部分怎么实现省略号...</p>
+        </div>
     </div>
   </div>
 
@@ -93,7 +96,7 @@ export default {
         { name: '跨域怎么处理？以及jsonp', answer: 'nginx，jsonp，cros，localstorage，sessionstorage，jsonp原理：利用src属性来实现跨域' },
         { name: 'react 和vue的区别？', answer: '' },
         { name: 'react中的virtual dom 以及diff？', answer: '' },
-        { name: 'websocket？', answer: '双向协议，http只能是客户端给服务端，服务器向客户端，建立在tcp只上，不受同源策略限制，' },
+        { name: 'websocket？', answer: '双向协议，http只能是客户端发起，建立在tcp只上。不受同源策略限制，' },
         { title: '01-13面试', name: ' http协议？', answer: '' },
         { name: 'vuex和全局变量的差别？', answer: '' },
         { name: 'js中的编译是什么意思？', answer: '语法分析js引擎检查你的代码有没有什么低级的语法错误预编译预编译简单理解就是在内存中开辟一些空间，存放一些变量与函数遇到函数时 预编译什么时候发生?遇到函数的时候其实只有在执行函数的时候才会预编译那一部分解释执行执行代码' },
@@ -381,5 +384,11 @@ export default {
 }
 button {
   margin-left: 4px;
+}
+.test{
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space: nowrap;
+ width:120px;
 }
 </style>
