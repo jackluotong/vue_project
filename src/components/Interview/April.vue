@@ -99,6 +99,13 @@ export default {
 				{ name: 'pc端兼容性问题？', answer: '' },
 				{ name: '组件的封装？', answer: '' },
 				{ name: '操作DOM BOM?', answer: '' },
+				{ title: '04.26面试', name: 'vue的响应式原理？', answer: '' },
+				{ name: 'prototype？以及原型链？', answer: '' },
+				{ name: '为什么vue中的data是个函数？', answer: '' },
+				{ name: '事件循环？', answer: '' },
+				{ name: '首屏加载优化？', answer: '' },
+				{ name: '性能方面？', answer: '' },
+
 			],
 		}
 	},
