@@ -118,7 +118,11 @@ export default {
                 { name: '如何使用动态展示？', answer: 'websocket？' },
                 { name: '国际化怎么配置？', answer: 'LocalProvider' },
                 { name: '怎么做适配？', answer: '因为屏幕分辨率导致' },
-
+                { title: '04.29面试', name: 'static assets区别？', answer: 'assets里面的资源会被webpack打包进代码，static里面的资源就直接引用了；static放别人家的资源，assets放自己家的资源。' },
+				{ name: '路由懒加载的原理？', answer: '' },
+				{ name: 'axios中的request？', answer: '' },
+				{ name: 'keep-alive的原理？', answer: '' },
+				{ name: '路由导航守卫？', answer: '' },
 			],
 		}
 	},

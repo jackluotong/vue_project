@@ -19,7 +19,6 @@ export default new Vuex.Store({
         } = context
         commit('increment')
       }
-    //计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
   },
   modules: {
   }
