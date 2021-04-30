@@ -105,25 +105,66 @@ export default {
 				{ name: '事件循环？', answer: '' },
 				{ name: '首屏加载优化？', answer: '' },
 				{ name: '性能方面？', answer: '' },
-                { title: '04.27面试', name: 'vue的响应式原理？', answer: '' },
-				{ name: 'nexttick原理？', answer: '在下次更新后回调，异步更新，批量操作' },
+				{ title: '04.27面试', name: 'vue的响应式原理？', answer: '' },
+				{
+					name: 'nexttick原理？',
+					answer: '在下次更新后回调，异步更新，批量操作',
+				},
 				{ name: '浏览器渲染原理？', answer: '' },
 				{ name: '0.5px怎么实现？', answer: 'trnasform.scale' },
 				{ name: '水平垂直居中？', answer: '' },
-				{ name: 'rem em vw px区别？', answer: 'rem是依据根元素， em是依据父元素相对定位，px是绝对，vw是窗口可视大小' },
+				{
+					name: 'rem em vw px区别？',
+					answer:
+						'rem是依据根元素， em是依据父元素相对定位，px是绝对，vw是窗口可视大小',
+				},
 				{ name: 'keep-alive原理？使用？', answer: '' },
 				{ name: '路由懒加载？', answer: '' },
-                { name: 'position', answer: '' },
-                { title: '04.27西门子面试', name: 'websocket原理使用？', answer: '双向传输，动态的实时的' },
-                { name: '如何使用动态展示？', answer: 'websocket？' },
-                { name: '国际化怎么配置？', answer: 'LocalProvider' },
-                { name: '怎么做适配？', answer: '因为屏幕分辨率导致' },
-
+				{ name: 'position', answer: '' },
+				{
+					title: '04.27西门子面试',
+					name: 'websocket原理使用？',
+					answer: '双向传输，动态的实时的',
+				},
+				{ name: '如何使用动态展示？', answer: 'websocket？' },
+				{ name: '国际化怎么配置？', answer: 'LocalProvider' },
+				{ name: '怎么做适配？', answer: '因为屏幕分辨率导致' },
+				{
+					title: '04.30FNZ面试',
+					name: 'apply call bind 的使用？以及传入参数？第一个参数',
+					answer: '双向传输，动态的实时的',
+				},
+				{
+					name: 'http中的请求头怎么配置？具体的request有那些？',
+					answer: '',
+				},
+				{
+					name: 'token,cookie,session的使用？',
+					answer: '',
+				},
+				{ name: '浏览器缓存中的etag if-none-match？', answer: '' },
+				{ name: '登陆权限控制怎么做？', answer: '' },
+				{ name: 'http中的请求方式？', answer: '' },
+				{ name: 'api的请求方式？', answer: '' },
+				{ name: '闭包的理解回调函数是不是闭包？', answer: '' },
+				{ name: 'GC详细？', answer: '' },
+				{ name: 'map set wekmap？', answer: '' },
+				{ name: 'js事件委托冒泡？', answer: '' },
+				{ name: '数组中取最大值？Math.Max', answer: '' },
+				{ name: 'react中的function和class的区别？', answer: '' },
+				{ name: 'find filter区别？', answer: '' },
+				{ name: 'react生命周期？以及hooks？', answer: '' },
+				{ name: 'setstate是同步还是异步？', answer: '' },
+				{ name: 'hooks卸载前以及卸载后？', answer: '' },
+				{ name: '敏捷开发？', answer: '' },
+				{ name: 'function中怎么做继承？', answer: '' },
+				{ name: 'webpack做过那些配置？', answer: '' },
+				{ name: '前端网页中的懒加载以及页面中的懒加载？', answer: '' },
 			],
 		}
 	},
 	methods: {
-		testOne: function () {
+		testOne: function() {
 			let arr = new Array(1, 2, 3)
 			let a = arr.push(1, 2, 4)
 			let b = [1, 2, 3, 11, 22, 33]
