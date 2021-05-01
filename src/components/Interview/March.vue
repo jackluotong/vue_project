@@ -348,6 +348,21 @@ export default {
 			img: require('../../assets/mvvm.png'), //做图片动态绑定的时候需要用require
 		}
 	},
+        beforeRouteEnter (to, from, next) {
+            // 注意，在路由进入之前，组件实例还未渲染，所以无法获取this实例，只能通过vm来访问组件实例
+            console.log('beforeRouteEnter');
+            next()
+        },
+        beforeRouteUpdate (to, from, next) {
+              // 同一页面，刷新不同数据时调用，
+              console.log(to,from,next,'beforeRouteUpdate');
+        },
+        beforeRouteLeave (to,from,next) {
+             // 离开当前路由页面时调用
+            
+            next()
+             console.log(to.path);
+        },
 
 	methods: {
 		testItem() {

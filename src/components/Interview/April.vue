@@ -120,6 +120,7 @@ export default {
 				},
 				{ name: 'keep-alive原理？使用？', answer: '' },
 				{ name: '路由懒加载？', answer: '' },
+<<<<<<< HEAD
 				{ name: 'position', answer: '' },
 				{
 					title: '04.27西门子面试',
@@ -160,6 +161,18 @@ export default {
 				{ name: 'function中怎么做继承？', answer: '' },
 				{ name: 'webpack做过那些配置？', answer: '' },
 				{ name: '前端网页中的懒加载以及页面中的懒加载？', answer: '' },
+=======
+                { name: 'position', answer: '' },
+                { title: '04.27西门子面试', name: 'websocket原理使用？', answer: '双向传输，动态的实时的' },
+                { name: '如何使用动态展示？', answer: 'websocket？' },
+                { name: '国际化怎么配置？', answer: 'LocalProvider' },
+                { name: '怎么做适配？', answer: '因为屏幕分辨率导致' },
+                { title: '04.29面试', name: 'static assets区别？', answer: 'assets里面的资源会被webpack打包进代码，static里面的资源就直接引用了；static放别人家的资源，assets放自己家的资源。' },
+				{ name: '路由懒加载的原理？', answer: '' },
+				{ name: 'axios中的request？', answer: '' },
+				{ name: 'keep-alive的原理？', answer: '' },
+				{ name: '路由导航守卫？', answer: '' },
+>>>>>>> 4eeff9955f06245228c0cdebbc67e35d64f5f4ca
 			],
 		}
 	},

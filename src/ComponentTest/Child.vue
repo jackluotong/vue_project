@@ -2,6 +2,8 @@
     <div class="SonDiv">
         <h1>我是子组件的标题</h1>    
         <p>父组件给子组件传的值：{{title}}</p>
+        <p>{{this.$store.state.count}}</p>
+
         <hr/>
         <el-button @click="sendToFather(toFatherValue)">子组件给父组件传参</el-button>
         <input v-model='toFatherValue' placeholder="请输入要传给父组件的值"/>
