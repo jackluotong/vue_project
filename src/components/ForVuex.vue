@@ -31,7 +31,7 @@ export default {
   },
    methods:{
     vuexClick:function(){
-      this.$store.commit('increment')
+      this.$store.commit({type:'increment',number:10})
       console.log(this.$store);
       
     }

@@ -105,6 +105,11 @@ const routes = [{
     path:'/Son',
     name:'Son',
     component:()=>import('../ComponentTest/Child.vue')
+  },
+  {
+      path:'/May',
+      name:'May',
+      component:()=>import('../components/Interview/May')
   }
 ]
 

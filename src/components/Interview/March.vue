@@ -378,7 +378,7 @@ export default {
 			alert(localStorage.getItem('key'))
 		},
 		testVuex: function() {
-			this.$store.commit('increment')
+		this.$store.commit({type:'increment',number:10})
 		},
 		select(val) {
 			let data = {
