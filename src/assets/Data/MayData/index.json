@@ -43,9 +43,29 @@
       "answer": "option"
     },
     {
-      "title":"05.07喜马拉雅面试",
-      "name":"？？？",
+      "title":"05.07平安面试",
+      "name":"中间件的优点？",
       "answer":"？？？"
+    },
+     {
+      "name": "less嵌套多少层？",
+      "answer": "option"
+    },
+     {
+      "name": "get请求的长度是谁管理？",
+      "answer": "option"
+    }, 
+    {
+      "name": "为什么要抓包？",
+      "answer": "option"
+    }, 
+    {
+      "name": "v-if v-for优先级？",
+      "answer": "v-for的优先级高，如果同时出现可在v-for的外层包裹v-if来判断，如果v-if出现在v-for的内部，可以通过计算属性过滤"
+    },
+     {
+      "name": "promise,async,await的区别？",
+      "answer": "option"
     }
   ]
 }

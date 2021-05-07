@@ -53,11 +53,11 @@
                 }
             }
             
-          let B=new A()
-          B.eat().get()
-          let C=(function(str){
-              console.log('C',str);
-          })
+      //     let B=new A()
+      //     B.eat().get()
+      //     let C=(function(str){
+      //         console.log('C',str);
+      //     })
        
 
         /*
@@ -158,10 +158,12 @@
             console.log(data)
             })
             console.log('hhh')
-         
-        
+            await function a(){
+                  if(1>2) alert(1)
+                  return;
+            }
      }
-     A()
+//      A()
      console.log('B');
      sortFun.bubbling(unique.indexOfFun(arrOne))
      /*
@@ -180,6 +182,29 @@
          }
      }
      console.log(operArray1.one([1,2,3],[1,3,4]));
+
+     let p = new Promise((resolve,reject) => {
+      setTimeout(() => {
+            reject('error');
+      },1000);
+      });
+            const ccc= { testFun:function(){
+                  if(4>3) {
+                  alert(2)
+                  return false}
+            }}
+async function demo(params) {
+    try {
+         await ccc.testFun()
+            if()
+        let result = await p;
+        
+    }catch(e) {
+        console.log(e);
+    }
+}
+
+demo();
     </script>
 </body>
 </html>
