@@ -380,6 +380,7 @@ export default {
       .then((response)=>{
         this.axiosData= response.data.bpi//拿到的值去做处理
         console.log(this.axiosData,'axiosData');
+        console.log(response,'response');
       })
       .catch((err) => {
         this.$message({
@@ -391,7 +392,7 @@ export default {
         this.loading=false
         this.$message({
           type:'right',
-          message:'request was overed.'
+          message:'request is ok.'
         })
         })
 

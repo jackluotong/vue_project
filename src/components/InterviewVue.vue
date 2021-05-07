@@ -2,7 +2,7 @@
 	<a-layout id="components-layout-demo-top-side-2">
 		<a-layout-header class="header">
 			<div class="logo" />
-			<!-- <a-menu
+			<a-menu
         theme="dark"
         mode="horizontal"
         :default-selected-keys="['2']"
@@ -17,7 +17,7 @@
         <a-menu-item key="3">
           nav 3
         </a-menu-item>
-      </a-menu> -->
+      </a-menu>
 		</a-layout-header>
 		<a-layout>
 			<a-layout-sider width="200" style="background: #fff">
@@ -55,12 +55,7 @@
 						>
 							Advanced
 						</a-menu-item>
-						<!-- <a-menu-item key="7">
-              option7
-            </a-menu-item>
-            <a-menu-item key="8">
-              option8
-            </a-menu-item> -->
+	
 					</a-sub-menu>
 					<a-sub-menu key="sub3">
 						<span slot="title"
@@ -152,11 +147,13 @@
 						minHeight: '280px',
 					}"
 				>
-					面试知识总结
+					{{content}}
 				</a-layout-content>
 			</a-layout>
 		</a-layout>
+           
 	</a-layout>
+     
 </template>
 <script>
 export default {
@@ -165,6 +162,7 @@ export default {
 	data() {
 		return {
 			collapsed: false,
+                  content:"content"
 		}
 	},
 	watch: {

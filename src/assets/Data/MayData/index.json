@@ -1,0 +1,51 @@
+
+{
+  "may": [
+    {
+      "title": "05.07阿里面试",
+      "name": "闭包？使用场景？",
+      "answer": "访问外部的变量，防抖中，"
+    },
+    {
+      "name": "http请求中的预检请求？",
+      "answer": "option"
+    },
+    {
+      "name": "浏览器类多个标签页的通信方式？",
+      "answer": "option"
+    },
+    {
+      "name": "es6转es5的原理？",
+      "answer": "option"
+    },
+    {
+      "name": "redux的原理？",
+      "answer": "option"
+    },
+    {
+      "name": "vue2和vue3的区别？做了那些优化？",
+      "answer": "option"
+    },
+    {
+      "name": "深拷贝的方式？",
+      "answer": "option"
+    },
+    {
+      "name": "缓存策略？",
+      "answer": "option"
+    },
+    {
+      "name": "性能优化？",
+      "answer": "针对html，css，js，webpack"
+    },
+    {
+      "name": "浏览器的渲染过程？",
+      "answer": "option"
+    },
+    {
+      "title":"05.07喜马拉雅面试",
+      "name":"？？？",
+      "answer":"？？？"
+    }
+  ]
+}

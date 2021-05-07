@@ -17,3 +17,16 @@ let arr = [1, 2, [3, 4], 5, 6, 1, [1, 2, [9, 0]]];
 arr += '';
 arr = arr.split('.')
 console.log(arr);
+const test={
+      a:function(a){
+            console.log('module a',a);
+      }
+}
+// const Test={
+//       a:function(a){
+//             console.log('module a',a);
+//       }
+// }
+
+export default  test
+export const S='1'
