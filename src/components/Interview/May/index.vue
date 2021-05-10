@@ -26,6 +26,13 @@
 
             <button @click="testMapMutations">testMapMutations</button>
       </div>
+     <!--  <input type="text" v-model="test">
+      <span>{{test}}</span> -->
+      <input type="text" :value='test' @input="test=$event.target.value">
+      <!-- v-model=:+@input -->
+      <h6>{{test}}</h6>
+      <span v-for="(item,index) in arr" :key="index">{{item}}</span>
+      <button @click="change">change arr</button>
     </a-card>
     </div>
 </template>
@@ -44,6 +51,8 @@ export default {
     data () {
         return {
               may:jsonData.may,
+              test:'test v-model',
+              arr:[11,22,33,44]
         }
     },
     mounted(){
@@ -66,7 +75,19 @@ export default {
     },
     methods:{
          ...mapMutations({testMapMutations:'increment'}),
-    
+      change:function(){
+            this.arr.join(",")//第一位是：开始，第二位是：删除，第三位是：插入元素
+            this.arr[0]='09'
+            this.$set(this.arr,0,'09')
+            console.log(this.arr);
+            /* 
+                  数组中重写的方法来做响应式：push、pop、shift、unshift、splice、sort、reverse
+                  更改数组不是响应式的，所以用$set来改变数组
+                  Vue2 中的变化侦测实现对 Object 及 Array 分别进行了不同的处理，Objcet 使用了
+                  Object.defineProperty API ，Array 使用了拦截器对 Array 原型上的能够改变数据的方法进行拦截。虽然也实现了数据的变化侦测，但存在很多局限 ，比如对象新增属性无法被侦测，以及通过数组下边修改数组内容，也因此在 Vue2 中经常会使用到 $set 这个方法对数据修改，以保证依赖更新。
+                  Vue3 中使用了 es6 的 Proxy API 对数据代理，没有像 Vue2 中对原数据进行修改，只是加了代理包装，因此首先性能上会有所改善。其次解决了 Vue2 中变化侦测的局限性，可以不使用 $set 新增的对象属性及通过下标修改数组都能被侦测到。
+            */
+      }
     }
 }
 </script>
