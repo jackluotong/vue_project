@@ -45,17 +45,17 @@
 			<span v-for="(item, index) in arr" :key="index">{{ item }}</span>
 			<button @click="change">change arr</button>
 			<a-button @click="testSwitch()">testSwitch</a-button>
-                  <p>1, {{re}}</p>
-                  <a-button @click="reFun">1</a-button>
-                  <p >1,{{reFun()}}</p>
-                  <a-card>
-                        <span>fullName:{{fullName}}</span>
-                        <span>firstName:{{firstName}}</span>
-                        <input type="text" v-model="firstName">
-                        <input type="text" v-model="test1">
-                  </a-card>
+			<p>1, {{ re }}</p>
+			<a-button @click="reFun">1</a-button>
+			<p>1,{{ reFun() }}</p>
+			<a-card>
+				<span>fullName:{{ fullName }}</span>
+				<span>firstName:{{ firstName }}</span>
+				<input type="text" v-model="firstName" />
+				<input type="text" v-model="test1" />
+			</a-card>
 		</a-card>
-            <p slot="test">我是一个slot测试</p>
+		<p slot="test">我是一个slot测试</p>
 	</div>
 </template>
 
@@ -69,20 +69,19 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 // let Test=require('../../../assets/test')
 let jsonData = require('../../../assets/Data/MayData/index') //json对象中的数组
 export default {
-      components:{
-      },
+	components: {},
 	data() {
 		return {
 			may: jsonData.may,
 			test: 'test v-model',
 			arr: [11, 22, 33, 44],
-                  obj:{name:'jack'},
-                  a:'122',
-                  b:'10',
-                  c:'',
-                  firstName:'11',
-                  lastName:'2',
-                  test1:'1'
+			obj: { name: 'jack' },
+			a: '122',
+			b: '10',
+			c: '',
+			firstName: '11',
+			lastName: '2',
+			test1: '1',
 		}
 	},
 	mounted() {
@@ -101,33 +100,33 @@ export default {
     */
 		...mapState(['nickName', 'age', 'count']),
 		...mapGetters(['realName']),
-            re:function(){
-                  return Number(this.a) +Number(this.b) 
-            },
-            fullName:{
-                  get:function(){
-                        return this.lastName+this.firstName
-                  },
-                  set:function(val){
-                        console.log(val,'new')
-                        // let names=newValue.split(',')
-                        // this.firstName=names[0]
-                        // this.lastName=names[names.length-1]
-                  }
-            }
+		re: function() {
+			return Number(this.a) + Number(this.b)
+		},
+		fullName: {
+			get: function() {
+				return this.lastName + this.firstName
+			},
+			set: function(val) {
+				console.log(val, 'new')
+				// let names=newValue.split(',')
+				// this.firstName=names[0]
+				// this.lastName=names[names.length-1]
+			},
+		},
 	},
-     watch:{
-           firstName:function(newValue,old){
-                 console.log('newValue',newValue,'old',old)
-           },
-           test1(){
-                 console.log(this.test1);
-           }
-     },
+	watch: {
+		firstName: function(newValue, old) {
+			console.log('newValue', newValue, 'old', old)
+		},
+		test1() {
+			console.log(this.test1)
+		},
+	},
 	methods: {
-            reFun:function(){
-                  return Number(this.a) +Number(this.b)
-            },
+		reFun: function() {
+			return Number(this.a) + Number(this.b)
+		},
 		...mapMutations({ testMapMutations: 'increment' }),
 		change: function() {
 			this.arr.join(',') //第一位是：开始，第二位是：删除，第三位是：插入元素
@@ -154,9 +153,9 @@ export default {
 				default:
 					break
 			}
-                  this.$set(this.obj,'num','18')
-                  this.$delete(this.obj,'name')
-                  console.log(this.obj)
+			this.$set(this.obj, 'num', '18')
+			this.$delete(this.obj, 'name')
+			console.log(this.obj)
 		},
 	},
 }

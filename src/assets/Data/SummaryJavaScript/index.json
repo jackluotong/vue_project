@@ -28,26 +28,45 @@
 			"name": "函数传参",
 			"answer": "所有函数的参数都是按值传递的；如果是原始值，那么就跟原始值变量的复制一样，如果是引用值，那么就跟引用值变量的复制一样。"
 		},
-            {
+		{
 			"name": "垃圾回收",
 			"answer": "确定哪个变量不会再使用，然后释放它占用的内存。标记清除，引用计数(循环引用无法解决)"
 		},
-            {
-			"name": "语句",
-			"answer": ""
+		{
+			"name": "array?",
+			"answer": ".from转换为数组， of转换为一整个数组；Array.isArray(array)，copywithin，fill"
 		},
-            {
-			"name": "语句",
-			"answer": ""
+		{
+			"name": "转换方法？",
+			"answer": "valueof，tolocalestring，tostring，join()方法接收一个参数，即字符串分隔符，返回包含所有项的字符串"
 		},
-            {
-			"name": "语句",
-			"answer": ""
+		{
+			"name": "数组的栈队列方法？",
+			"answer": "from转换为数组， of转换为一整个数组；Array.isArray(array)，填充方法copywithin，fill,迭代器方法：keys，values,entries；栈方法：push pop，队列方法：shift unshift；排序方法:reverse sort(接收一个比较函数)；操作方法：concat，splice();搜素和位置方法：indexof lastindeof includes；断言函数：find，findindex；迭代方法：every，map，some，foreach，filter；归并方法：reduce，reduceright"
 		},
-            {
-			"name": "语句",
+		{
+			"name": "定型数组？",
+			"answer": "ArrayBuffer，DataView"
+		},
+		{
+			"name": "Map",
+			"answer": "key:value形式存储；基本api:set,get,has,size,delete,clear,迭代器，entries"
+		},
+		{
+			"name": "weakmap",
+			"answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
+		},
+		{
+			"name": "Set",
+			"answer": "key:value形式存储；基本api:add,has,size,delete,clear,迭代器，entries"
+		},
+		{
+			"name": "weakset",
+			"answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
+		},
+		{
+			"name": "迭代器与生成器",
 			"answer": ""
 		}
-            
 	]
 }
