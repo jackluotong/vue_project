@@ -125,32 +125,109 @@
 			"answer": "第二次访问的时候才缓存，"
 		},
 		{
-			"name": "vue2和vue3的对比？",
+			"name": "vue中对象的删除增加可以实现响应式？",
 			"answer": "option"
 		},
 		{
-			"name": "vue2和vue3的对比？",
+			"name": "深拷贝的的方法？",
+			"answer": "json.parse=对function会丢失；递归"
+		},
+		{
+			"name": "keep-alive的配置？max删除机制？",
+			"answer": ""
+		},
+		{
+			"name": "computed 和methods？",
+			"answer": "计算属性是基于它们的响应式依赖进行缓存的。"
+		},
+		{
+			"name": "如何实现等高正方形？",
+			"answer": "vm"
+		},
+		{
+			"name": "rem em区别？",
 			"answer": "option"
 		},
 		{
-			"name": "vue2和vue3的对比？",
-			"answer": "option"
+			"name": "内存泄漏？",
+			"answer": "指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。"
 		},
-		{
-			"name": "vue2和vue3的对比？",
-			"answer": "option"
-		},
-		{
-			"name": "vue2和vue3的对比？",
-			"answer": "option"
-		},
-		{
-			"name": "vue2和vue3的对比？",
-			"answer": "option"
-		},
-		{
-			"name": "vue2和vue3的对比？",
-			"answer": "option"
-		}
+            {
+                  "name": "watch实现原理？",
+			"answer":""
+            },
+            {
+                  "name": " omputed实现原理？",
+			"answer":""
+            },
+            {
+                  "name": "keep-alive的原理？",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            },
+            {
+                  "name": "",
+			"answer":""
+            }
+
 	]
 }
