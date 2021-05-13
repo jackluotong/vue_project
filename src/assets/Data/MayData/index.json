@@ -165,15 +165,15 @@
 			"answer":""
             },
             {
-                  "name": "",
+                  "name": "require import?",
+			"answer":"require 是赋值过程并且是运行时才执行， import 是解构过程并且是编译时执行。require可以理解为一个全局方法require是在运行时才引入模块并且还赋值给某个变量，而import只需要依据import中的接口在编译时引入指定模块"
+            },
+            {
+                  "name": "如何给对象设置私有属性？",
 			"answer":""
             },
             {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
+                  "name": "事件循环？",
 			"answer":""
             },
             {

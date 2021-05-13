@@ -30,6 +30,104 @@
     
   </div>
   <button onclick="test()">click</button>
+    <button onclick="testFun()">testFun</button>
+    <button onclick="console.log(newPerson._name)">person</button>
+
+  <script>
+        function testFun(name) {
+
+            console.log('log1')
+
+            Promise.resolve().then(()=>{console.log('then1')})
+       
+            setTimeout(() => {
+                  console.log('settimeout');
+            }, 0);
+
+            Promise.resolve().then(()=>{
+
+            Promise.resolve().then(()=>{
+                  setTimeout(() => {
+                  console.log('settimeout in in');
+            }, 0);
+            console.log('then1 in')})
+       
+            setTimeout(() => {
+                  console.log('settimeout in');
+            }, 0);
+            console.log('then2')
+            
+            })
+            console.log('log2');
+            /* 
+                  不是一个一个执行是一轮一轮执行
+                  宏任务主代码块=>微任务=>宏=>微任务
+            */
+          
+
+        }
+            function Person(name) {
+                   /* 
+                  属性私有
+           */
+            let _name=name
+            this.getName=()=>{
+                  return _name
+            }
+            }
+            let newPerson=new Person('jack')
+      function A(name,age){
+            //工厂模式
+            let factoryA=new Object()
+            factoryA.age=age
+            factoryA.name=name
+            factoryA.say=function(){
+                  console.log(this.name+this.age);
+            }
+            // factoryA.say=()=>{
+            //       console.log(this.age+this.name) //ARROW FUNCTION
+                  
+            //       console.log(this);
+            // }
+            return factoryA
+      }
+
+      let B= A('JACK',25)
+      console.log(B);
+      B.say()
+      /* 
+            prototype
+            以下
+            把东西放在原型上
+      */
+      function Person(name,age) {
+            Person.prototype.name=name
+            Person.prototype.age=age
+            Person.prototype.say=function() {
+                  console.log(this.name,'111')
+            }
+      }
+      let person=new Person()
+      console.log(Person.prototype.__proto__)
+      person.name='jack luo'
+      console.log(person.name)
+      delete person.name//删除属性
+      console.log(person.name,'after delete')
+      person.name='jack1'
+      console.log(person.hasOwnProperty('name'),'hasOwnProperty')//检测是否是自己的属性
+      console.log(Object.keys(Person.prototype))
+      /* 
+            对象迭代
+      */
+      const obj={
+            o:'jack',
+            j:'ada',
+            l:{}
+      }
+      console.log(Object.values(obj))
+      const objCopy=Object.values(obj)
+      console.log(objCopy);
+  </script>
 <script>
   function test(){
     console.log('script start');
