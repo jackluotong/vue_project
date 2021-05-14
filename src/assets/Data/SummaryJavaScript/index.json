@@ -77,20 +77,20 @@
 			"answer": "：每个构造函数都有一个原型对象，原型有一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想。属性通常会在构造函数中定义"
 		},
 		{
-			"name": "迭代器与生成器",
-			"answer": ""
+			"name": "代理与反射",
+			"answer": "创建空代理，定义捕获器;代理是使用 Proxy 构造函数创建的。这个构造函数接收两个参数：目标对象和处理程序对象;创建proxy是为了用trap"
 		},
 		{
-			"name": "迭代器与生成器",
-			"answer": ""
+			"name": "代理捕获器与反射方法",
+			"answer": "get,set,has,defineProerty,getOwnPropertyDescriptor,deleteProperty,ownKeys,getPrototypeOf,setPrototypeOf,isExtensible,preventExtensions,apply,construct,"
 		},
 		{
-			"name": "迭代器与生成器",
-			"answer": ""
+			"name": "代理模式",
+			"answer": "跟踪属性访问=>隐藏属性=>属性验证=>函数与构造函数参数验证=>数据绑定与可观察对象;跟踪属性访问、隐藏属性、阻止修改或删除属性、函数参数验证、构造函数参数验证、数据绑定，以及可观察对象"
 		},
 		{
-			"name": "迭代器与生成器",
-			"answer": ""
+			"name": "箭头函数",
+			"answer": "箭头函数不能使用 arguments、super 和new.target，也不能用作构造函数。此外，箭头函数也没有 prototype 属性；函数名：指向函数的指针，"
 		},
 		{
 			"name": "迭代器与生成器",

@@ -374,6 +374,53 @@ entries() 方法返回一个数组的迭代对象，该对象包含数组的键�
 
 迭代对象中数组的索引值作为 key， 数组元素作为 value。
 */
+
+/* 
+      proxy
+ */
+
+ const target={
+       foo:'bar'
+ }
+ const firstProxy=new Proxy(target,{
+       get(){
+             console.log('first proxy')
+             return Reflect.get(...arguments)
+       }
+ })
+ 
+const secondProxy=new Proxy(firstProxy,{
+       get(trapTarget,property,receiver){//create a trap
+             console.log('second proxy')
+             return Reflect.get(...arguments)
+       },
+       set(newVal){
+            console.log(newVal)
+       }
+ })
+ console.log(secondProxy.foo)
+ 
+ /* 
+      function part
+      arrow function
+ */
+const a1=(x)=>{return x*3}
+console.log(a1(33),'arrow function')
+function a11(){
+    return arguments[0]*3 
+}
+// a11(3)
+console.log(a11(3))
+const random=()=>{return Math.floor(Math.random()*10)}
+console.log(random())
+/* 
+      函数参数
+*/
+function howManyFun() {
+      console.log(arguments.length)
+}
+
+howManyFun('1','222','11',0)
 </script>
 
 
