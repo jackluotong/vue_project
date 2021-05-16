@@ -90,14 +90,314 @@
 		},
 		{
 			"name": "箭头函数",
-			"answer": "箭头函数不能使用 arguments、super 和new.target，也不能用作构造函数。此外，箭头函数也没有 prototype 属性；函数名：指向函数的指针，"
+			"answer": "箭头函数不能使用 arguments、super 和new.target，也不能用作构造函数。此外，箭头函数也没有 prototype 属性；函数名：指向函数的指针;在 ECMAScript 5 中，函数内部存在两个特殊的对象：arguments 和 this。ECMAScript 6 又新增了 new.target 属性"
 		},
 		{
-			"name": "迭代器与生成器",
+			"name": "this,caller,target",
+			"answer": "函数名只是保存指针的变量,target用来检测函数是new出来的还是正常调用，每个函数都有两个属性：length，prototype=prototype 是保存引用类型所有实例方法的地方;函数还有两个方法：apply call"
+		},
+		{
+			"name": "函数的定义方式",
+			"answer": "函数声明提升，(函数表达式)匿名函数"
+		},
+		{
+			"name": "递归？",
+			"answer": "arguments.callee来避免一些错误"
+		},
+		{
+			"name": "尾调用优化",
 			"answer": ""
 		},
 		{
-			"name": "迭代器与生成器",
+			"name": "闭包",
+			"answer": "在一个函数内部定义的函数会把其包含函数的活动对象添加到自己的作用域链中"
+		},
+		{
+			"name": "this",
+			"answer": ""
+		},
+		{
+			"name": "内存泄漏？",
+			"answer": "在某个闭包的作用域中"
+		},
+		{
+			"name": "立即调用的函数表达式",
+			"answer": ""
+		},
+		{
+			"name": "私有变量，静态私有变量",
+			"answer": ""
+		},
+		{
+			"name": "模块模式",
+			"answer": ""
+		},
+		{
+			"name": "异步编程",
+			"answer": "在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数,在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数;期约有向图，也就是二叉树;缺点：无法取消（cancel token），进度追踪"
+		},
+		{
+			"name": "BOM",
+			"answer": "location,navigator,history"
+		},
+		{
+			"name": "window对象",
+			"answer": "作用域，窗口关系/位置/大小/视口位置，导航与打开新窗口，定时器，系统对话框(alert prompt conform print find)"
+		},
+		{
+			"name": "navigator",
+			"answer": ""
+		},
+		{
+			"name": "screen",
+			"answer": ""
+		},
+		{
+			"name": "history",
+			"answer": "hashchange事件,pushState方法，popstate事件"
+		},
+		{
+			"name": "客户端检测",
+			"answer": "安全能力检测，用户代理，浏览器内核：ie（netscape），Firefox（gecko），safari（webkit），chrome（blink），opera（presto），ios android 都是基于webkit"
+		},
+		{
+			"name": "dom ",
+			"answer": "节点层级：node类型 节点关系 操纵节点 append replace remove insert"
+		},
+		{
+			"name": "document类型 element类型",
+			"answer": "element：html元素 取得属性 设置属性 attributes属性 创建元素 元素后代；text类型；comment类型；CDATASection类型；DocumentType；DocumentFragment类型；Attr类型；"
+		},
+		{
+			"name": "DOM编程",
+			"answer": "动态脚本，动态样式，操作表格，使用NodeList"
+		},
+		{
+			"name": "MutationObserver",
+			"answer": "在dom被修改时异步执行回调"
+		},
+		{
+			"name": "DOM扩展",
+			"answer": "selectors API：querySelector；querySelectAll；matches 元素遍历"
+		},
+		{
+			"name": "HTML5",
+			"answer": "焦点管理：focus；readyState，compatMode属性，字符集属性；自定义数据类型"
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
 			"answer": ""
 		}
 	]

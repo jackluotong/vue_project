@@ -6,6 +6,9 @@
 			:bordered="false"
 			style="width: 98%; margin: 0 auto"
 		>
+			<a-button @click="$router.push({ name: 'Advanced' })">
+				查看高级程序设计</a-button
+			>
 			<div class="content">
 				<ol>
 					<li
@@ -25,12 +28,12 @@
 						</span>
 					</li>
 				</ol>
+
 				<p>
 					{{ nickName }}，{{ age }},{{ count }} realName:{{
 						realName
 					}}
 				</p>
-
 				<button @click="testMapMutations">testMapMutations</button>
 			</div>
 			<!--  <input type="text" v-model="test">
@@ -56,9 +59,12 @@
 			</a-card>
 		</a-card>
 		<p slot="test">我是一个slot测试</p>
-            <span v-for="(item ,key) in testObj" :key="key">
-                  {{item}}
-            </span>
+		<span v-for="(item, key) in testObj" :key="key">
+			{{ item }}
+		</span>
+		<span>
+			12122121
+		</span>
 	</div>
 </template>
 
@@ -85,7 +91,7 @@ export default {
 			firstName: '11',
 			lastName: '2',
 			test1: '1',
-                  testObj:{name:"jack",age:26,}
+			testObj: { name: 'jack', age: 26 },
 		}
 	},
 	mounted() {
@@ -134,10 +140,10 @@ export default {
 		...mapMutations({ testMapMutations: 'increment' }),
 		change: function() {
 			// this.arr.join(',') //第一位是：开始，第二位是：删除，第三位是：插入元素
-                  this.$nextTick(()=>{
-                        //直接修改被监听不到 使用$set
-		this.arr[0] = '09'
-                  })
+			this.$nextTick(() => {
+				//直接修改被监听不到 使用$set
+				this.arr[0] = '09'
+			})
 			// this.$set(this.arr, 0, '09')
 			/*
                   数组中重写的方法来做响应式：push、pop、shift、unshift、splice、sort、reverse
@@ -162,21 +168,19 @@ export default {
 			/* this.$set(this.obj, 'num', '18')
 			this.$delete(this.obj, 'name')
 			console.log(this.obj) */
-                  this.$nextTick(()=>{
-                       
-                        //  this.testObj.sex='boy1'
-                         this.testObj.sex='jerry'
-                         this.arr[0]='21211sss'
-                  })
-                   
-                 /* this.$set(this.testObj,'gg','yes')
+			this.$nextTick(() => {
+				//  this.testObj.sex='boy1'
+				this.testObj.sex = 'jerry'
+				this.arr[0] = '21211sss'
+			})
+
+			/* this.$set(this.testObj,'gg','yes')
                  //多个赋值
                   
                   this.testObj=Object.assign({},this.testObj,{school:'sspu',abstract:'uk'})
                   console.log(this.testObj,'this.testObj')
- */
-                  // this.$delete(this.testObj,'name')
-
+                    */
+			// this.$delete(this.testObj,'name')
 		},
 	},
 }

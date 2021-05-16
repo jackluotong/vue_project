@@ -152,82 +152,81 @@
 			"name": "内存泄漏？",
 			"answer": "指程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果。"
 		},
-            {
-                  "name": "watch实现原理？",
-			"answer":""
-            },
-            {
-                  "name": " omputed实现原理？",
-			"answer":""
-            },
-            {
-                  "name": "keep-alive的原理？",
-			"answer":""
-            },
-            {
-                  "name": "require import?",
-			"answer":"require 是赋值过程并且是运行时才执行， import 是解构过程并且是编译时执行。require可以理解为一个全局方法require是在运行时才引入模块并且还赋值给某个变量，而import只需要依据import中的接口在编译时引入指定模块"
-            },
-            {
-                  "name": "如何给对象设置私有属性？",
-			"answer":""
-            },
-            {
-                  "name": "事件循环？",
-			"answer":""
-            },
-            {
-                  "name": "cokie session",
-			"answer":"session保存在服务器，客户端不知道其中的信息；cookie保存在客户端，服务器能够知道其中的信息 ;session中保存的是对象，cookie中保存的是字符串 "
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            },
-            {
-                  "name": "",
-			"answer":""
-            }
-
+		{
+			"name": "watch实现原理？",
+			"answer": ""
+		},
+		{
+			"name": " omputed实现原理？",
+			"answer": ""
+		},
+		{
+			"name": "keep-alive的原理？",
+			"answer": ""
+		},
+		{
+			"name": "require import?",
+			"answer": "require 是赋值过程并且是运行时才执行， import 是解构过程并且是编译时执行。require可以理解为一个全局方法require是在运行时才引入模块并且还赋值给某个变量，而import只需要依据import中的接口在编译时引入指定模块"
+		},
+		{
+			"name": "如何给对象设置私有属性？",
+			"answer": ""
+		},
+		{
+			"name": "事件循环？",
+			"answer": ""
+		},
+		{
+			"name": "cokie session",
+			"answer": "session保存在服务器，客户端不知道其中的信息；cookie保存在客户端，服务器能够知道其中的信息 ;session中保存的是对象，cookie中保存的是字符串 "
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		},
+		{
+			"name": "",
+			"answer": ""
+		}
 	]
 }

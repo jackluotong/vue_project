@@ -423,7 +423,215 @@ function howManyFun() {
 howManyFun('1','222','11',0)
 </script>
 
+<script>
+    /* 
+        function
+    */
+   function myFunctionOne() {
+       console.log(arguments)
+   }
+   myFunctionOne()
+   let arrowFun=()=>{
+       console.log('arguments',this)//箭头函数中没有自己的arguments 以及this
+   }
+   arrowFun()
+   /* 
+    apply call bind
+   */
 
+  function sum(num1,num2) {
+      return num1+num2
+  }
+  function callSum(num1,num2) {
+      return sum.apply(this,arguments)
+  }
+  function callSum1(num1,num2) {
+      return sum.apply(this,arguments)
+  }
+   function callSum2(num1,num2) {
+      return sum.call(this,arguments)
+  }
+  console.log(callSum(1,0.222222))
+/* 
+
+*/
+
+  this.color='red'
+  this.color='sky'
+  let o={
+        color:'yellow'
+  }
+  let oo={
+        color:'blue'
+  }
+  function sayColor() {
+        console.log(this.color,'====',this)
+  }
+  sayColor()
+  sayColor.call(this)
+  sayColor.call(o)
+  let sayColorBind=sayColor.bind(oo)
+  sayColor.bind(o)()
+  sayColorBind()
+  /* 
+      递归
+  */
+ const factorial=(function f(nums) {
+       if(nums<1){
+             return 1
+       }else{
+             return nums *f(nums-1)
+       }
+ })
+ console.log(factorial(100))
+
+ function fib() {
+       return fibImp(0,1,n)
+ }
+ function fibImp(a,b,n) {
+       if(n===0){
+             return 0
+       }
+       return fibImp(b,a+b,n-1)
+ }
+ /* 
+      闭包
+ */
+function createComparisonFunction(propertyName) {
+      return function(object1,object2){
+            let value1=object1[propertyName]
+            let value2=object2[propertyName]
+            if(value1<value2){
+                  return -1
+            }else if(value1>value2){
+                  return 1
+            }else{
+                  return 0
+            }
+      }
+}
+console.log(createComparisonFunction('1111'),'createComparisonFunction')
+
+/* 
+      this
+*/
+
+
+let singLeton=function(){
+    let privateVariable=10
+
+function privateFun() {
+    return false
+}
+return {
+    publicProperty:true,
+    publicMethod(){
+        privateVariable++
+        return privateFun()
+    }
+}
+}()
+/* 
+    模块模式
+*/
+let app=function(){
+    //私有变量和私有函数
+    let components=new Array()
+    //AdvancedJavaScript.html初始化
+    components.push(1)
+
+    //公告接口
+    return {
+        getComponentCount(){
+            return components.length
+        },
+        registerComponent(component){
+            if(typeof component=='object');
+        }
+    }
+}();
+console.log(app)
+let testF1=function(){
+    //函数表达式=匿名函数
+    console.log('testF1')
+}
+function testF2(){
+    //函数声明式
+    console.log('testF1')
+}
+/* 
+    promise与函数
+    异步编程
+    同步与异步
+    pending resolved rejected
+*/
+let p=new Promise((resolve,reject)=>{resolve(console.log('resolve'))})
+setTimeout(() => {
+    console.log(p)
+}, 0);
+try{
+let p=new Promise((resolve,reject)=>{setTimeout(() => {
+    resolve()
+}, 3000);})
+p.then(()=>{
+    console.log('then')
+}).then(()=>{
+    console.log('then then')
+})
+let p1=new Promise((resolve,reject)=>{reject('foo')})
+p1.catch(e=>console.log(e))
+let p2=Promise.resolve('resolve')
+p2.then(value=>console.log(value))
+/* let p3=Promise.reject('reject..')
+p2.catch(e=>console.log(e)) 
+这种格式报错*/
+}catch(e){
+    console.log(e)
+}
+/* 
+    new 
+*/
+
+let pNew=new Promise((resolve,reject)=>{
+    console.log('rejects')
+    if(1==='1'){
+        reject()
+    }else{
+        resolve()
+    }
+})
+// pNew.then(()=>console.log('????'))
+pNew.catch(()=>{console.log('reject handler')})
+.then(()=>{console.log('resolve handler')})
+.finally(()=>console.log('finally handler'))
+
+
+/* 
+    async await
+
+*/
+
+async function foo() {
+    console.log(await Promise.resolve(6666))
+}
+foo()
+function addOne(x) {
+    return x+2
+}
+function addTwo(x) {
+    return x+2
+}
+function addThree(x) {
+    return x+2
+}
+async function add(x) {
+    for(const fn of[addOne,addThree,addTwo]){
+        x=await fn(x)
+    }
+    return x
+}
+add(19).then(console.log)
+</script>
 
 <script>
   function test(){
