@@ -26,13 +26,12 @@
 
         </div>
       </div>
-  
-    
   </div>
   <button onclick="test()">click</button>
     <button onclick="testFun()">testFun</button>
     <button onclick="console.log(newPerson._name)">person</button>
-
+    <button id="btn">testEvent</button>
+    <button  onclick="getXY()">getXY</button>
   <script>
         function testFun(name) {
 
@@ -424,6 +423,24 @@ howManyFun('1','222','11',0)
 </script>
 
 <script>
+      let btn=document.getElementById('btn')
+      let handler=function (event) {
+            switch (event.type) {
+                  case 'click':
+                        console.log('click')
+                        break;
+                  case 'mouseover':
+                        console.log('mouseover')
+                        break;
+                  default:
+                        break;
+            }
+      }
+      btn.onclick=handler
+      btn.onmouseover=handler
+      function getXY(){
+           console.log(window.screenX,window.screenY) 
+      }
     /* 
         function
     */

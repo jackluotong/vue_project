@@ -185,19 +185,19 @@
 			"answer": "焦点管理：focus；readyState，compatMode属性，字符集属性；自定义数据类型"
 		},
 		{
-			"name": "",
+			"name": "DOM2DOM3",
 			"answer": ""
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "事件？",
+			"answer": "事件流：IE 事件流被称为事件冒泡，事件捕获：提前拦截事件；事件处理程序：DOM事件处理程序：addEventListener，attachEvent，"
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "事件对象？",
+			"answer": " DOM 中发生事件时，所有相关信息都会被收集并存储在一个名为 event 的对象中。"
 		},
 		{
-			"name": "",
+			"name": "事件类型？",
 			"answer": ""
 		},
 		{
