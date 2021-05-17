@@ -76,6 +76,7 @@
  * export 导出的在导入的时候用{}
  * export default 导出的在导入的时候不用{}
  */
+import axios from 'axios'
 import test, { S } from '../../../assets/test'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 // let Test=require('../../../assets/test')
@@ -186,7 +187,7 @@ export default {
 			// this.$delete(this.testObj,'name')
 		},
         testAxios(){
-            this.$axios.get('../../../assets/Data/MayData/index.json').then(res=>{console.log(res)}).catch(e=>console.log(e))
+            axios.get('').then(res=>{console.log(res)}).catch(e=>console.log(e))
         }
 	},
 }
