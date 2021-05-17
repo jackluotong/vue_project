@@ -22,7 +22,9 @@
 							</p>
 						</div>
 
-						<span>题目： {{ item.name }}<br /></span>
+						<span>
+                        题目： {{ item.name }}<br />
+                        </span>
 						答案：<span style="color: blue"
 							>{{ item.answer }}.
 						</span>
@@ -47,7 +49,8 @@
 			<h6>{{ test }}</h6>
 			<span v-for="(item, index) in arr" :key="index">{{ item }}</span>
 			<a-button @click="change()">change arr</a-button>
-			<a-button @click="testSwitch()">testSwitch</a-button>
+			<a-button @click="testSwitch">testSwitch</a-button>
+            <a-button @click="testAxios">testAxios</a-button>
 			<p>1, {{ re }}</p>
 			<a-button @click="reFun">1</a-button>
 			<p>1,{{ reFun() }}</p>
@@ -182,6 +185,9 @@ export default {
                     */
 			// this.$delete(this.testObj,'name')
 		},
+        testAxios(){
+            this.$axios.get('../../../assets/Data/MayData/index.json').then(res=>{console.log(res)}).catch(e=>console.log(e))
+        }
 	},
 }
 </script>
