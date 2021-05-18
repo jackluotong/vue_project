@@ -67,9 +67,8 @@
 		<span v-for="(item, key) in testObj" :key="key">
 			{{ item }}
 		</span>
-		<span>
-			12122121
-		</span>
+            <br>
+		<input type="file" value="select files">
 	</div>
 </template>
 
@@ -81,6 +80,7 @@
 import axios from 'axios'
 import test, { S } from '../../../assets/test'
 import { mapState, mapGetters, mapMutations } from 'vuex'
+import {log} from '../../../CommonFunction/CommonFunction'
 // let Test=require('../../../assets/test')
 let jsonData = require('../../../assets/Data/MayData/index') //json对象中的数组
 export default {
@@ -142,6 +142,8 @@ export default {
 	methods: {
         enter(event){
             if(event.keyCode!==13) return
+            log(1111)
+            console.log(JSON.parse(JSON.stringify(jsonData))) 
         },
 		reFun: function() {
 			return Number(this.a) + Number(this.b)
@@ -192,7 +194,7 @@ export default {
 			// this.$delete(this.testObj,'name')
 		},
         testAxios(){
-            axios.get('').then(res=>{console.log(res)}).catch(e=>console.log(e))
+            axios.get('/static/index.json').then(res=>{console.log(res)}).catch(e=>console.log(e))
         }
 	},
 }

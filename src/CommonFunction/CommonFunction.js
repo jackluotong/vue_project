@@ -1,6 +1,7 @@
-let commonFun = {
-	throttle: function(fn, interval) {
+export const throttle = function(fn, interval) {
+	
 		let last = 0
+             alert(1111)
 		return function(...args) {
 			let context = this
 			let now = +new Date()
@@ -9,8 +10,8 @@ let commonFun = {
 			last = now
 			fn.apply(context, args)
 		}
-	},
-	debounce: function(fn, delay) {
+}
+export const debounce=function(fn, delay) {
 		let timer = null
 		return function(...args) {
 			let context = this
@@ -19,5 +20,8 @@ let commonFun = {
 				fn.apply(context, args)
 			}, delay)
 		}
-	},
+}
+
+export const log=(str)=>{
+      console.log(str)
 }
