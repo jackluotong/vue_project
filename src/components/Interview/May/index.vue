@@ -28,6 +28,8 @@
 						答案：<span style="color: blue"
 							>{{ item.answer }}.
 						</span>
+                        <br>
+                         <input type="text" placeholder="" @keyup="enter">
 					</li>
 				</ol>
 
@@ -138,6 +140,9 @@ export default {
 		},
 	},
 	methods: {
+        enter(event){
+            if(event.keyCode!==13) return
+        },
 		reFun: function() {
 			return Number(this.a) + Number(this.b)
 		},

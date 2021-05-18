@@ -201,12 +201,12 @@
 			"answer": ""
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "事件委托",
+			"answer": "事件委托利用事件冒泡，可以只使用一个事件处理程序来管理一种类型的事件。例如，click 事件冒泡到 document。这意味着可以为整个页面指定一个 onclick 事件处理程序，而不用为每个可点击元素分别指定事件处理程序"
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "动画与canvas图形",
+			"answer": "1.requestAnimationFrame；2.cancelAnimationFrame"
 		},
 		{
 			"name": "",
