@@ -38,6 +38,8 @@
         </canvas>
     </div>
   <script>
+      let socket=new WebSocket("ws://www.example.com/server.php")
+      console.log(socket)
       let h=new Headers()
       console.log(h)
       let r = new Request('https://foo.com'); 
