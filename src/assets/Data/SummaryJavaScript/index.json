@@ -229,52 +229,52 @@
 			"answer": "语法：简单值，对象，数组；方法：JSON 对象有两个方法：stringify()和 parse();JSON.stringify()把一个 JavaScript 对象序列化为一个 JSON 字符串"
 		},
 		{
-			"name": "",
+			"name": "网络请求与远程资源",
+			"answer": "XMLHttpRequest"
+		},
+		{
+			"name": "HTTP 头部",
+			"answer": "Accept：浏览器可以处理的内容类型。Accept-Charset：浏览器可以显示的字符集。Accept-Encoding：浏览器可以处理的压缩编码类型。Accept-Language：浏览器使用的语言。Connection：浏览器与服务器的连接类型。Cookie：页面中设置的 Cookie Host：发送请求的页面所在的域。Host Referer User-Agent"
+		},
+		{
+			"name": "get post",
+			"answer": "POST 请求相比 GET 请求要占用更多资源。从性能方面说，发送相同数量的数据，GET 请求比 POST 请求要快两倍"
+		},
+		{
+			"name": "进度事件",
+			"answer": "load progress "
+		},
+		{
+			"name": "跨域资源共享 cors",
+			"answer": "使用自定义的 HTTP 头部允许浏览器和服务器相互了解，以确实请求或响应应该成功还是失败。Access-Control-Allow-Origin"
+		},
+		{
+			"name": "预检请求",
+			"answer": "Origin Access-Control-Request-Method"
+		},
+		{
+			"name": "凭据请求",
+			"answer": "Access-Control-Allow-Credentials: true "
+		},
+		{
+			"name": "图片探测",
 			"answer": ""
 		},
 		{
-			"name": "",
+			"name": "JSONP",
+			"answer": "：回调和数据。"
+		},
+		{
+			"name": "Fetch",
 			"answer": ""
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "Headers 对象",
+			"answer": "是所有外发请求和入站响应头部的容器"
 		},
 		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
+			"name": "Request 对象",
+			"answer": "Request 对象是获取资源请求的接口。这个接口暴露了请求的相关信息，也暴露了使用请求体的不同方式。"
 		},
 		{
 			"name": "",
