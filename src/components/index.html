@@ -44,7 +44,19 @@
     .main .right {
       background: green;
     }
-
+    .triangle{
+        width: 0px;
+        height: 0px;
+        border-bottom: 200px solid red;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+    }
+    .cycle{
+        width: 100px;
+        height: 50px;
+        background-color: aqua;
+        border-radius: 50px 50px 0 0;
+    }
     /*
         1.盒子模型是content+paddin+border+margin；
         盒子模型分为两种：ie和w3c，ie盒子的width=content+padding+border；w3c盒子的width=content；
@@ -130,11 +142,28 @@
 </head>
 
 <body>
+    <div class="cycle"></div>
+<div class='triangle'></div>
   <div class="header"></div>
   <div class="main">
     <div class="left"></div>
     <div class="right"></div>
+    <div>
+        <p style="display: none">1</p>
+        <ul>
+            <li>11</li>
+        </ul>
+    </div>
   </div>
 </body>
-
+<script>
+    let a=[1,2,3,4,5,6,7,11]
+    
+    console.log(a.forEach((value,key)=>{return a[key]=value*value}))
+    console.log(a)
+    let b=[]
+    console.log(a.map((index,value)=>{
+        return b.push(index)
+    }))
+</script>
 </html>
