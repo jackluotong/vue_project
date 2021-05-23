@@ -209,16 +209,16 @@
 			"answer": ""
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "如何画一个三角形？",
+			"answer": "width:0;border-left/right:200px  solid transparent;bottom 200px red solid"
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "for in of 的区别？",
+			"answer": "遍历对象：in 遍历key，of不行需要迭代器支持；遍历数组：in 遍历key， of遍历value"
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "foreach map的区别？",
+			"answer": "map返回一个新数组，需要return；foreach中return无效"
 		},
 		{
 			"name": "",
