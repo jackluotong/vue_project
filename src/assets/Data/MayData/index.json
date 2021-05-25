@@ -237,7 +237,40 @@
 			"answer": "防抖：单位时间内触发后重新计时（提交，搜索框）；节流：单位时间内只触发一次（拖拽，缩放）"
 		},
             {
-			"name": "浏览器渲染过程是阻塞还是非阻塞？",
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		}
+        ,
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
+			"answer": ""
+		},
+            {
+			"name": "http2.0？",
 			"answer": ""
 		}
 	]
