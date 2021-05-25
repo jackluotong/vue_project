@@ -221,11 +221,23 @@
 			"answer": "map返回一个新数组，需要return；foreach中return无效"
 		},
 		{
-			"name": "",
-			"answer": ""
+			"name": "cdn?",
+			"answer": "content delivery network 是建立并覆盖在承载网之上，由分布在不同区域的边缘节点服务器群组成的分布式网络。"
 		},
 		{
-			"name": "",
+			"name": "浏览器渲染过程是阻塞还是非阻塞？",
+			"answer": ""
+		},
+            {
+			"name": "浏览器缓存的一些字段？",
+			"answer": "强缓存：Expires，Cache-control；协商缓存：Last-Modified(服务器上文件的最后修改时间);Etag(依据hash算法得来)"
+		},
+            {
+			"name": "防抖节流？",
+			"answer": "防抖：单位时间内触发后重新计时（提交，搜索框）；节流：单位时间内只触发一次（拖拽，缩放）"
+		},
+            {
+			"name": "浏览器渲染过程是阻塞还是非阻塞？",
 			"answer": ""
 		}
 	]
