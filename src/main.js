@@ -8,7 +8,8 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css'
 import axios from "axios";
 import VueResource from 'vue-resource'
-Vue.prototype.$axios = axios;
+Vue.prototype.axios = axios;
+Vue.prototype.name = 'jack';
 Vue.use(Antd);
 Vue.use(ElementUI);
 Vue.use(VueResource)

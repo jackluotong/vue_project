@@ -51,6 +51,9 @@
     </span>
     <br />
     <input type="file" value="select files" />
+    <div>
+        <button @click="testAxiosExport">test axios</button>
+    </div>
   </div>
 </template>
 
@@ -59,7 +62,7 @@
  * export 导出的在导入的时候用{}
  * export default 导出的在导入的时候不用{}
  */
-import axios from "axios";
+import axios from '../../../utils/axios'
 import test, { S } from "../../../assets/test";
 import { mapState, mapGetters, mapMutations } from "vuex";
 import { log } from "../../../CommonFunction/CommonFunction";
@@ -183,6 +186,12 @@ export default {
         })
         .catch((e) => console.log(e));
     },
+    async testAxiosExport(){
+        // const res=await axios.get('http://localhost:8080/api1/students')
+        // // this.axios.get('http://localhost:8080/api1/students').then(res=>console.log(res))
+        // console.log(res)
+        console.log(this.name)
+    }
   },
 };
 </script>

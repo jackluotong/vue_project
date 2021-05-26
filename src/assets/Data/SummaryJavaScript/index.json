@@ -1,404 +1,404 @@
 {
-	"SuperJs": [
-		{
-			"name": "let var const?",
-			"answer": "变量提升；全局声明var声明的会变为window的属性；声明过的报错;const 声明的限制只适用于它指向的变量的引用。换句话说，如果 const 变量引用的是一个对象，那么修改这个对象内部的属性并不违反 const 的限制。"
-		},
-		{
-			"name": "for 循环中的 let 声明",
-			"answer": "var：在退出循环时，迭代变量保存的是导致循环退出的值"
-		},
-		{
-			"name": "各种数据类型的转换？",
-			"answer": "+的时候转换为number，空字符串=0，非空=1，true=1，false=0；if判断的时候也是"
-		},
-		{
-			"name": "语句",
-			"answer": "for of/in,do while while switch ；for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。"
-		},
-		{
-			"name": "函数",
-			"answer": ""
-		},
-		{
-			"name": "原始值与引用值",
-			"answer": "引用值得复制：这里复制的值实际上是一个指针，它指向存储在堆内存中的对象。操作完成后，两个变量实际上指向同一个对象，因此一个对象上面的变化会在另一个对象上反映出来"
-		},
-		{
-			"name": "函数传参",
-			"answer": "所有函数的参数都是按值传递的；如果是原始值，那么就跟原始值变量的复制一样，如果是引用值，那么就跟引用值变量的复制一样。"
-		},
-		{
-			"name": "垃圾回收",
-			"answer": "确定哪个变量不会再使用，然后释放它占用的内存。标记清除，引用计数(循环引用无法解决)"
-		},
-		{
-			"name": "array?",
-			"answer": ".from转换为数组， of转换为一整个数组；Array.isArray(array)，copywithin，fill"
-		},
-		{
-			"name": "转换方法？",
-			"answer": "valueof，tolocalestring，tostring，join()方法接收一个参数，即字符串分隔符，返回包含所有项的字符串"
-		},
-		{
-			"name": "数组的栈队列方法？",
-			"answer": "from转换为数组， of转换为一整个数组；Array.isArray(array)，填充方法copywithin，fill,迭代器方法：keys，values,entries；栈方法：push pop，队列方法：shift unshift；排序方法:reverse sort(接收一个比较函数)；操作方法：concat，splice();搜素和位置方法：indexof lastindeof includes；断言函数：find，findindex；迭代方法：every，map，some，foreach，filter；归并方法：reduce，reduceright"
-		},
-		{
-			"name": "定型数组？",
-			"answer": "ArrayBuffer，DataView"
-		},
-		{
-			"name": "Map",
-			"answer": "key:value形式存储；基本api:set,get,has,size,delete,clear,迭代器，entries"
-		},
-		{
-			"name": "weakmap",
-			"answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
-		},
-		{
-			"name": "Set",
-			"answer": "key:value形式存储；基本api:add,has,size,delete,clear,迭代器，entries"
-		},
-		{
-			"name": "weakset",
-			"answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
-		},
-		{
-			"name": "迭代器与生成器",
-			"answer": ""
-		},
-		{
-			"name": "对象",
-			"answer": "属性分两种：数据属性和访问器属性；定义多个属性 Object defineProperties 读取属性：Object.getOwnPropertyDescriptor；合并对象：assign(浅复制)；计算属性(传入固定的参数名)；简写方法名：解构；工厂模式，构造函数模式(不用返回对象);getPrototypeOf取得一个对象的原型，原型用于在多个对象实例间共享属性和方法的;属性枚举：for-in 循环、Object.keys()、Object.getOwnPropertyNames()、Object.getOwnPropertySymbols()以及 Object.assign()"
-		},
-		{
-			"name": "继承",
-			"answer": "：每个构造函数都有一个原型对象，原型有一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想。属性通常会在构造函数中定义"
-		},
-		{
-			"name": "代理与反射",
-			"answer": "创建空代理，定义捕获器;代理是使用 Proxy 构造函数创建的。这个构造函数接收两个参数：目标对象和处理程序对象;创建proxy是为了用trap"
-		},
-		{
-			"name": "代理捕获器与反射方法",
-			"answer": "get,set,has,defineProerty,getOwnPropertyDescriptor,deleteProperty,ownKeys,getPrototypeOf,setPrototypeOf,isExtensible,preventExtensions,apply,construct,"
-		},
-		{
-			"name": "代理模式",
-			"answer": "跟踪属性访问=>隐藏属性=>属性验证=>函数与构造函数参数验证=>数据绑定与可观察对象;跟踪属性访问、隐藏属性、阻止修改或删除属性、函数参数验证、构造函数参数验证、数据绑定，以及可观察对象"
-		},
-		{
-			"name": "箭头函数",
-			"answer": "箭头函数不能使用 arguments、super 和new.target，也不能用作构造函数。此外，箭头函数也没有 prototype 属性；函数名：指向函数的指针;在 ECMAScript 5 中，函数内部存在两个特殊的对象：arguments 和 this。ECMAScript 6 又新增了 new.target 属性"
-		},
-		{
-			"name": "this,caller,target",
-			"answer": "函数名只是保存指针的变量,target用来检测函数是new出来的还是正常调用，每个函数都有两个属性：length，prototype=prototype 是保存引用类型所有实例方法的地方;函数还有两个方法：apply call"
-		},
-		{
-			"name": "函数的定义方式",
-			"answer": "函数声明提升，(函数表达式)匿名函数"
-		},
-		{
-			"name": "递归？",
-			"answer": "arguments.callee来避免一些错误"
-		},
-		{
-			"name": "尾调用优化",
-			"answer": ""
-		},
-		{
-			"name": "闭包",
-			"answer": "在一个函数内部定义的函数会把其包含函数的活动对象添加到自己的作用域链中"
-		},
-		{
-			"name": "this",
-			"answer": ""
-		},
-		{
-			"name": "内存泄漏？",
-			"answer": "在某个闭包的作用域中"
-		},
-		{
-			"name": "立即调用的函数表达式",
-			"answer": ""
-		},
-		{
-			"name": "私有变量，静态私有变量",
-			"answer": ""
-		},
-		{
-			"name": "模块模式",
-			"answer": ""
-		},
-		{
-			"name": "异步编程",
-			"answer": "在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数,在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数;期约有向图，也就是二叉树;缺点：无法取消（cancel token），进度追踪"
-		},
-		{
-			"name": "BOM",
-			"answer": "location,navigator,history"
-		},
-		{
-			"name": "window对象",
-			"answer": "作用域，窗口关系/位置/大小/视口位置，导航与打开新窗口，定时器，系统对话框(alert prompt conform print find)"
-		},
-		{
-			"name": "navigator",
-			"answer": ""
-		},
-		{
-			"name": "screen",
-			"answer": ""
-		},
-		{
-			"name": "history",
-			"answer": "hashchange事件,pushState方法，popstate事件"
-		},
-		{
-			"name": "客户端检测",
-			"answer": "安全能力检测，用户代理，浏览器内核：ie（netscape），Firefox（gecko），safari（webkit），chrome（blink），opera（presto），ios android 都是基于webkit"
-		},
-		{
-			"name": "dom ",
-			"answer": "节点层级：node类型 节点关系 操纵节点 append replace remove insert"
-		},
-		{
-			"name": "document类型 element类型",
-			"answer": "element：html元素 取得属性 设置属性 attributes属性 创建元素 元素后代；text类型；comment类型；CDATASection类型；DocumentType；DocumentFragment类型；Attr类型；"
-		},
-		{
-			"name": "DOM编程",
-			"answer": "动态脚本，动态样式，操作表格，使用NodeList"
-		},
-		{
-			"name": "MutationObserver",
-			"answer": "在dom被修改时异步执行回调"
-		},
-		{
-			"name": "DOM扩展",
-			"answer": "selectors API：querySelector；querySelectAll；matches 元素遍历"
-		},
-		{
-			"name": "HTML5",
-			"answer": "焦点管理：focus；readyState，compatMode属性，字符集属性；自定义数据类型"
-		},
-		{
-			"name": "DOM2DOM3",
-			"answer": ""
-		},
-		{
-			"name": "事件？",
-			"answer": "事件流：IE 事件流被称为事件冒泡，事件捕获：提前拦截事件；事件处理程序：DOM事件处理程序：addEventListener，attachEvent，"
-		},
-		{
-			"name": "事件对象？",
-			"answer": " DOM 中发生事件时，所有相关信息都会被收集并存储在一个名为 event 的对象中。"
-		},
-		{
-			"name": "事件类型？",
-			"answer": ""
-		},
-		{
-			"name": "事件委托",
-			"answer": "事件委托利用事件冒泡，可以只使用一个事件处理程序来管理一种类型的事件。例如，click 事件冒泡到 document。这意味着可以为整个页面指定一个 onclick 事件处理程序，而不用为每个可点击元素分别指定事件处理程序"
-		},
-		{
-			"name": "动画与canvas图形",
-			"answer": "1.requestAnimationFrame；2.cancelAnimationFrame"
-		},
-		{
-			"name": "表单脚本",
-			"answer": ""
-		},
-		{
-			"name": " JavaScript API",
-			"answer": ""
-		},
-		{
-			"name": "错误处理与调试",
-			"answer": ""
-		},
-		{
-			"name": "处理XML",
-			"answer": ""
-		},
-		{
-			"name": "JSON",
-			"answer": "语法：简单值，对象，数组；方法：JSON 对象有两个方法：stringify()和 parse();JSON.stringify()把一个 JavaScript 对象序列化为一个 JSON 字符串"
-		},
-		{
-			"name": "网络请求与远程资源",
-			"answer": "XMLHttpRequest"
-		},
-		{
-			"name": "HTTP 头部",
-			"answer": "Accept：浏览器可以处理的内容类型。Accept-Charset：浏览器可以显示的字符集。Accept-Encoding：浏览器可以处理的压缩编码类型。Accept-Language：浏览器使用的语言。Connection：浏览器与服务器的连接类型。Cookie：页面中设置的 Cookie Host：发送请求的页面所在的域。Host Referer User-Agent"
-		},
-		{
-			"name": "get post",
-			"answer": "POST 请求相比 GET 请求要占用更多资源。从性能方面说，发送相同数量的数据，GET 请求比 POST 请求要快两倍"
-		},
-		{
-			"name": "进度事件",
-			"answer": "load progress "
-		},
-		{
-			"name": "跨域资源共享 cors",
-			"answer": "使用自定义的 HTTP 头部允许浏览器和服务器相互了解，以确实请求或响应应该成功还是失败。Access-Control-Allow-Origin"
-		},
-		{
-			"name": "预检请求",
-			"answer": "Origin Access-Control-Request-Method"
-		},
-		{
-			"name": "凭据请求",
-			"answer": "Access-Control-Allow-Credentials: true "
-		},
-		{
-			"name": "图片探测",
-			"answer": ""
-		},
-		{
-			"name": "JSONP",
-			"answer": "：回调和数据。"
-		},
-		{
-			"name": "Fetch",
-			"answer": ""
-		},
-		{
-			"name": "Headers 对象",
-			"answer": "是所有外发请求和入站响应头部的容器"
-		},
-		{
-			"name": "Request 对象",
-			"answer": "Request 对象是获取资源请求的接口。这个接口暴露了请求的相关信息，也暴露了使用请求体的不同方式。"
-		},
-		{
-			"name": "Response 对象",
-			"answer": "，Response 对象是获取资源响应的接口。这个接口暴露了响应的相关信息，也暴露了使用响应体的不同方式"
-		},
-		{
-			"name": "Web Socket ",
-			"answer": "通过一个长时连接实现与服务器全双工、双向的通信，一个 HTTP 请求会发送到服务器以初始化连接。服务器响应后，连接使用 HTTP的 Upgrade 头部从 HTTP 协议切换到 Web Socket 协议。发送和接收数据;"
-		},
-		{
-			"name": "客户端存储",
-			"answer": "cookie:cookie 存储在客户端机器上，所以为保证它不会被恶意利用，浏览器会施加限制。同时，cookie也不会占用太多磁盘空间; cookie的构成：{名称，值，域，路径，过期时间，安全标志，}； 子cookie；Web Storage：sessionStorage 对象； localStorage 对象"
-		},
-		{
-			"name": "IndexedDB",
-			"answer": "IndexedDB 使用对象存储而不是表格保存数据，创建了对象存储之后，剩下的所有操作都是通过事务完成的"
-		},
-		{
-			"name": "模块",
-			"answer": " 理解模块模式；模块标识符；模块依赖；模块加载；入口；异步依赖；动态依赖；静态分析；循环依赖"
-		},
-		{
-			"name": "使用 ES6 之前的模块加载器",
-			"answer": "CommonJS；规范概述了同步声明依赖的模块定义。这个规范主要用于在服务器端实现模块化代码组织，但也可用于定义在浏览器中使用的模块依赖。CommonJS 模块语法不能在浏览器中直接运行。用 require()指定依赖"
-		},
-		{
-			"name": "异步模块定义",
-			"answer": "AMD 的一般策略是让模块声明自己的依赖，而运行在浏览器中的模块系统会按需获取依赖，并在依赖加载完成后立即执行依赖它们的模块。AMD 模块实现的核心是用函数包装模块定义。这样可以防止声明全局变量；define"
-		},
-		{
-			"name": "通用模块定义",
-			"answer": "为了统一 CommonJS 和 AMD 生态系统，通用模块定义（UMD，Universal Module Definition）规范应运而生。UMD 可用于创建这两个系统都可以使用的模块代码。本质上，UMD 定义的模块会在启动时检测要使用哪个模块系统，然后进行适当配置，并把所有逻辑包装在一个立即调用的函数表达式（IIFE）中。"
-		},
-		{
-			"name": "使用 ES6 模块",
-			"answer": "模块标签及定义；模块加载：异步完成；浏览器会解析入口模块，确定依赖，并发送对依赖模块的请求。这些文件通过网络返回后，浏览器就会解析它们的内容，确定它们的依赖，如果这些二级依赖还没有加载，则会发送更多请求。这个异步递归加载过程会持续到整个应用程序的依赖图都解析完成。解析完依赖图，应用程序就可以正式加载模块了。模块导出：。默认导出使用 default 关键字将一个值声明为默认导出，每个模块只能有一个默认导出。重复的默认导出会导致 SyntaxError。模块导入；模块转移导出；工作者模块；向后兼容"
-		},
-		{
-			"name": "工作者线程",
-			"answer": "JavaScript 环境实际上是运行在托管操作系统中的虚拟环境。在浏览器中每打开一个页面，就会分配一个它自己的环境。这样，每个页面都有自己的内存、事件循环、DOM，等等。每个页面就相当于一个沙盒，不会干扰其他页面。对于浏览器来说，同时管理多个环境是非常简单的，因为所有这些环境都是并行执行的。使用工作者线程，浏览器可以在原始页面环境之外再分配一个完全独立的二级子环境。这个子环境不能与依赖单线程交互的 API（如 DOM）互操作，但可以与父环境并行执行代码。"
-		},
-		{
-			"name": "工作者线程的类型",
-			"answer": " 专用工作者线程 worker 来创建；线程池； 共享工作者线程 SharedWorker；  服务工作者线程 serviceWorker 拦截 fetch 事件，推送通知"
-		},
-		{
-			"name": "最佳实践",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		},
-		{
-			"name": "",
-			"answer": ""
-		}
-	]
+    "SuperJs": [
+        {
+            "name": "let var const?",
+            "answer": "变量提升；全局声明var声明的会变为window的属性；声明过的报错;const 声明的限制只适用于它指向的变量的引用。换句话说，如果 const 变量引用的是一个对象，那么修改这个对象内部的属性并不违反 const 的限制。"
+        },
+        {
+            "name": "for 循环中的 let 声明",
+            "answer": "var：在退出循环时，迭代变量保存的是导致循环退出的值"
+        },
+        {
+            "name": "各种数据类型的转换？",
+            "answer": "+的时候转换为number，空字符串=0，非空=1，true=1，false=0；if判断的时候也是"
+        },
+        {
+            "name": "语句",
+            "answer": "for of/in,do while while switch ；for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。"
+        },
+        {
+            "name": "函数",
+            "answer": ""
+        },
+        {
+            "name": "原始值与引用值",
+            "answer": "引用值得复制：这里复制的值实际上是一个指针，它指向存储在堆内存中的对象。操作完成后，两个变量实际上指向同一个对象，因此一个对象上面的变化会在另一个对象上反映出来"
+        },
+        {
+            "name": "函数传参",
+            "answer": "所有函数的参数都是按值传递的；如果是原始值，那么就跟原始值变量的复制一样，如果是引用值，那么就跟引用值变量的复制一样。"
+        },
+        {
+            "name": "垃圾回收",
+            "answer": "确定哪个变量不会再使用，然后释放它占用的内存。标记清除，引用计数(循环引用无法解决)"
+        },
+        {
+            "name": "array?",
+            "answer": ".from转换为数组， of转换为一整个数组；Array.isArray(array)，copywithin，fill"
+        },
+        {
+            "name": "转换方法？",
+            "answer": "valueof，tolocalestring，tostring，join()方法接收一个参数，即字符串分隔符，返回包含所有项的字符串"
+        },
+        {
+            "name": "数组的栈队列方法？",
+            "answer": "from转换为数组， of转换为一整个数组；Array.isArray(array)，填充方法copywithin，fill,迭代器方法：keys，values,entries；栈方法：push pop，队列方法：shift unshift；排序方法:reverse sort(接收一个比较函数)；操作方法：concat，splice();搜素和位置方法：indexof lastindeof includes；断言函数：find，findindex；迭代方法：every，map，some，foreach，filter；归并方法：reduce，reduceright"
+        },
+        {
+            "name": "定型数组？",
+            "answer": "ArrayBuffer，DataView"
+        },
+        {
+            "name": "Map",
+            "answer": "key:value形式存储；基本api:set,get,has,size,delete,clear,迭代器，entries"
+        },
+        {
+            "name": "weakmap",
+            "answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
+        },
+        {
+            "name": "Set",
+            "answer": "key:value形式存储；基本api:add,has,size,delete,clear,迭代器，entries"
+        },
+        {
+            "name": "weakset",
+            "answer": "键只能是 Object 或者继承自 Object 的类型,私有变量会存储在弱映射中"
+        },
+        {
+            "name": "迭代器与生成器",
+            "answer": ""
+        },
+        {
+            "name": "对象",
+            "answer": "属性分两种：数据属性和访问器属性；定义多个属性 Object defineProperties 读取属性：Object.getOwnPropertyDescriptor；合并对象：assign(浅复制)；计算属性(传入固定的参数名)；简写方法名：解构；工厂模式，构造函数模式(不用返回对象);getPrototypeOf取得一个对象的原型，原型用于在多个对象实例间共享属性和方法的;属性枚举：for-in 循环、Object.keys()、Object.getOwnPropertyNames()、Object.getOwnPropertySymbols()以及 Object.assign()"
+        },
+        {
+            "name": "继承",
+            "answer": "：每个构造函数都有一个原型对象，原型有一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想。属性通常会在构造函数中定义"
+        },
+        {
+            "name": "代理与反射",
+            "answer": "创建空代理，定义捕获器;代理是使用 Proxy 构造函数创建的。这个构造函数接收两个参数：目标对象和处理程序对象;创建proxy是为了用trap"
+        },
+        {
+            "name": "代理捕获器与反射方法",
+            "answer": "get,set,has,defineProerty,getOwnPropertyDescriptor,deleteProperty,ownKeys,getPrototypeOf,setPrototypeOf,isExtensible,preventExtensions,apply,construct,"
+        },
+        {
+            "name": "代理模式",
+            "answer": "跟踪属性访问=>隐藏属性=>属性验证=>函数与构造函数参数验证=>数据绑定与可观察对象;跟踪属性访问、隐藏属性、阻止修改或删除属性、函数参数验证、构造函数参数验证、数据绑定，以及可观察对象"
+        },
+        {
+            "name": "箭头函数",
+            "answer": "箭头函数不能使用 arguments、super 和new.target，也不能用作构造函数。此外，箭头函数也没有 prototype 属性；函数名：指向函数的指针;在 ECMAScript 5 中，函数内部存在两个特殊的对象：arguments 和 this。ECMAScript 6 又新增了 new.target 属性"
+        },
+        {
+            "name": "this,caller,target",
+            "answer": "函数名只是保存指针的变量,target用来检测函数是new出来的还是正常调用，每个函数都有两个属性：length，prototype=prototype 是保存引用类型所有实例方法的地方;函数还有两个方法：apply call"
+        },
+        {
+            "name": "函数的定义方式",
+            "answer": "函数声明提升，(函数表达式)匿名函数"
+        },
+        {
+            "name": "递归？",
+            "answer": "arguments.callee来避免一些错误"
+        },
+        {
+            "name": "尾调用优化",
+            "answer": ""
+        },
+        {
+            "name": "闭包",
+            "answer": "在一个函数内部定义的函数会把其包含函数的活动对象添加到自己的作用域链中"
+        },
+        {
+            "name": "this",
+            "answer": ""
+        },
+        {
+            "name": "内存泄漏？",
+            "answer": "在某个闭包的作用域中"
+        },
+        {
+            "name": "立即调用的函数表达式",
+            "answer": ""
+        },
+        {
+            "name": "私有变量，静态私有变量",
+            "answer": ""
+        },
+        {
+            "name": "模块模式",
+            "answer": ""
+        },
+        {
+            "name": "异步编程",
+            "answer": "在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数,在执行函数中，解决的值和拒绝的理由是分别作为 resolve()和 reject()的第一个参数往后传的。然后，这些值又会传给它们各自的处理程序，作为 onResolved 或 onRejected 处理程序的唯一参数;期约有向图，也就是二叉树;缺点：无法取消（cancel token），进度追踪"
+        },
+        {
+            "name": "BOM",
+            "answer": "location,navigator,history"
+        },
+        {
+            "name": "window对象",
+            "answer": "作用域，窗口关系/位置/大小/视口位置，导航与打开新窗口，定时器，系统对话框(alert prompt conform print find)"
+        },
+        {
+            "name": "navigator",
+            "answer": ""
+        },
+        {
+            "name": "screen",
+            "answer": ""
+        },
+        {
+            "name": "history",
+            "answer": "hashchange事件,pushState方法，popstate事件"
+        },
+        {
+            "name": "客户端检测",
+            "answer": "安全能力检测，用户代理，浏览器内核：ie（netscape），Firefox（gecko），safari（webkit），chrome（blink），opera（presto），ios android 都是基于webkit"
+        },
+        {
+            "name": "dom ",
+            "answer": "节点层级：node类型 节点关系 操纵节点 append replace remove insert"
+        },
+        {
+            "name": "document类型 element类型",
+            "answer": "element：html元素 取得属性 设置属性 attributes属性 创建元素 元素后代；text类型；comment类型；CDATASection类型；DocumentType；DocumentFragment类型；Attr类型；"
+        },
+        {
+            "name": "DOM编程",
+            "answer": "动态脚本，动态样式，操作表格，使用NodeList"
+        },
+        {
+            "name": "MutationObserver",
+            "answer": "在dom被修改时异步执行回调"
+        },
+        {
+            "name": "DOM扩展",
+            "answer": "selectors API：querySelector；querySelectAll；matches 元素遍历"
+        },
+        {
+            "name": "HTML5",
+            "answer": "焦点管理：focus；readyState，compatMode属性，字符集属性；自定义数据类型"
+        },
+        {
+            "name": "DOM2DOM3",
+            "answer": ""
+        },
+        {
+            "name": "事件？",
+            "answer": "事件流：IE 事件流被称为事件冒泡，事件捕获：提前拦截事件；事件处理程序：DOM事件处理程序：addEventListener，attachEvent，"
+        },
+        {
+            "name": "事件对象？",
+            "answer": " DOM 中发生事件时，所有相关信息都会被收集并存储在一个名为 event 的对象中。"
+        },
+        {
+            "name": "事件类型？",
+            "answer": ""
+        },
+        {
+            "name": "事件委托",
+            "answer": "事件委托利用事件冒泡，可以只使用一个事件处理程序来管理一种类型的事件。例如，click 事件冒泡到 document。这意味着可以为整个页面指定一个 onclick 事件处理程序，而不用为每个可点击元素分别指定事件处理程序"
+        },
+        {
+            "name": "动画与canvas图形",
+            "answer": "1.requestAnimationFrame；2.cancelAnimationFrame"
+        },
+        {
+            "name": "表单脚本",
+            "answer": ""
+        },
+        {
+            "name": " JavaScript API",
+            "answer": ""
+        },
+        {
+            "name": "错误处理与调试",
+            "answer": ""
+        },
+        {
+            "name": "处理XML",
+            "answer": ""
+        },
+        {
+            "name": "JSON",
+            "answer": "语法：简单值，对象，数组；方法：JSON 对象有两个方法：stringify()和 parse();JSON.stringify()把一个 JavaScript 对象序列化为一个 JSON 字符串"
+        },
+        {
+            "name": "网络请求与远程资源",
+            "answer": "XMLHttpRequest"
+        },
+        {
+            "name": "HTTP 头部",
+            "answer": "Accept：浏览器可以处理的内容类型。Accept-Charset：浏览器可以显示的字符集。Accept-Encoding：浏览器可以处理的压缩编码类型。Accept-Language：浏览器使用的语言。Connection：浏览器与服务器的连接类型。Cookie：页面中设置的 Cookie Host：发送请求的页面所在的域。Host Referer User-Agent"
+        },
+        {
+            "name": "get post",
+            "answer": "POST 请求相比 GET 请求要占用更多资源。从性能方面说，发送相同数量的数据，GET 请求比 POST 请求要快两倍"
+        },
+        {
+            "name": "进度事件",
+            "answer": "load progress "
+        },
+        {
+            "name": "跨域资源共享 cors",
+            "answer": "使用自定义的 HTTP 头部允许浏览器和服务器相互了解，以确实请求或响应应该成功还是失败。Access-Control-Allow-Origin"
+        },
+        {
+            "name": "预检请求",
+            "answer": "Origin Access-Control-Request-Method"
+        },
+        {
+            "name": "凭据请求",
+            "answer": "Access-Control-Allow-Credentials: true "
+        },
+        {
+            "name": "图片探测",
+            "answer": ""
+        },
+        {
+            "name": "JSONP",
+            "answer": "：回调和数据。"
+        },
+        {
+            "name": "Fetch",
+            "answer": ""
+        },
+        {
+            "name": "Headers 对象",
+            "answer": "是所有外发请求和入站响应头部的容器"
+        },
+        {
+            "name": "Request 对象",
+            "answer": "Request 对象是获取资源请求的接口。这个接口暴露了请求的相关信息，也暴露了使用请求体的不同方式。"
+        },
+        {
+            "name": "Response 对象",
+            "answer": "，Response 对象是获取资源响应的接口。这个接口暴露了响应的相关信息，也暴露了使用响应体的不同方式"
+        },
+        {
+            "name": "Web Socket ",
+            "answer": "通过一个长时连接实现与服务器全双工、双向的通信，一个 HTTP 请求会发送到服务器以初始化连接。服务器响应后，连接使用 HTTP的 Upgrade 头部从 HTTP 协议切换到 Web Socket 协议。发送和接收数据;"
+        },
+        {
+            "name": "客户端存储",
+            "answer": "cookie:cookie 存储在客户端机器上，所以为保证它不会被恶意利用，浏览器会施加限制。同时，cookie也不会占用太多磁盘空间; cookie的构成：{名称，值，域，路径，过期时间，安全标志，}； 子cookie；Web Storage：sessionStorage 对象； localStorage 对象"
+        },
+        {
+            "name": "IndexedDB",
+            "answer": "IndexedDB 使用对象存储而不是表格保存数据，创建了对象存储之后，剩下的所有操作都是通过事务完成的"
+        },
+        {
+            "name": "模块",
+            "answer": " 理解模块模式；模块标识符；模块依赖；模块加载；入口；异步依赖；动态依赖；静态分析；循环依赖"
+        },
+        {
+            "name": "使用 ES6 之前的模块加载器",
+            "answer": "CommonJS；规范概述了同步声明依赖的模块定义。这个规范主要用于在服务器端实现模块化代码组织，但也可用于定义在浏览器中使用的模块依赖。CommonJS 模块语法不能在浏览器中直接运行。用 require()指定依赖"
+        },
+        {
+            "name": "异步模块定义",
+            "answer": "AMD 的一般策略是让模块声明自己的依赖，而运行在浏览器中的模块系统会按需获取依赖，并在依赖加载完成后立即执行依赖它们的模块。AMD 模块实现的核心是用函数包装模块定义。这样可以防止声明全局变量；define"
+        },
+        {
+            "name": "通用模块定义",
+            "answer": "为了统一 CommonJS 和 AMD 生态系统，通用模块定义（UMD，Universal Module Definition）规范应运而生。UMD 可用于创建这两个系统都可以使用的模块代码。本质上，UMD 定义的模块会在启动时检测要使用哪个模块系统，然后进行适当配置，并把所有逻辑包装在一个立即调用的函数表达式（IIFE）中。"
+        },
+        {
+            "name": "使用 ES6 模块",
+            "answer": "模块标签及定义；模块加载：异步完成；浏览器会解析入口模块，确定依赖，并发送对依赖模块的请求。这些文件通过网络返回后，浏览器就会解析它们的内容，确定它们的依赖，如果这些二级依赖还没有加载，则会发送更多请求。这个异步递归加载过程会持续到整个应用程序的依赖图都解析完成。解析完依赖图，应用程序就可以正式加载模块了。模块导出：。默认导出使用 default 关键字将一个值声明为默认导出，每个模块只能有一个默认导出。重复的默认导出会导致 SyntaxError。模块导入；模块转移导出；工作者模块；向后兼容"
+        },
+        {
+            "name": "工作者线程",
+            "answer": "JavaScript 环境实际上是运行在托管操作系统中的虚拟环境。在浏览器中每打开一个页面，就会分配一个它自己的环境。这样，每个页面都有自己的内存、事件循环、DOM，等等。每个页面就相当于一个沙盒，不会干扰其他页面。对于浏览器来说，同时管理多个环境是非常简单的，因为所有这些环境都是并行执行的。使用工作者线程，浏览器可以在原始页面环境之外再分配一个完全独立的二级子环境。这个子环境不能与依赖单线程交互的 API（如 DOM）互操作，但可以与父环境并行执行代码。"
+        },
+        {
+            "name": "工作者线程的类型",
+            "answer": " 专用工作者线程 worker 来创建；线程池； 共享工作者线程 SharedWorker；  服务工作者线程 serviceWorker 拦截 fetch 事件，推送通知"
+        },
+        {
+            "name": "最佳实践",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        }
+    ]
 }
