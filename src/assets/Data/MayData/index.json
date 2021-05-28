@@ -261,15 +261,16 @@
             "answer": ""
         },
         {
-            "name": "http2.0？",
-            "answer": ""
+            "title": "项目中的知识点",
+            "name": "assign？",
+            "answer": "做浅复制，拿出值到一个新对象上，组成对象数组"
         },
         {
-            "name": "http2.0？",
-            "answer": ""
+            "name": "foreach的使用以及map？",
+            "answer": "都是遍历每一项,item,index,arr;foreach没有返回值，map可以return"
         },
         {
-            "name": "http2.0？",
+            "name": "？",
             "answer": ""
         },
         {
