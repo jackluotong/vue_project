@@ -17,6 +17,7 @@
                         <el-button
                             type="text"
                             size="mini"
+                            icon="el-icon-circle-plus"
                             @click="() => append(data)"
                         >
                             新增子级菜单
@@ -24,6 +25,7 @@
                         <el-button
                             type="text"
                             size="mini"
+                            icon="el-icon-delete-solid"
                             @click="() => remove(node, data)"
                         >
                             删除
@@ -31,6 +33,7 @@
                         <el-button
                             type="text"
                             size="mini"
+                            icon="el-icon-s-tools"
                             @click="() => edit(node, data)"
                         >
                             编辑
@@ -103,7 +106,7 @@ export default {
             children.splice(index, 1)
         },
         edit(node, data) {
-            console.log(node, data.label)
+            console.log(node.childNodes.length, data.label)
         },
     },
 }
