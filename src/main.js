@@ -8,9 +8,11 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import axios from 'axios'
 import VueResource from 'vue-resource'
+import iview from 'iview'
 Vue.prototype.axios = axios
 Vue.use(Antd)
 Vue.use(ElementUI)
+Vue.use(iview)
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
