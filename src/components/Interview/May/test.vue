@@ -42,26 +42,7 @@
                 </span>
             </el-tree>
         </div>
-        <div>
-            <Checkbox-group v-model="social" @on-change="select">
-                <Checkbox label="twitter">
-                    <Icon type="social-twitter"></Icon>
-                    <span>Twitter</span>
-                </Checkbox>
-                <Checkbox label="facebook">
-                    <Icon type="social-facebook"></Icon>
-                    <span>Facebook</span>
-                </Checkbox>
-                <Checkbox label="github">
-                    <Icon type="social-github"></Icon>
-                    <span>Github</span>
-                </Checkbox>
-                <Checkbox label="snapchat">
-                    <Icon type="social-snapchat"></Icon>
-                    <span>Snapchat</span>
-                </Checkbox>
-            </Checkbox-group>
-        </div>
+
         <div>
             <a-checkbox-group @change="onChange">
                 <a-row>
@@ -118,6 +99,23 @@
                 />
             </div>
         </div>
+        <div>
+            <Checkbox-group
+                v-model="checkAllGroup1"
+                @on-change="selected"
+                :label="labelValue"
+            >
+                <Checkbox
+                    v-for="(item, index) in checkAllGroup"
+                    :key="index"
+                    :label="item"
+                    v-model="getValue"
+                    size="large"
+                    ref="checkBox"
+                    >{{ item.name }}</Checkbox
+                >
+            </Checkbox-group>
+        </div>
     </div>
 </template>
 <script>
@@ -161,7 +159,10 @@ export default {
                 ],
             },
         ]
-        const plainOptions = ['Apple', 'Pear', 'Orange']
+        const plainOptions = [
+            { name: 'Apple', id: 2 },
+            { name: 'Apple3', id: 3 },
+        ]
         const defaultCheckedList = ['Apple', 'Orange']
         return {
             data: JSON.parse(JSON.stringify(data)),
@@ -180,10 +181,27 @@ export default {
             indeterminate: true,
             checkAll: false,
             plainOptions,
+            checkAllGroup: [
+                { id: '1122', name: 'jack11', areaName: 'jackluo' },
+                { id: '11', name: 'jack2', areaName: 'jackluo' },
+                { id: '12', name: 'jack3', areaName: 'jackluo' },
+                { id: '13', name: 'jack4', areaName: 'jackluo' },
+            ],
+            checkAllGroup1: [],
+            labelValue: [],
+            getValue: [
+                { yangzixu: '' },
+                { yangzixu: '' },
+                { zhangsan: '测试角色，测试角色a' },
+            ],
         }
     },
 
     methods: {
+        selected(e) {
+            console.log(e, this.checkAllGroup1, this.$refs.checkBox)
+        },
+        checkAllGroupChange() {},
         onChange(checkedList) {
             this.indeterminate =
                 !!checkedList.length &&
