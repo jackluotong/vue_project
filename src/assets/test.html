@@ -37,6 +37,26 @@
   </div>
 </div>
 <script>
+    function translate(){
+            let array = []
+            arr.map((item) => {
+                let obj = {}
+                if (item.roles.length === 0) {
+                    obj[item.userCode] = ''
+                } else {
+                    let roleName = ''
+                    item.roles.map((i, t) => {
+                        roleName = roleName + ',' + i.roleName
+                    })
+                    obj[item.userCode] = roleName
+                }
+                array.push(obj)
+            })
+            console.log(array)
+    }
+            
+</script>
+<script>
       // 实现vue2双向绑定
       let obj={}
       console.log(obj);
