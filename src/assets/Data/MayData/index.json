@@ -271,10 +271,14 @@
         },
         {
             "name": "？",
+            "answer": "webpack中的各种hash？"
+        },
+        {
+            "name": "防抖节流？",
             "answer": ""
         },
         {
-            "name": "",
+            "name": "闭包以及浏览器渲染过程？仔细详细",
             "answer": ""
         }
     ]
