@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            const addValue=[
+            //    { AuthCode: 'cc_11', AuthName: 'luo', id: 1, AuthLevel: 01, AuthParentCode: 00 }
+                  { AuthCode: 'cc_11', AuthName: 'luo', id: 1, pid: 0, AuthParentCode: 00 },
+                  /* { AuthCode: 'cc_12', AuthName: 'li', id: 2, pid: 1, AuthParentCode: 1 },
+                  { AuthCode: 'cc_13', AuthName: 'wang', id: 3, pid: 2, AuthParentCode: 2 },
+                  { AuthCode: 'cc_14', AuthName: 'luo', id: 4, pid: 2, AuthParentCode: 0 } */
+
+            ]
+            var source = [{
+                id: 1,
+                pid: 0,
+                name: 'body'
+            }, {
+                id: 2,
+                pid: 1,
+                name: 'title'
+            }, {
+                id: 3,
+                pid: 2,
+                name: 'div'
+            }, {
+                id: 4,
+                pid: 3,
+                name: 'span'
+            }, {
+                id: 5,
+                pid: 3,
+                name: 'icon'
+            }, {
+                id: 6,
+                pid: 4,
+                name: 'subspan'
+            }]
+
+            function toTree(data) {
+                let result = []
+                if(!Array.isArray(data)) {
+                    return result
+                }
+                data.forEach(item => {
+                    delete item.children;
+                });
+                let map = {};
+                data.forEach(item => {
+                    map[item.id] = item;
+                });
+                data.forEach(item => {
+                    let parent = map[item.pid];
+                    if(parent) {
+                        (parent.children || (parent.children = [])).push(item);
+                    } else {
+                        result.push(item);
+                    }
+                });
+                return result;
+            }
+            console.log(toTree(addValue))
+            console.log(JSON.parse(JSON.stringify(source)))
+        </script>
+    </body>
+</html>

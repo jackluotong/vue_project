@@ -116,23 +116,6 @@
                 >
             </Checkbox-group>
         </div>
-        <div>
-            <a-tree-select
-                show-search
-                style="width: 100%"
-                :value="value"
-                :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-                placeholder="Please select"
-                tree-checkable
-                :show-checked-strategy="SHOW_PARENT"
-                :tree-data="treeData"
-                @change="onChange"
-                @search="onSearch"
-                @select="onSelect"
-                v-model="currentValue"
-            >
-            </a-tree-select>
-        </div>
     </div>
 </template>
 <script>
@@ -143,7 +126,7 @@ export default {
         const data = [
             {
                 id: 1,
-                label: '一级 1',
+                label: '一级 111',
                 children: [
                     {
                         id: 4,
@@ -176,14 +159,12 @@ export default {
                 ],
             },
         ]
-
         const plainOptions = [
             { name: 'Apple', id: 2 },
             { name: 'Apple3', id: 3 },
         ]
         const defaultCheckedList = ['Apple', 'Orange']
         return {
-            treeData: data,
             data: JSON.parse(JSON.stringify(data)),
             social: [
                 { value: 1, label: 'twitter' },
@@ -208,54 +189,21 @@ export default {
             ],
             checkAllGroup1: [],
             labelValue: [],
-            getValue: [
-                { yangzixu: '' },
-                { yangzixu: '' },
-                { zhangsan: '测试角色，测试角色a' },
-            ],
-            value: undefined,
-            currentValue: [],
         }
     },
 
     methods: {
-        onChange(value) {
-            console.log(value)
-        },
-        onSearch() {
-            console.log(...arguments)
-        },
-        onSelect() {
-            console.log(...arguments, this.currentValue)
-        },
-        translateArr(arr) {
-            let array = []
-            arr.map((item) => {
-                let obj = {}
-                if (item.roles.length === 0) {
-                    obj[item.userCode] = ''
-                } else {
-                    let roleName = ''
-                    item.roles.map((i, t) => {
-                        roleName = roleName + ',' + i.roleName
-                    })
-                    obj[item.userCode] = roleName
-                }
-                array.push(obj)
-            })
-            console.log(array)
-        },
         selected(e) {
             console.log(e, this.checkAllGroup1, this.$refs.checkBox)
         },
         checkAllGroupChange() {},
-        /*  onChange(checkedList) {
+        onChange(checkedList) {
             this.indeterminate =
                 !!checkedList.length &&
                 checkedList.length < this.plainOptions.length
             this.checkAll = checkedList.length === this.plainOptions.length
             console.log(checkedList)
-        }, */
+        },
         onCheckAllChange(e) {
             Object.assign(this, {
                 checkedList: e.target.checked ? this.plainOptions : [],
