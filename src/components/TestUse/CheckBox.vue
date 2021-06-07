@@ -18,6 +18,16 @@
             <Checkbox label="苹果"></Checkbox>
             <Checkbox label="西瓜"></Checkbox>
         </Checkbox-group>
+        <div>
+            <Select v-model="model15" prefix="ios-home" style="width:200px">
+                <Option
+                    v-for="item in cityList"
+                    :value="item.id"
+                    :key="item.id"
+                    >{{ item.name }}</Option
+                >
+            </Select>
+        </div>
     </div>
 </template>
 <script>
@@ -27,6 +37,33 @@ export default {
             indeterminate: true,
             checkAll: false,
             checkAllGroup: ['香蕉', '西瓜'],
+            cityList: [
+                {
+                    id: '204',
+                    name: 'New York',
+                },
+                {
+                    id: '205',
+                    name: 'London',
+                },
+                {
+                    id: '206',
+                    name: 'Sydney',
+                },
+                {
+                    id: '207',
+                    name: 'Ottawa',
+                },
+                {
+                    id: '208',
+                    name: 'Paris',
+                },
+                {
+                    id: '209',
+                    name: 'Canberra',
+                },
+            ],
+            model15: '',
         }
     },
     methods: {
@@ -56,6 +93,12 @@ export default {
                 this.checkAll = false
             }
         },
+        judge() {
+            this.model15 = 'Canberra'
+        },
+    },
+    mounted() {
+        this.judge()
     },
 }
 </script>
