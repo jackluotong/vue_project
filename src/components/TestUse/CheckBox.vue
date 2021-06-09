@@ -18,6 +18,7 @@
             <Checkbox label="苹果"></Checkbox>
             <Checkbox label="西瓜"></Checkbox>
         </Checkbox-group>
+<<<<<<< HEAD
         <div>
             <Select v-model="model15" prefix="ios-home" style="width:200px">
                 <Option
@@ -28,12 +29,32 @@
                 >
             </Select>
         </div>
+=======
+        <Input
+            v-model.trim="searchValue"
+            type="text"
+            class="search"
+            style="width:80%;margin-left:10%"
+            @on-enter="keyPress"
+            @on-focus="keyUp"
+        >
+        </Input>
+>>>>>>> e1d872005ab884c7114374226b02645ea635c966
     </div>
 </template>
 <script>
+const throttle = (function() {
+    let timer = 0
+    return function(callback, time) {
+        clearTimeout(timer)
+        timer = setTimeout(callback, time)
+    }
+})()
 export default {
+    name: 'search',
     data() {
         return {
+            searchValue: '',
             indeterminate: true,
             checkAll: false,
             checkAllGroup: ['香蕉', '西瓜'],
@@ -67,6 +88,12 @@ export default {
         }
     },
     methods: {
+        keyUp(e) {
+            console.log(e.target.value)
+        },
+        keyPress(e) {
+            console.log(e.keyCode)
+        },
         handleCheckAll() {
             if (this.indeterminate) {
                 this.checkAll = false
