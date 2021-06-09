@@ -82,7 +82,7 @@
  * export 导出的在导入的时候用{}
  * export default 导出的在导入的时候不用{}
  */
-import axios from '../../../utils/axios'
+// import axios from '../../../libs/axios'
 import test, { S } from '../../../assets/test'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 import { log } from '../../../CommonFunction/CommonFunction'

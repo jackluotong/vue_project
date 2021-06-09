@@ -28,12 +28,23 @@
         />
         <div>
             <h1>
-                防抖的应用
+                防抖的应用（debonuce）
+            </h1>
+            <input type="text" @keyup="keyUpClick" />
+        </div>
+        <div>
+            <h1>
+                截流的应用（throttle）
             </h1>
         </div>
     </div>
 </template>
 <script>
+import { debounce } from '../../libs/tools'
+/* 
+    debounce 防抖 多次提交只执行一次 按钮提交 搜索框联想场景  防抖1秒 连续点按钮10秒，在11秒的时候，执行一次
+    throttle 截流  节流是每隔固定时间执行一次  节流1秒 连续点按钮10秒，每秒执行一次，共执行10次
+*/
 const throttle = (function() {
     let timer = 0
     return function(callback, time) {
@@ -79,6 +90,25 @@ export default {
         }
     },
     methods: {
+        keyUpClick(e) {
+            // debounce(this.getValue(e.target.value), 1000)
+            return new Promise((resolve, reject) => {
+                this.getValue(e.target.value)
+                    .then((res) => {
+                        console.log(res)
+                        resolve(res)
+                    })
+                    .catch((err) => {
+                        reject(err)
+                    })
+            })
+        },
+        getValue(value) {
+            return new Promise((resolve, reject) => {
+                console.log(value)
+                resolve(value)
+            }).then((res) => console.log(res))
+        },
         keyUp(e) {
             console.log(e.target.value)
         },

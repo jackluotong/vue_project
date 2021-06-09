@@ -154,6 +154,9 @@
             <li>11</li>
         </ul>
     </div>
+    <div>
+        <button onclick="debounceClick()">debounce</button>
+    </div>
   </div>
 </body>
 <script>
@@ -165,5 +168,26 @@
     console.log(a.map((index,value)=>{
         return b.push(index)
     }))
+
+    function debounce(method, delay) {
+    let timer = null;
+    return function () {
+        let context = this, args = arguments;
+        if(timer){
+            clearTimeout(timer);
+            timer = null;
+        } 
+        timer = setTimeout(function () {
+            method.apply(context, args);
+        }, delay);
+    }
+}
+let fun= debounce(() => {
+        console.log('123');
+}, 600);
+let debounceClick=debounce(()=>{
+    console.log('debounce')
+},3001)
+window.addEventListener(debounceClick, fun); 
 </script>
 </html>
