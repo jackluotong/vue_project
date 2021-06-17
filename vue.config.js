@@ -1,12 +1,12 @@
 module.exports = {
-  lintOnSave: false,
-  devServer: {
-    proxy: {
-      "/api": {
-            target: "http://localhost:5000",
-            changeOrigin: true,
-            pathRewrite: { '^/api1': '' },
-      },
+    lintOnSave: false,
+    devServer: {
+        proxy: {
+            '/dcenter': {
+                target: 'http://yang.cn1.utools.club',
+                changeOrigin: true,
+                // pathRewrite: { '^/api1': '' },
+            },
+        },
     },
-  },
-};
+}

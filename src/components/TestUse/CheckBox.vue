@@ -37,6 +37,15 @@
                 截流的应用（throttle）
             </h1>
         </div>
+        <div>
+            <p
+                ref="testRef"
+                id="test01"
+                v-show="checkAllGroup.indexOf('西瓜') > -1"
+            >
+                11112
+            </p>
+        </div>
     </div>
 </template>
 <script>
@@ -147,6 +156,14 @@ export default {
     },
     mounted() {
         this.judge()
+    },
+    created() {
+        console.log(this.$refs.testRef)
+        /* this.axios
+            .get(' http://yang.cn1.utools.club/dcenter/application/queryAppAll')
+            .then((res) => {
+                console.log(res)
+            }) */
     },
 }
 </script>
