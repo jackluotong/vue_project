@@ -9,6 +9,7 @@ import 'ant-design-vue/dist/antd.css'
 import axios from 'axios'
 import VueResource from 'vue-resource'
 import iview from 'iview'
+import 'iview/dist/styles/iview.css'
 Vue.prototype.axios = axios
 Vue.use(Antd)
 Vue.use(ElementUI)
