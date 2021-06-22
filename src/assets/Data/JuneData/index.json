@@ -1,0 +1,93 @@
+{
+    "june": [
+        {
+            "title": "06.22明略科技面试",
+            "name": "doctype的作用？",
+            "answer": "访问外部的变量，防抖中，"
+        },
+        {
+            "name": "h5新特性？",
+            "answer": ""
+        },
+        {
+            "name": "cxrf？xss？",
+            "answer": ""
+        },
+        {
+            "name": "盒子模型？bfc？",
+            "answer": ""
+        },
+        {
+            "name": "清楚浮动？为什么要清楚浮动？",
+            "answer": ""
+        },
+        {
+            "name": "rem em？",
+            "answer": ""
+        },
+        {
+            "name": "position？以及其中的值？",
+            "answer": "fixed absolute sticky static relative"
+        },
+        {
+            "name": "在哪个生命周期中操作dom？",
+            "answer": "在mounted中，created中添加服务器访问请求"
+        },
+        {
+            "name": "z-index的属性？",
+            "answer": ""
+        },
+        {
+            "name": "less css区别？less的使用？",
+            "answer": ""
+        },
+        {
+            "name": "js 0.1+0.2为什么不等于0.3？",
+            "answer": "IEEE754的规定，js最大安全数？=2*53-1"
+        },
+        {
+            "name": "i++和++i的区别？",
+            "answer": ""
+        },
+        {
+            "name": "js数据类型？for循环中断？暂时性死区？",
+            "answer": "因为作用域的关系"
+        },
+        {
+            "name": "vue数组方法？",
+            "answer": "push pop unshift shift sort reverse concat"
+        },
+        {
+            "name": "前端跨域产生的原因以及解决方法？",
+            "answer": ""
+        },
+        {
+            "name": "git flow？ git rebase merge？",
+            "answer": ""
+        },
+        {
+            "name": "冒泡排序，快排？二分法？",
+            "answer": ""
+        },
+        {
+            "name": "编码规范？",
+            "answer": ""
+        },
+        {
+            "name": "性能优化？",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        }
+    ]
+}

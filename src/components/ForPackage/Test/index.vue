@@ -17,14 +17,14 @@
                         type="primary"
                         size="small"
                         style="margin-right: 5px"
-                        @click="edit(index)"
+                        @click="edit(index, row)"
                         >编辑</Button
                     >
                     <Button
                         type="error"
                         size="small"
                         style="margin-right: 5px"
-                        @click="del(index)"
+                        @click="del(index, row)"
                         >删除</Button
                     >
                 </div>
@@ -59,8 +59,11 @@ export default {
         return {}
     },
     methods: {
-        edit(e) {
-            console.log(e)
+        edit(e, row) {
+            console.log(e, row)
+        },
+        del(index, row) {
+            console.log(index, row)
         },
     },
     mounted() {

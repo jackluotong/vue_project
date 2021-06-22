@@ -102,6 +102,12 @@
                         >
                             May
                         </a-menu-item>
+                        <a-menu-item
+                            key="25"
+                            @click="$router.push({ name: 'June' })"
+                        >
+                            June
+                        </a-menu-item>
                     </a-sub-menu>
 
                     <!-- add new part such as protocol and arithmetic -->

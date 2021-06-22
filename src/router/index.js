@@ -128,6 +128,11 @@ const routes = [
         name: 'CheckBox',
         component: () => import('../components/TestUse/CheckBox.vue'),
     },
+    {
+        path: '/June',
+        name: 'June',
+        component: () => import('../components/Interview/June'),
+    },
 ]
 
 const router = new VueRouter({
