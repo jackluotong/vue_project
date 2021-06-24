@@ -34,10 +34,15 @@
         <span v-if="0 > 1">
             {{ nameComputed }}
         </span>
+<<<<<<< HEAD
         <div>
             <canvas id='myCanvs' width="800" height="800">
             </canvas>
         </div>
+=======
+        <a-button @click="push">push array</a-button>
+        <h1 ref="domRef">nameFor</h1>
+>>>>>>> 88e977dbba561d36e99716885c197f09dc2310be
     </div>
 </template>
 <script>
@@ -62,6 +67,7 @@ export default {
     },
     data() {
         return {
+            nameFor: 'nameFor',
             computed: [1, 2, 3, 4],
             searchValue: '',
             indeterminate: true,
@@ -87,17 +93,57 @@ export default {
                     align: 'center',
                 },
             ],
+<<<<<<< HEAD
             confData: [
             { roleName: 'jack', roleCode: 'luo', id: '001' },
             { roleName: 'jack', roleCode: 'li', id: '002' },
             { roleName: 'jack', roleCode: 'wang', id: '003' },
             { roleName: 'jack', roleCode: 'shi', id: '004' }],
+=======
+            myTestObject: {
+                sex: 'boy',
+                name: 'luo',
+                age: 26,
+                child: { name: 'samll luo', age: 0, sex: 'boy' },
+            },
+            confData: [{ roleName: 'jack', roleCode: 'luo' }],
+>>>>>>> 88e977dbba561d36e99716885c197f09dc2310be
         }
     },
     methods: {
         keyUpClick() {},
+        push() {
+            this.computed.push('0624')
+        },
     },
-    mounted() {},
+    mounted() {
+        window.my = this
+        /*  this.$nextTick(() => {
+            this.nameFor = 'created'
+        }) */
+    },
+    watch: {
+        computed(value) {
+            //can not watch array function not include in vue
+            console.log(value)
+        },
+        columns: {
+            handler(value) {
+                console.log(value)
+            },
+            deep: true,
+        },
+        'myTestObject.child'(value) {
+            console.log(value)
+            console.log(this.myTestObject)
+        },
+        myTestObject: {
+            handler(value) {
+                console.log(value)
+            },
+            deep: true,
+        },
+    },
     computed: {
         userName() {
             return 'jack+父组件给的值'
@@ -121,6 +167,10 @@ export default {
                 console.log(item, 'second', id, x)
             })
         ) */
+        /*   this.$nextTick(() => {
+            console.log(this.$refs)
+        }) */
+        console.log(this.$refs)
     },
 }
 </script>
