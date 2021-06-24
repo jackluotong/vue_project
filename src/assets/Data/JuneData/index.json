@@ -78,6 +78,151 @@
             "answer": ""
         },
         {
+            "title": "2021.06.24面试",
+            "name": "bfc?以及css单位？",
+            "answer": "block format context ,vw vh px rem em "
+        },
+        {
+            "name": "单位换算",
+            "answer": "calc"
+        },
+        {
+            "name": "重绘回流",
+            "answer": "reflow:几何属性发生改变；repaint:样式发生改变"
+        },
+        {
+            "name": "数组去重？v-if v-for优先级？computed watch区别？",
+            "answer": ""
+        },
+        {
+            "name": "keep-alive使用？",
+            "answer": "生命周期：activated disactivated"
+        },
+        {
+            "name": "watch监听数组对象以及其中的值?",
+            "answer": ""
+        },
+        {
+            "name": "static和assets？",
+            "answer": "static:存放一些外部的第三方的； assets:其中的文件会经过webpack打包，重新编译"
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
             "name": "",
             "answer": ""
         },
