@@ -30,14 +30,17 @@
                 </div>
             </template>
         </Table>
+        <Modal :visible='visible'/>
     </div>
 </template>
 <script>
 import { Table, Button } from 'iview'
+import Modal from '../Modal'
 export default {
     components: {
         Table,
         Button,
+        Modal
     },
     props: {
         usertick: {
@@ -56,15 +59,21 @@ export default {
         },
     },
     data() {
-        return {}
+        return {
+        }
     },
     methods: {
         edit(e, row) {
             console.log(e, row)
         },
         del(index, row) {
-            console.log(index, row)
+            console.log(index, row,this.confData[index])
+            // delete this.confData[index]
         },
+    },
+    computed:{
+        visible(){
+        }
     },
     mounted() {
         console.log(this.$props)

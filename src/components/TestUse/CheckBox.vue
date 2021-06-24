@@ -1,3 +1,8 @@
+<style scoped>
+#myCanvs{
+    border: 1px solid rgb(3, 3, 3);
+}
+</style>
 <template>
     <div>
         <div>
@@ -29,6 +34,10 @@
         <span v-if="0 > 1">
             {{ nameComputed }}
         </span>
+        <div>
+            <canvas id='myCanvs' width="800" height="800">
+            </canvas>
+        </div>
     </div>
 </template>
 <script>
@@ -78,7 +87,11 @@ export default {
                     align: 'center',
                 },
             ],
-            confData: [{ roleName: 'jack', roleCode: 'luo' }],
+            confData: [
+            { roleName: 'jack', roleCode: 'luo', id: '001' },
+            { roleName: 'jack', roleCode: 'li', id: '002' },
+            { roleName: 'jack', roleCode: 'wang', id: '003' },
+            { roleName: 'jack', roleCode: 'shi', id: '004' }],
         }
     },
     methods: {
