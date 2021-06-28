@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Time/>
+    <Time />
   </div>
 </template>
 <script>
 import Time from '../components/Time'
 export default {
-  components:{
-    Time
-  }
+  components: {
+    Time,
+  },
 }
 </script>
