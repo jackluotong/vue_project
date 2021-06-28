@@ -107,8 +107,8 @@
             "answer": "static:存放一些外部的第三方的； assets:其中的文件会经过webpack打包，重新编译"
         },
         {
-            "name": "",
-            "answer": ""
+            "name": "webpack?",
+            "answer": "entry otput loader plugin mode"
         },
         {
             "name": "",
