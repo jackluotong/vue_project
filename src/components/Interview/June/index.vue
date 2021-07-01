@@ -1,4 +1,4 @@
-<style scoped>
+<style scoped lang="scss">
 .liClass {
     text-align: left;
 }
@@ -13,9 +13,16 @@ p:hover {
     background-color: rgb(157, 255, 0);
     transform: scale(1.5);
 }
+.first {
+    background-color: rgb(128, 31, 0);
+    padding: 20px;
+    li {
+        color: blue;
+    }
+}
 </style>
 <template>
-    <div style="background: #ececec; padding: 20px">
+    <div class="first">
         <a-card
             title="Interview"
             :bordered="false"

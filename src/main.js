@@ -13,7 +13,6 @@ import 'iview/dist/styles/iview.css'
 Vue.prototype.axios = axios
 Vue.use(Antd)
 Vue.use(ElementUI)
-// Vue.use(iview)
 Vue.use(VueResource)
 Vue.config.productionTip = false
 

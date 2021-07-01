@@ -110,6 +110,35 @@ export default {
         /*  this.$nextTick(() => {
             this.nameFor = 'created'
         }) */
+        let person = {
+            _name: 'jack11',
+            get name() {
+                alert(this._name)
+                return this._name
+            },
+            set name(params) {
+                this._name = params
+                alert(this._name)
+            },
+        }
+        /*  person.name
+        person.name = 'jack luo' */
+        let student = {
+            name: 'red',
+            age: 26,
+        }
+        for (let i in student) {
+            // for in  using loop array
+            console.log(i)
+        }
+        console.log(
+            Object.keys(person),
+            '0000',
+            Object.getOwnPropertyNames(person),
+            Object.keys(student).map((item) => {
+                return student[item]
+            })
+        )
     },
     watch: {
         computed(value) {
@@ -160,7 +189,6 @@ export default {
             console.log(this.$refs)
         }) */
         console.log(this.$refs)
-        debugger
         let data = this.confData.filter((item) => {
             if (item.id === '001') {
                 return item
