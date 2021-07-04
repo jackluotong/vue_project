@@ -133,6 +133,11 @@ const routes = [
         name: 'June',
         component: () => import('../components/Interview/June'),
     },
+    {
+        path: 'Array',
+        name: 'Array',
+        component: () => import('../components/Array'),
+    },
 ]
 
 const router = new VueRouter({
