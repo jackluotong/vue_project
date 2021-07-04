@@ -147,6 +147,12 @@
                         >
                             CheckBox
                         </a-menu-item>
+                        <a-menu-item
+                            key="51"
+                            @click="$router.push({ name: 'Array' })"
+                        >
+                            Array
+                        </a-menu-item>
                     </a-sub-menu>
                 </a-menu>
             </a-layout-sider>
