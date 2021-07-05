@@ -3,7 +3,7 @@
         {
             "title": "明略科技06.29面试",
             "name": "css部分？",
-            "answer": ""
+            "answer": "水平垂直居中？"
         },
         {
             "name": "js部分？",
@@ -11,10 +11,35 @@
         },
         {
             "name": "react部分？",
-            "answer": ""
+            "answer": "hooks"
         },
         {
             "name": "vue部分？",
+            "answer": ""
+        },
+        {
+            "title": "07.04面试",
+            "name": "restful?",
+            "answer": "接口定义准则"
+        },
+        {
+            "name": "原理类？",
+            "answer": "跨域：jsonp？cors：在tcp层传输的时候发现？Nginx：设置反向代理？base64 utf-8"
+        },
+        {
+            "name": "this的用法？",
+            "answer": "全局 函数内 "
+        },
+        {
+            "name": "http1=>2?",
+            "answer": ""
+        },
+        {
+            "name": "requestHeader中的keep-alive",
+            "answer": "长连接短连接的区别？"
+        },
+        {
+            "name": "",
             "answer": ""
         }
     ]

@@ -4,10 +4,10 @@ module.exports = {
         port: 3030,
         open: true,
         proxy: {
-            '/dcenter': {
-                target: 'http://yang.cn1.utools.club',
+            '/api': {
+                target: 'http://localhost:5000',
                 changeOrigin: true,
-                // pathRewrite: { '^/api1': '' },
+                pathRewrite: { '^/api1': '' },
             },
         },
     },

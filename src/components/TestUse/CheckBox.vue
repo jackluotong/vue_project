@@ -1,10 +1,26 @@
-<style scoped>
+<style lang="scss" scoped>
 #myCanvs {
     border: 1px solid rgb(3, 3, 3);
+}
+.text-test {
+    width: 100px;
+    height: 100px;
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        // word-break: break-all;
+        // display: -webkit-box;
+    }
 }
 </style>
 <template>
     <div>
+        <div class="text-test">
+            <p>
+                {"header":{"signInfo":"/JMqPTWqUdxOmz0uMNVuSoR0Ir/n1Mf6KX8du4ONgHU=","source":"EB-WSM","uuid":"88daf6f39a9549e79ef6eecbe3771415","reqSeq":"202011202101005861"},"body":{"signdata":"NULL","imgstr":"true","imgtyp":"jpeg","type":"idCardF"}}
+            </p>
+        </div>
         <div>
             <h1>防抖的应用（debonuce）</h1>
             <input type="text" @keyup="keyUpClick" />
@@ -35,12 +51,15 @@
         </div>
         <a-button @click="push">push array</a-button>
         <h1 ref="domRef">nameFor</h1>
+        <a-button type="error" @click="textAxios">test axios</a-button>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex'
 import { debounce } from '../../libs/tools'
 import User from '../ForPackage/Test'
+import { testProxy } from '../../api/test'
+import axios from 'axios'
 /*
     debounce 防抖 多次提交只执行一次 按钮提交 搜索框联想场景  防抖1秒 连续点按钮10秒，在11秒的时候，执行一次
     throttle 截流  节流是每隔固定时间执行一次  节流1秒 连续点按钮10秒，每秒执行一次，共执行10次
@@ -100,6 +119,17 @@ export default {
         }
     },
     methods: {
+        textAxios() {
+            /*  testProxy().then((res) => {
+                console.log(res)
+            }) */
+            this.axios()
+        },
+        axios() {
+            axios.get('http://localhost:3031/api1/man').then((res) => {
+                console.log(res)
+            })
+        },
         keyUpClick() {},
         push() {
             this.computed.push('0624')
