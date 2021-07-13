@@ -115,10 +115,32 @@ export default {
                 name: 'luo',
                 age: 26,
                 child: { name: 'samll luo', age: 0, sex: 'boy' },
+                fun: function name(params) {
+                    console.log(params)
+                },
             },
+            myTestArray: [{ name: 'william', age: 26 }],
         }
     },
     methods: {
+        jsonDeepClone(originObj) {
+            let target = JSON.parse(JSON.stringify(originObj))
+            console.log(target, 'JSON')
+            let assignClone = Object.assign(originObj)
+            console.log(assignClone, 'assign')
+        },
+        recursion(obj) {
+            let obj_copy = null
+            if (typeof obj === 'object' && obj !== '') {
+                obj_copy = obj instanceof Array ? [] : {}
+                for (let i in obj) {
+                    obj_copy[i] = this.recursion(obj[i])
+                }
+            } else {
+                obj_copy = obj
+            }
+            return obj_copy
+        },
         textAxios() {
             /*  testProxy().then((res) => {
                 console.log(res)
@@ -136,6 +158,9 @@ export default {
         },
     },
     mounted() {
+        console.log(this.myTestObject)
+        console.log(this.recursion(this.myTestObject))
+        this.jsonDeepClone(this.myTestObject)
         window.my = this
         /*  this.$nextTick(() => {
             this.nameFor = 'created'
@@ -171,6 +196,12 @@ export default {
         )
     },
     watch: {
+        myTestArray: {
+            handler(value) {
+                console.log(value)
+            },
+            deep: true,
+        },
         computed(value) {
             //can not watch array function not include in vue
             console.log(value)
