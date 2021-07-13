@@ -197,7 +197,7 @@ export default {
         { name: "原型链的理解？", answer: "向上查找_proto_" },
         { name: "js如何实现继承？", answer: "prototype+call/call/apply(参数是数组)/prototype" },
         { name: "对象/数组/方法/的浅拷贝？", answer: "assign/slice/concat" },
-        { name: "vue3相比vue2做了哪些优化？", answer: "" },
+        { name: "vue3相比vue2做了哪些优化？", answer: "对TypeScript支持不友好（所有属性都放在了this对象上，难以推倒组件的数据类型）,大量的API挂载在Vue对象的原型上，难以实现TreeShaking,架构层面对跨平台dom渲染开发支持不友好,CompositionAPI。受ReactHook启发,更方便的支持了 jsx,响应式不区分数组和对象,3.0比2.0 快2倍" },
         { name: 'vue-router的底层原理？', answer: '' },
         { name: 'webpack的用法以及底层原理？', answer: '' },
         { name: '封装一个方法你要考虑的要素？', answer: '' },
