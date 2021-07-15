@@ -39,16 +39,17 @@
             "answer": "长连接短连接的区别？"
         },
         {
-            "name": "深拷贝和浅拷贝的区别？深拷贝陷入无限循环？",
-            "answer": "深拷贝使用json 这一套无法拷贝function，出现无线循环时可以使用hash，WeakMap"
-        },
-        {
-            "name": "十大算法排序？",
+            "name": "",
             "answer": ""
         },
         {
-            "name": "监听？",
-            "answer": "深度监听时对象中的某一属性改变会监听到整个对象"
+            "title": "07.15面试",
+            "name": "加密算法？tcp对称加密和非对称加密",
+            "answer": "des aes base64 rsa md5"
+        },
+        {
+            "name": "",
+            "answer": ""
         }
     ]
 }
