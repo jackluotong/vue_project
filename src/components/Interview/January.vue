@@ -205,7 +205,11 @@ export default {
                     answer:
                         'link的同时被加载，import的当前页面加载完毕时被加载',
                 },
-                { name: 'px em rem？', answer: '因此一般不用于响应式网站,' },
+                {
+                    name: 'px em rem？',
+                    answer:
+                        '因此一般不用于响应式网站,em相对于父级单位，font-size:16px则后代使用时1em=16px;rem相对于根元素',
+                },
                 {
                     title: '01.28面试',
                     name: '数据结构与算法？队列？广度优先算法',
@@ -344,7 +348,7 @@ export default {
             for (let i = 0; i < length; i++) {
                 for (let j = 0; j < length - 1 - i; j++) {
                     if (array[j] > array[j + 1]) {
-                        [array[j + 1], array[j]] = [array[j], array[j + 1]]
+                        ;[array[j + 1], array[j]] = [array[j], array[j + 1]]
                     }
                 }
             }
@@ -362,7 +366,7 @@ export default {
                     if (array[indexMin] > array[j]) indexMin = j
                 }
                 if (i != indexMin) {
-                    [array[indexMin], array[i]] = [array[i], array[indexMin]]
+                    ;[array[indexMin], array[i]] = [array[i], array[indexMin]]
                 }
             }
             return array
@@ -501,7 +505,7 @@ export default {
             for (let i = 0; i < staffs.length; i++) {
                 for (let j = 0; j < staffs.length - 1 - i; j++) {
                     if (staffs[j].age > staffs[j + 1].age) {
-                        [staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
+                        ;[staffs[j + 1], staffs[j]] = [staffs[j], staffs[j + 1]]
                     }
                 }
             }
