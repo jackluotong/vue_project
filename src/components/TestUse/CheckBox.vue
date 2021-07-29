@@ -55,22 +55,22 @@
     </div>
 </template>
 <script>
-import { mapState } from 'vuex'
-import { debounce } from '../../libs/tools'
+// import { mapState } from 'vuex'
+// import { debounce } from '../../libs/tools'
 import User from '../ForPackage/Test'
-import { testProxy } from '../../api/test'
+// import { testProxy } from '../../api/test'
 import axios from 'axios'
 /*
     debounce 防抖 多次提交只执行一次 按钮提交 搜索框联想场景  防抖1秒 连续点按钮10秒，在11秒的时候，执行一次
     throttle 截流  节流是每隔固定时间执行一次  节流1秒 连续点按钮10秒，每秒执行一次，共执行10次
 */
-const throttle = (function() {
-    let timer = 0
-    return function(callback, time) {
-        clearTimeout(timer)
-        timer = setTimeout(callback, time)
-    }
-})()
+// const throttle = (function() {
+//     let timer = 0
+//     return function(callback, time) {
+//         clearTimeout(timer)
+//         timer = setTimeout(callback, time)
+//     }
+// })()
 export default {
     // name: 'search',
     components: {
@@ -148,8 +148,30 @@ export default {
             this.axios()
         },
         axios() {
-            axios.get('http://localhost:3031/api1/man').then((res) => {
+            axios.get('http://localhost:5000/api1/students').then((res) => {
                 console.log(res)
+            })
+            /**
+             * @name: promise
+             * @test:
+             * @msg:
+             * @param {resolve,reject}
+             * @return {*}
+             */
+            function testPromsie(params) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(resolve, params, 'timeout')
+                })
+            }
+            const promise = new Promise((resolve, reject) => {
+                resolve(1)
+                console.log('new promise')
+            })
+            promise.then((value) => {
+                console.log(value)
+            })
+            testPromsie(100).then((value) => {
+                console.log(value)
             })
         },
         keyUpClick() {},
@@ -158,8 +180,6 @@ export default {
         },
     },
     mounted() {
-        console.log(this.myTestObject)
-        console.log(this.recursion(this.myTestObject))
         this.jsonDeepClone(this.myTestObject)
         window.my = this
         /*  this.$nextTick(() => {

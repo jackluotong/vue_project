@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-31 23:33:28
+ * @LastEditTime: 2021-07-27 22:21:46
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue_project\src\libs\axios.js
+ */
 import axios from 'axios'
 import store from '@/store'
 import { getToken } from '@/libs/util'

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-07-01 22:49:06
+ * @LastEditTime: 2021-07-27 22:21:18
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue_project\src\router\routers.js
+ */
 import Home from '../views/Home.vue'
 
 export default [

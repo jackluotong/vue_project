@@ -199,12 +199,12 @@ export default {
             // this.$delete(this.testObj,'name')
         },
         testAxios() {
-            axios
-                .get('/static/index.json')
-                .then((res) => {
-                    console.log(res)
-                })
-                .catch((e) => console.log(e))
+            // axios
+            //     .get('/static/index.json')
+            //     .then((res) => {
+            //         console.log(res)
+            //     })
+            //     .catch((e) => console.log(e))
         },
         async testAxiosExport() {
             // const res=await axios.get('http://localhost:8080/api1/students')
