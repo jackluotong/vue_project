@@ -55,6 +55,7 @@
     </div>
 </template>
 <script>
+import { flattenReduce, flattenSplit } from '../../libs/util'
 // import { mapState } from 'vuex'
 // import { debounce } from '../../libs/tools'
 import User from '../ForPackage/Test'
@@ -120,6 +121,15 @@ export default {
                 },
             },
             myTestArray: [{ name: 'william', age: 26 }],
+            testData: [
+                1,
+                23,
+                21,
+                2312,
+                312,
+                [23, 312, 31231],
+                [1, 23, 21, 123123, 11, 0],
+            ],
         }
     },
     methods: {
@@ -182,9 +192,6 @@ export default {
     mounted() {
         this.jsonDeepClone(this.myTestObject)
         window.my = this
-        /*  this.$nextTick(() => {
-            this.nameFor = 'created'
-        }) */
         let person = {
             _name: 'jack11',
             get name() {
@@ -196,14 +203,12 @@ export default {
                 alert(this._name)
             },
         }
-        /*  person.name
-        person.name = 'jack luo' */
+
         let student = {
             name: 'red',
             age: 26,
         }
         for (let i in student) {
-            // for in  using loop array
             console.log(i)
         }
         console.log(
@@ -213,6 +218,18 @@ export default {
             Object.keys(student).map((item) => {
                 return student[item]
             })
+        )
+        const mapArr = this.testData.map((item) => {
+            return item
+        })
+        const froArr = this.testData.forEach((item) => {
+            console.log(item)
+        })
+        console.log(this.testData, mapArr, froArr)
+        console.log(
+            flattenReduce(this.testData),
+            '----',
+            flattenSplit(this.testData)
         )
     },
     watch: {
@@ -276,6 +293,9 @@ export default {
             }
         })
         console.log(data)
+        this.$nextTick(() => {
+            this.confData[1].roleName = 'created12'
+        })
     },
 }
 </script>

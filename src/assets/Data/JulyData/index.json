@@ -48,8 +48,91 @@
             "answer": "des aes base64 rsa md5"
         },
         {
+            "title": "07.29花旗面试",
+            "name": "在created中怎么操作dom",
+            "answer": "加nexttick"
+        },
+        {
+            "name": "for of for in 区别？foreach map区别？",
+            "answer": ""
+        },
+        {
+            "name": "vue和react的区别？",
+            "answer": ""
+        },
+        {
+            "name": "promise的原理？",
+            "answer": ""
+        },
+        {
+            "name": "对象数组字符串数字各自的api？",
+            "answer": ""
+        },
+        {
+            "name": "原型链？",
+            "answer": ""
+        },
+        {
+            "name": "盒子模型转换？",
+            "answer": "box-sizing"
+        },
+        {
             "name": "",
             "answer": ""
+        },
+        {
+            "title": "07.29平安壹钱包",
+            "name": "webpack中的module bundle chunk",
+            "answer": ""
+        },
+        {
+            "name": "前端工程化",
+            "answer": ""
+        },
+        {
+            "name": "webpack性能优化？loader plugin 区别？ entry？output？",
+            "answer": ""
+        },
+        {
+            "name": "typescript？",
+            "answer": ""
+        },
+        {
+            "name": "url输入到页面呈现？",
+            "answer": "字符串拼接=》查找缓存=》dns=》ip=》tcp=》http=》domtree=》csstree=》rendertree（开启多线程）"
+        },
+        {
+            "title": "07.30合合科技",
+            "name": "webpack打包性能优化？",
+            "answer": ""
+        },
+        {
+            "name": "for of 可以迭代字符串和数组！！！！",
+            "answer": "for of不能迭代对象"
+        },
+        {
+            "name": "项目介绍？",
+            "answer": "自己熟悉一遍，突出亮点"
+        },
+        {
+            "name": "react hooks执行时机？同步异步？",
+            "answer": ""
+        },
+        {
+            "name": "usestate值改变要重新渲染？",
+            "answer": ""
+        },
+        {
+            "name": "防抖截流？",
+            "answer": "防抖：单位时间内事件触发被重置；截流：单位时间内只有一次（限制流量）"
+        },
+        {
+            "name": "react中的受控组件？非受控组件？",
+            "answer": "受控组件：React负责渲染表单的组件仍然控制用户后续输入时所发生的变化；非受控：非受控也就意味着我可以不需要设置它的state属性，而通过ref来操作真实的DOM"
+        },
+        {
+            "name": "浅拷贝和深拷贝？",
+            "answer": "基本数据类型：直接存在栈中；引用数据类型："
         }
     ]
 }
