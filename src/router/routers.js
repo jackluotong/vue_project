@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-07-01 22:49:06
- * @LastEditTime: 2021-07-27 22:21:18
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-08 16:58:45
+ * @LastEditors: william
  * @Description: In User Settings Edit
  * @FilePath: \vue_project\src\router\routers.js
  */
@@ -36,7 +36,6 @@ export default [
     },
     {
         path: '/forRouter',
-        // redirect: '/about',
         alias: 'heheda',
         name: 'ForRouter',
         component: () => import('../components/ForRouter.vue'),

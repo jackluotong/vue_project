@@ -1,0 +1,114 @@
+/* index.css */
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    float: left;
+    width: 25%;
+    color: white
+}
+
+.first {
+    background-color: #F44336
+}
+
+.second {
+    background-color: #E91E63
+}
+
+.third {
+    background-color: #9C27B0
+}
+
+.fourth {
+    background-color: #009688
+}
+
+nav {
+    background-color: #607D8B;
+    text-align: right;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: right
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+    margin-right: 3%
+}
+
+.menu {
+    width: 1.5rem;
+    margin-left: 0;
+    display: none;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    position: absolute;
+    z-index: 11;
+    left: -10rem;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    background: #607D8B;
+}
+
+.nav {
+    transition: left linear 0.1s;
+}
+
+.nav a {
+    display: block;
+    padding: 1em 0;
+    border-bottom: 1px solid #888;
+    font-size: 16px;
+    color: #eee;
+    text-align: center;
+}
+
+.nav li {
+    cursor: pointer;
+}
+
+/* .first,
+.second,
+.third,
+.fourth {
+    float: none;
+    width: 100%;
+}
+
+.menu {
+    display: block;
+    margin-right: 2%;
+}
+
+a {
+    display: none
+}
+.first,
+.second,
+.third,
+.fourth {
+    width: 50%;
+}
+
+.menu {
+    display: block;
+    margin-right: 2%;
+}
+
+a {
+    display: none
+} */

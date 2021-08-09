@@ -1,0 +1,373 @@
+{
+    "aug": [
+        {
+            "title": "08.03默克二面",
+            "name": "es6数组的方法？",
+            "answer": "map filter,reduce,some,every"
+        },
+        {
+            "name": "webpack做性能优化时的plugin配置？",
+            "answer": ""
+        },
+        {
+            "name": "flex布局？ 各个属性",
+            "answer": ""
+        },
+        {
+            "name": "响应式布局如何布局？",
+            "answer": ""
+        },
+        {
+            "name": "前端工程化？",
+            "answer": "针对不同浏览器内核去做处理"
+        },
+        {
+            "name": "浏览器的内核？以及对代码的运行渲染？",
+            "answer": ""
+        },
+        {
+            "name": "跨域是发生在那里？怎么配置？",
+            "answer": ""
+        },
+        {
+            "name": "父子组件执行顺序？",
+            "answer": "beforeCreated created beforeMounted beforeCreated"
+        },
+        {
+            "name": "模块化机制？",
+            "answer": ""
+        },
+        {
+            "name": "webpack原理？",
+            "answer": ""
+        },
+        {
+            "name": "set map",
+            "answer": "map 类似于对象结构 set 类似于数组结构"
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        },
+        {
+            "name": "",
+            "answer": ""
+        }
+    ]
+}
