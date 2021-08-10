@@ -1,3 +1,12 @@
+<!--
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: william
+ * @Date: 2021-08-05 15:06:09
+ * @LastEditors: william
+ * @LastEditTime: 2021-08-10 00:16:25
+ * @For What?: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,5 +58,169 @@
         <div class="son3"></div>
         <div class="son4"></div>
     </div>
+    <div>
+        <input type="text" id="inputText">
+        <span id='showSpan'></span>
+        <button id="btn">click me</button>
+    </div>
 </body>
+<script>
+    /**
+     * @name: anonymous function
+     * @test: 
+     * @msg: 
+     * @param {*}
+     * @return {*}
+     */    
+    let tellName =(function(){
+        let name='jack'
+        let answer='1231231'
+        return{
+            tell:function(){
+                console.log(`my name is:${name}`)
+                console.log(`my name is:${answer}`)
+            }
+        }
+    })()
+    tellName.tell()
+/**
+ * @name: object.defineProperty
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */    
+let value;
+let obj={}
+Object.defineProperty(obj,'name',{
+    get:function(){
+        console.log('get...')
+        return value
+    },
+    set:function(newValue){
+        console.log('set...')
+        value=newValue
+    }
+})
+obj.name='jack'
+console.log(obj.name)
+
+/**
+ * @name: two way binding
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+let input=document.getElementById('inputText'),
+sp=document.getElementById('showSpan'),
+ob={}
+
+Object.defineProperty(ob,'msg',{
+    enumerable:true,
+    configurable:true,
+    get:function(){
+        return input.value
+    },
+    set:function(newVal){
+        input.value=newVal
+        sp.innerText=newVal
+    }
+})
+input.addEventListener('keyup',function (event) {
+    ob.msg=event.target.value
+    console.log(ob.msg)
+    ob.name='jack'
+    
+    console.log(ob)
+    test(ob)
+})
+
+function test(object){
+     Object.keys(object).forEach((key)=>{console.log(key)})
+}
+function arrayEven(arr){
+    if(arr instanceof Array){
+        for(let key in 'string'){
+            console.log(key)
+        }
+    }else{
+        alert('type error')
+    }
+}
+const traverse={
+    forIn:function(obj){
+        for(let i in obj){
+            console.log(i)
+        }
+    },
+    forOf:function(obj){
+        if(typeof(obj)!==''){
+            for(let i of Object.keys(obj)){
+            console.log(i)
+            }
+        }
+    },
+    reCombine:function(data){
+        let obj=[]
+        if(data instanceof Array){
+            data.map(item=>{
+                return obj.push({
+                    id:item.id,
+                    roleCode: item.roleName.roleCode
+                }) 
+            })
+
+        }
+        console.log(obj)
+    },
+    /**
+     * @name: for promise
+     * @test: 
+     * @msg: 
+     * @param {*} data
+     * @return {*}
+     */    
+    testPromise:function(data){
+        return new Promise((resolve,reject)=>{
+            if(Array.isArray(data)){
+                resolve(data)
+            }else{
+                reject(error)
+            }
+        })
+    }
+}
+/**
+ * @name: for of / for in :for of can not traverse object; for in traverse object and other is key
+ * @test: 
+ * @msg: 
+ * @param {*} btn
+ * @param {*} function
+ * @return {*}
+ */
+document.getElementById('btn').addEventListener('click',function(){
+    let arr=[1,23,12,8]
+    let obj={name:'jack',age:26}
+    let str='JackLuo'
+    let data=[
+    {
+        id:'jack',
+        roleName:{
+            roleCode:100,
+        }
+    },
+    {
+        id:'william',
+        roleName:{
+            roleCode:200,
+        }
+    }
+]
+    traverse.forIn(obj)
+    traverse.forOf(obj)
+    traverse.reCombine(data)
+    traverse.testPromise(data).then(res=>console.log(res))
+})
+</script>
 </html>
