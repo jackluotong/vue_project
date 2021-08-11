@@ -4,7 +4,7 @@
  * @Author: william
  * @Date: 2021-08-05 15:06:09
  * @LastEditors: william
- * @LastEditTime: 2021-08-10 00:16:25
+ * @LastEditTime: 2021-08-10 16:33:03
  * @For What?: 
 -->
 <!DOCTYPE html>
@@ -62,6 +62,7 @@
         <input type="text" id="inputText">
         <span id='showSpan'></span>
         <button id="btn">click me</button>
+        <button onclick="proxy()">vue3_proxy</button>
     </div>
 </body>
 <script>
@@ -221,6 +222,67 @@ document.getElementById('btn').addEventListener('click',function(){
     traverse.forOf(obj)
     traverse.reCombine(data)
     traverse.testPromise(data).then(res=>console.log(res))
+})
+/**
+ * @name: 
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+function proxy(){
+    const dinner={
+        meal:'potato',
+        eat:function(){
+            return 'i am eating...'
+        }
+    }
+    const handler={
+        get(target,prop,receiver){
+            // track(target,prop)
+            return Reflect.get(...arguments)
+        },
+        set(target,key,value,receiver){
+            // trigger(target,key)
+            return Reflect.set(...arguments)
+        }
+    }
+    const arr=[12,312,312,1231]
+    const [first,second]=arr
+    const {meal}=dinner
+    const proxy=new Proxy(dinner,handler)
+    console.log(proxy.eat(),'----',meal,first)
+    fun('jack',{name:'luo'})
+    test('jack',1231)
+}
+function fun(){
+    console.log(arguments)
+}
+test=(...arguments)=>{
+    console.log(...arguments)
+}
+async function testAsync(){
+    console.log('testAsync1')
+    let a =await test1()
+}
+function test1(){
+    console.log('test1')
+    return new Promise((resolve)=>{
+    console.log('test1 resolve before')
+    resolve('test1 data')
+    }).then(res=>{
+        console.log(res,'then')
+    })
+}
+testAsync()
+new Promise((resolve,reject)=>{
+    console.log('promise resolve before')
+    // resolve('promise data')
+    reject('error')
+}).then(res=>{
+    console.log(res)
+}).catch(e=>{
+    alert(e)
 })
 </script>
 </html>
