@@ -4,7 +4,7 @@
  * @Author: william
  * @Date: 2021-08-05 15:06:09
  * @LastEditors: william
- * @LastEditTime: 2021-08-10 16:33:03
+ * @LastEditTime: 2021-08-12 23:32:05
  * @For What?: 
 -->
 <!DOCTYPE html>
@@ -277,12 +277,24 @@ function test1(){
 testAsync()
 new Promise((resolve,reject)=>{
     console.log('promise resolve before')
-    // resolve('promise data')
+    // resolve('promise data') 
     reject('error')
 }).then(res=>{
     console.log(res)
 }).catch(e=>{
     alert(e)
 })
+/**
+ * @name:symbol iterator generator 
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+function sy(){
+    let sym=new Symbol()
+    console.log(sym)
+}
+sy()
 </script>
 </html>
