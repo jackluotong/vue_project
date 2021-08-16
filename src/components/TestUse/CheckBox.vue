@@ -52,9 +52,11 @@
         <a-button @click="push">push array</a-button>
         <h1 ref="domRef">nameFor</h1>
         <a-button type="error" @click="textAxios">test axios</a-button>
+        <div class="bigDiv"></div>
     </div>
 </template>
 <script>
+import './index.css'
 import { flattenReduce, flattenSplit } from '../../libs/util'
 // import { mapState } from 'vuex'
 // import { debounce } from '../../libs/tools'
