@@ -1,0 +1,308 @@
+<!--
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: william
+ * @Date: 2021-08-05 15:06:09
+ * @LastEditors: william
+ * @LastEditTime: 2021-08-14 08:21:34
+ * @For What?: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        background-color: azure;
+    }
+    h1{
+        text-align: center;
+    }
+    .father{
+        height:400px;
+        background-color: rgb(88, 88, 94);
+        display: flex;
+    }
+    .son1{
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+    }
+    .son2{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(116, 19, 99);
+    }
+    .son3{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(35, 14, 230);
+    }
+    .son4{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(15, 216, 115);
+    }
+</style>
+<body>
+    <h1> 01 flex 布局</h1>
+    <div class="father">
+        <div class="son1"></div>
+        <div class="son2"></div>
+        <div class="son3"></div>
+        <div class="son4"></div>
+    </div>
+    <div>
+        <input type="text" id="inputText">
+        <span id='showSpan'></span>
+        <button id="btn">click me</button>
+        <button onclick="proxy()">vue3_proxy</button>
+    </div>
+    <div style="overflow:scroll;height: 100px;width: 200px;">
+        <h1>overflow1</h1>
+        <h1>overflow1</h1>
+        <h1>overflow1</h1>
+        <h1>overflow1</h1>
+        <h1>overflow1</h1>
+        <h1>overflow1</h1>
+    </div>
+</body>
+<script>
+    /**
+     * @name: anonymous function
+     * @test: 
+     * @msg: 
+     * @param {*}
+     * @return {*}
+     */    
+    let tellName =(function(){
+        let name='jack'
+        let answer='1231231'
+        return{
+            tell:function(){
+                console.log(`my name is:${name}`)
+                console.log(`my name is:${answer}`)
+            }
+        }
+    })()
+    tellName.tell()
+/**
+ * @name: object.defineProperty
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */    
+let value;
+let obj={}
+Object.defineProperty(obj,'name',{
+    get:function(){
+        console.log('get...')
+        return value
+    },
+    set:function(newValue){
+        console.log('set...')
+        value=newValue
+    }
+})
+obj.name='jack'
+console.log(obj.name)
+
+/**
+ * @name: two way binding
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+let input=document.getElementById('inputText'),
+sp=document.getElementById('showSpan'),
+ob={}
+
+Object.defineProperty(ob,'msg',{
+    enumerable:true,
+    configurable:true,
+    get:function(){
+        return input.value
+    },
+    set:function(newVal){
+        input.value=newVal
+        sp.innerText=newVal
+    }
+})
+input.addEventListener('keyup',function (event) {
+    ob.msg=event.target.value
+    console.log(ob.msg)
+    ob.name='jack'
+    
+    console.log(ob)
+    test(ob)
+})
+
+function test(object){
+     Object.keys(object).forEach((key)=>{console.log(key)})
+}
+function arrayEven(arr){
+    if(arr instanceof Array){
+        for(let key in 'string'){
+            console.log(key)
+        }
+    }else{
+        alert('type error')
+    }
+}
+const traverse={
+    forIn:function(obj){
+        for(let i in obj){
+            console.log(i)
+        }
+    },
+    forOf:function(obj){
+        if(typeof(obj)!==''){
+            for(let i of Object.keys(obj)){
+            console.log(i)
+            }
+        }
+    },
+    reCombine:function(data){
+        let obj=[]
+        if(data instanceof Array){
+            data.map(item=>{
+                return obj.push({
+                    id:item.id,
+                    roleCode: item.roleName.roleCode
+                }) 
+            })
+
+        }
+        console.log(obj)
+    },
+    /**
+     * @name: for promise
+     * @test: 
+     * @msg: 
+     * @param {*} data
+     * @return {*}
+     */    
+    testPromise:function(data){
+        return new Promise((resolve,reject)=>{
+            if(Array.isArray(data)){
+                resolve(data)
+            }else{
+                reject(error)
+            }
+        })
+    }
+}
+/**
+ * @name: for of / for in :for of can not traverse object; for in traverse object and other is key
+ * @test: 
+ * @msg: 
+ * @param {*} btn
+ * @param {*} function
+ * @return {*}
+ */
+document.getElementById('btn').addEventListener('click',function(){
+    let arr=[1,23,12,8]
+    let obj={name:'jack',age:26}
+    let str='JackLuo'
+    let data=[
+    {
+        id:'jack',
+        roleName:{
+            roleCode:100,
+        }
+    },
+    {
+        id:'william',
+        roleName:{
+            roleCode:200,
+        }
+    }
+]
+    traverse.forIn(obj)
+    traverse.forOf(obj)
+    traverse.reCombine(data)
+    traverse.testPromise(data).then(res=>console.log(res))
+})
+/**
+ * @name: 
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+function proxy(){
+    const dinner={
+        meal:'potato',
+        eat:function(){
+            return 'i am eating...'
+        }
+    }
+    const handler={
+        get(target,prop,receiver){
+            // track(target,prop)
+            return Reflect.get(...arguments)
+        },
+        set(target,key,value,receiver){
+            // trigger(target,key)
+            return Reflect.set(...arguments)
+        }
+    }
+    const arr=[12,312,312,1231]
+    const [first,second]=arr
+    const {meal}=dinner
+    const proxy=new Proxy(dinner,handler)
+    console.log(proxy.eat(),'----',meal,first)
+    fun('jack',{name:'luo'})
+    test('jack',1231)
+}
+function fun(){
+    console.log(arguments)
+}
+test=(...arguments)=>{
+    console.log(...arguments)
+}
+async function testAsync(){
+    console.log('testAsync1')
+    let a =await test1()
+}
+function test1(){
+    console.log('test1')
+    return new Promise((resolve)=>{
+    console.log('test1 resolve before')
+    resolve('test1 data')
+    }).then(res=>{
+        console.log(res,'then')
+    })
+}
+testAsync()
+new Promise((resolve,reject)=>{
+    console.log('promise resolve before')
+    // resolve('promise data') 
+    reject('error')
+}).then(res=>{
+    console.log(res)
+}).catch(e=>{
+    alert(e)
+})
+/**
+ * @name:symbol iterator generator 
+ * @test: 
+ * @msg: 
+ * @param {*}
+ * @return {*}
+ */
+function sy(){
+    let sym=new Symbol()
+    console.log(sym)
+}
+sy()
+</script>
+</html>

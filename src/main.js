@@ -1,3 +1,12 @@
+/*
+ * @Description:
+ * @version: 1.0.0
+ * @Author: william
+ * @Date: 2021-06-23 22:12:35
+ * @LastEditors: william
+ * @LastEditTime: 2021-08-14 17:41:20
+ * @For What?:
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -21,3 +30,4 @@ new Vue({
     store,
     render: (h) => h(App),
 }).$mount('#app')
+console.log(process.env)
