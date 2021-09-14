@@ -1,3 +1,12 @@
+<!--
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: william
+ * @Date: 2021-05-12 22:45:55
+ * @LastEditors: william
+ * @LastEditTime: 2021-09-14 00:01:35
+ * @For What?: 
+-->
 <template>
     <div class="FatherDiv">
         <h1>我是父组件的标题</h1>
@@ -49,7 +58,8 @@ export default {
     },
     methods: {
         FatherFun(data) {
-            ;(this.num = data.num), (this.name = data.name)
+            this.num = data.num
+            this.name = data.name
         },
         /**
          * 存储数据用sessionStorage

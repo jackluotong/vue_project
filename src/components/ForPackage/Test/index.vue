@@ -30,7 +30,7 @@
                 </div>
             </template>
         </Table>
-        <Modal :visible='visible'/>
+        <Modal :visible="visible" />
     </div>
 </template>
 <script>
@@ -40,7 +40,7 @@ export default {
     components: {
         Table,
         Button,
-        Modal
+        Modal,
     },
     props: {
         usertick: {
@@ -59,21 +59,19 @@ export default {
         },
     },
     data() {
-        return {
-        }
+        return {}
     },
     methods: {
         edit(e, row) {
             console.log(e, row)
         },
         del(index, row) {
-            console.log(index, row,this.confData[index])
+            console.log(index, row, this.confData[index])
             // delete this.confData[index]
         },
     },
-    computed:{
-        visible(){
-        }
+    computed: {
+        visible() {},
     },
     mounted() {
         console.log(this.$props, 'props')

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-06-04 23:01:26
- * @LastEditTime: 2021-07-27 22:20:53
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-13 22:16:29
+ * @LastEditors: william
  * @Description: In User Settings Edit
  * @FilePath: \vue_project\src\router\index.js
  */
@@ -145,6 +145,11 @@ const routes = [
         path: 'Array',
         name: 'Array',
         component: () => import('../components/Array'),
+    },
+    {
+        path: 'August',
+        name: 'August',
+        component: () => import('../components/Interview/Aug'),
     },
 ]
 

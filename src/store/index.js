@@ -1,3 +1,12 @@
+/*
+ * @Description:
+ * @version: 1.0.0
+ * @Author: william
+ * @Date: 2021-05-10 08:36:51
+ * @LastEditors: william
+ * @LastEditTime: 2021-09-14 00:33:34
+ * @For What?:
+ */
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -28,7 +37,9 @@ export default new Vuex.Store({
             let { commit } = context
             commit('increment')
         },
-        getAllInfo() {},
+        testActions(context, args) {
+            context.commit('increment', args)
+        },
     },
     modules: {},
 })
